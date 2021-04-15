@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:overworld",
+    "generator": {
+      "type": "minecraft:flat",
+      "seed": 17871,
+      "settings": {
+        "layers": [],
+        "structures": {
+          "structures": {} 
+        }
+      }
+    }
+  }

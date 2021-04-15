@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "settings": {
+      "lakes": false,
+      "features": true,
+      "biome": "minecraft:overworld",
+      "structures": {
+        "structures": {}
+      },
+      "layers": []
+    },
+    "type": "minecraft:overworld"
+  }
+}

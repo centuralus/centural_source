@@ -14,6 +14,7 @@ stats
 server.jar
 old
 /minecraft/world/datapacks/core_datapack/
+build_scp.sh
 
 # Generated Code
 centural/
