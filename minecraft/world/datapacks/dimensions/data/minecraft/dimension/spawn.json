@@ -27,7 +27,7 @@
         "features": true,
         "layers": [
           {
-            "block": "minecraft:portal",
+            "block": "minecraft:barrier",
             "height": 1
           }
         ],
