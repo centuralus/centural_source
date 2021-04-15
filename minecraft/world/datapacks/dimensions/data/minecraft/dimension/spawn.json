@@ -13,7 +13,7 @@
       "ambient_light": 1,
       "fixed_time": 1000,
       "logical_height": 1024,
-      "effects": "minecraft:overworld",
+      "effects": "minecraft:max_height",
       "infiniburn": "minecraft:infiniburn_overworld",
       "min_y": -1024,
       "height": 2048
