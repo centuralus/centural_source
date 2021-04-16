@@ -45,8 +45,11 @@ execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] if enti
 execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] run scoreboard players reset @a[scores={restroom=1..}] restroom
 
 #Double Jump
-execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:levitation 1 20 true
+execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:levitation 1 1 true
+
+execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:feather_falling 1 1 true
 scoreboard players reset @a[nbt={OnGround:1b}] sneaks
 execute as @a[scores={sneaks=1}] run scoreboard players add @s sneaks 1
 execute as @a store result score @s duration run data get entity @s ActiveEffects[{Id:25b}].Duration 1
-execute as @a[scores={duration=..17}] run effect clear @s
+execute as @a[scores={duration=..17}] run effect clear @s minecraft:levitation
+execute as @a[scores={duration=..17}] run effect clear @s minecraft:feather_falling
