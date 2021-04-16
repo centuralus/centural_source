@@ -49,7 +49,6 @@ execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:
 
 execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:slow_falling 1 4 true
 scoreboard players reset @a[nbt={OnGround:1b}] sneaks
-execute as @a[scores={sneaks=1}] run scoreboard players add @s sneaks 1
-execute as @a store result score @s duration run data get entity @s ActiveEffects[{Id:25b}].Duration 1
-execute as @a[scores={duration=..4}] run effect clear @s minecraft:levitation
-execute as @a[scores={duration=..4}] run effect clear @s minecraft:slow_falling
+execute as @a[scores={sneaks=1..}] run scoreboard players add @s sneaks 1
+execute as @a[scores={sneaks=7..}] run effect clear @s minecraft:levitation
+execute as @a[scores={sneaks=7..}] run effect clear @s minecraft:slow_falling
