@@ -1,7 +1,7 @@
 {
     "type": {
-      "name": "minecraft:spawn",
-      "ultrawarm": false,
+      "name": "minecraft:jail",
+      "ultrawarm": true,
       "natural": true,
       "piglin_safe": true,
       "respawn_anchor_works": true,
@@ -11,12 +11,12 @@
       "has_ceiling": false,
       "coordinate_scale": 1,
       "ambient_light": 1,
-      "fixed_time": 1000,
-      "logical_height": 1024,
+      "fixed_time": 12000,
+      "logical_height": 1,
       "effects": "minecraft:overworld",
       "infiniburn": "minecraft:infiniburn_overworld",
-      "min_y": -1024,
-      "height": 2048
+      "min_y": 0,
+      "height": 1
     },
     "generator": {
       "type": "minecraft:flat",
