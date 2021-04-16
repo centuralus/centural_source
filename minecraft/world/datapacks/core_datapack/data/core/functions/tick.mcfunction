@@ -39,16 +39,3 @@ execute if entity @p[tag=raycast] as @a[tag=raycast] at @a[tag=raycast] position
 #execute if entity @p[gamemode=adventure,team=player] at @a[gamemode=adventure,team=player] unless entity @e[tag=protected,type=armor_stand,distance=..64] run tellraw @s "You have now left the builder zone."
 #execute if entity @p[gamemode=adventure,team=player] at @a[gamemode=adventure,team=player] unless entity @e[tag=protected,type=armor_stand,distance=..64] run gamemode survival @s
 #
-
-
-execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] if entity @e[tag=toilet,distance=..1] run particle minecraft:squid_ink ~ ~ ~ 0 0 0 1 1 force @a[distance=..32]
-execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] run scoreboard players reset @a[scores={restroom=1..}] restroom
-
-#Double Jump
-execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:levitation 1 4 true
-
-execute as @e[scores={sneaks=1},nbt={OnGround:0b}] run effect give @s minecraft:slow_falling 1 4 true
-scoreboard players reset @a[nbt={OnGround:1b}] sneaks
-execute as @a[scores={sneaks=1..}] run scoreboard players add @s sneaks 1
-execute as @a[scores={sneaks=7..}] run effect clear @s minecraft:levitation
-execute as @a[scores={sneaks=7..}] run effect clear @s minecraft:slow_falling
