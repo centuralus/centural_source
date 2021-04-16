@@ -1,13 +1,39 @@
 {
-    "type": "minecraft:overworld",
-    "generator": {
-      "type": "minecraft:flat",
-      "seed": 17871,
-      "settings": {
-        "layers": [],
-        "structures": {
-          "structures": {} 
+  "type": {
+    "name": "minecraft:creative",
+    "ultrawarm": false,
+    "natural": true,
+    "piglin_safe": true,
+    "respawn_anchor_works": true,
+    "bed_works": true,
+    "has_raids": false,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 1,
+    "ambient_light": 1,
+    "fixed_time": 1000,
+    "logical_height": 1024,
+    "effects": "minecraft:max_height",
+    "infiniburn": "minecraft:infiniburn_overworld",
+    "min_y": -1024,
+    "height": 2048
+  },
+  "generator": {
+    "type": "minecraft:flat",
+    "seed": 369075055,
+    "settings": {
+      "biome": "minecraft:mushroom_fields",
+      "lakes": true,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:barrier",
+          "height": 1
         }
+      ],
+      "structures": {
+        "structures": {}
       }
     }
   }
+}
