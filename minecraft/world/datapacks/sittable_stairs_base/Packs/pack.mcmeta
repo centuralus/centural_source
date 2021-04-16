@@ -1,0 +1,22 @@
+{
+	"pack":{
+         "pack_format":5,
+         "description":[
+                        {"text":"Datapack ","color":"green"},
+                        {"text":"made by ","color":"gold"},
+                        {"text":"TheDiamondPlayables","color":"aqua"}
+                       ]
+        },
+	"info":{
+         "author":"TheDiamondPlayables",
+         "datapack-series":"ChairS",
+         "version":"3.0",
+         "designed-mc-version":"Minecraft 1.16x"
+        },
+	"links":{
+          "comment":"I spent a lot of effort making these. Support me so I can do more stuff like this!",
+          "support-link":"paypal.me/thediamondplayables",
+          "patreon-link":"patreon.com/thediamondplayables",
+          "discord-link":"discord.plus/DiamondUniverse"
+         }
+}
