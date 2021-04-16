@@ -41,5 +41,5 @@ execute if entity @p[tag=raycast] as @a[tag=raycast] at @a[tag=raycast] position
 #
 
 
-execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] run particle minecraft:squid_ink ~ ~ ~ 0 0 0 1 1 force @a[distance=..32]
+execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] if entity @e[tag=toilet,distance=..1] run particle minecraft:squid_ink ~ ~ ~ 0 0 0 1 1 force @a[distance=..32]
 execute if entity @p[scores={restroom=1..}] at @a[scores={restroom=1..}] run scoreboard players reset @a[scores={restroom=1..}] restroom
