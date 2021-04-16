@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7812
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7813
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7814
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7815
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7816
+execute if block ~ ~ ~ minecraft:sandstone_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7817
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7818
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7819
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7820
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7821
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7822
+execute if block ~ ~ ~ minecraft:cut_sandstone_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7823

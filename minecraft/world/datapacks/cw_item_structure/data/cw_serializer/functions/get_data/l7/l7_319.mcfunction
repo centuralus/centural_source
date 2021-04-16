@@ -1,0 +1,12 @@
+execute if score block bsc matches 10271 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10272 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10273 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10274 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10275 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10276 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:polished_diorite_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 10277 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10278 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10279 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10280 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10281 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10282 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:mossy_cobblestone_slab",Properties:{type:double,waterlogged:false}}}

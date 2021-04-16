@@ -1,0 +1,15 @@
+execute if score block bsc matches 11272 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:north}}}
+execute if score block bsc matches 11273 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:east}}}
+execute if score block bsc matches 11274 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:south}}}
+execute if score block bsc matches 11275 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:west}}}
+execute if score block bsc matches 11276 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:up}}}
+execute if score block bsc matches 11277 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jigsaw",Properties:{facing:down}}}
+execute if score block bsc matches 11278 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:0}}}
+execute if score block bsc matches 11279 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:1}}}
+execute if score block bsc matches 11280 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:2}}}
+execute if score block bsc matches 11281 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:3}}}
+execute if score block bsc matches 11282 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:4}}}
+execute if score block bsc matches 11283 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:5}}}
+execute if score block bsc matches 11284 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:6}}}
+execute if score block bsc matches 11285 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:7}}}
+execute if score block bsc matches 11286 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:composter",Properties:{level:8}}}

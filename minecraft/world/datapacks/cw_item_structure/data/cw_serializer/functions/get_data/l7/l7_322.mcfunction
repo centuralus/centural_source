@@ -1,0 +1,12 @@
+execute if score block bsc matches 10307 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10308 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10309 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10310 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10311 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10312 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:andesite_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 10313 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10314 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10315 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10316 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10317 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10318 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:red_nether_brick_slab",Properties:{type:double,waterlogged:false}}}

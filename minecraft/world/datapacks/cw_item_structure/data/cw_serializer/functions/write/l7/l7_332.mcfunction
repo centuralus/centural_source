@@ -1,0 +1,9 @@
+execute if score block bsc matches 11155 run setblock ~ ~ ~ minecraft:blast_furnace[facing=north,lit=true]
+execute if score block bsc matches 11156 run setblock ~ ~ ~ minecraft:blast_furnace[facing=north,lit=false]
+execute if score block bsc matches 11157 run setblock ~ ~ ~ minecraft:blast_furnace[facing=south,lit=true]
+execute if score block bsc matches 11158 run setblock ~ ~ ~ minecraft:blast_furnace[facing=south,lit=false]
+execute if score block bsc matches 11159 run setblock ~ ~ ~ minecraft:blast_furnace[facing=west,lit=true]
+execute if score block bsc matches 11160 run setblock ~ ~ ~ minecraft:blast_furnace[facing=west,lit=false]
+execute if score block bsc matches 11161 run setblock ~ ~ ~ minecraft:blast_furnace[facing=east,lit=true]
+execute if score block bsc matches 11162 run setblock ~ ~ ~ minecraft:blast_furnace[facing=east,lit=false]
+execute if score block bsc matches 11163 run setblock ~ ~ ~ minecraft:cartography_table

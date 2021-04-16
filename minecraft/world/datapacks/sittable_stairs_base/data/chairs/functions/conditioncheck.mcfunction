@@ -6,7 +6,7 @@
 # var_2: Boolean
 
 # 1. To spawn a chair:
-execute unless score :var_1 cs_op matches 1.. run scoreboard players set :var_1 cs_op 3
+execute unless score :var_1 cs_op matches 1.. run scoreboard players set :var_1 cs_op 1
 execute as @a at @s align xz run function chairs:actions/1_1
 execute as @e[tag=ChairS,tag=Unfiltered] at @s run function chairs:actions/1_2
 

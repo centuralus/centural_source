@@ -1,0 +1,13 @@
+execute if block ~ ~ ~ minecraft:black_wool run scoreboard players set block bsc 1398
+execute if block ~ ~ ~ minecraft:moving_piston[facing=north,type=normal] run scoreboard players set block bsc 1399
+execute if block ~ ~ ~ minecraft:moving_piston[facing=north,type=sticky] run scoreboard players set block bsc 1400
+execute if block ~ ~ ~ minecraft:moving_piston[facing=east,type=normal] run scoreboard players set block bsc 1401
+execute if block ~ ~ ~ minecraft:moving_piston[facing=east,type=sticky] run scoreboard players set block bsc 1402
+execute if block ~ ~ ~ minecraft:moving_piston[facing=south,type=normal] run scoreboard players set block bsc 1403
+execute if block ~ ~ ~ minecraft:moving_piston[facing=south,type=sticky] run scoreboard players set block bsc 1404
+execute if block ~ ~ ~ minecraft:moving_piston[facing=west,type=normal] run scoreboard players set block bsc 1405
+execute if block ~ ~ ~ minecraft:moving_piston[facing=west,type=sticky] run scoreboard players set block bsc 1406
+execute if block ~ ~ ~ minecraft:moving_piston[facing=up,type=normal] run scoreboard players set block bsc 1407
+execute if block ~ ~ ~ minecraft:moving_piston[facing=up,type=sticky] run scoreboard players set block bsc 1408
+execute if block ~ ~ ~ minecraft:moving_piston[facing=down,type=normal] run scoreboard players set block bsc 1409
+execute if block ~ ~ ~ minecraft:moving_piston[facing=down,type=sticky] run scoreboard players set block bsc 1410

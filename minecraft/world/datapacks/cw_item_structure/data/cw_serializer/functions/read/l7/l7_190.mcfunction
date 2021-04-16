@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7308
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7309
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7310
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7311
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7312
+execute if block ~ ~ ~ minecraft:prismarine_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7313
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7314
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7315
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7316
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7317
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7318
+execute if block ~ ~ ~ minecraft:prismarine_brick_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7319

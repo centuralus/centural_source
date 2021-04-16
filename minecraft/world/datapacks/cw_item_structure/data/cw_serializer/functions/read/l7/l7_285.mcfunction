@@ -1,0 +1,13 @@
+execute if block ~ ~ ~ minecraft:dried_kelp_block run scoreboard players set block bsc 8961
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=0] run scoreboard players set block bsc 8962
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=1] run scoreboard players set block bsc 8963
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=2] run scoreboard players set block bsc 8964
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=0] run scoreboard players set block bsc 8965
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=1] run scoreboard players set block bsc 8966
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=2] run scoreboard players set block bsc 8967
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=0] run scoreboard players set block bsc 8968
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=1] run scoreboard players set block bsc 8969
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=2] run scoreboard players set block bsc 8970
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=0] run scoreboard players set block bsc 8971
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=1] run scoreboard players set block bsc 8972
+execute if block ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=2] run scoreboard players set block bsc 8973

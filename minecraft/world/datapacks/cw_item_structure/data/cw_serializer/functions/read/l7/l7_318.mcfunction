@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10259
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10260
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10261
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10262
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10263
+execute if block ~ ~ ~ minecraft:smooth_red_sandstone_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10264
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10265
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10266
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10267
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10268
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10269
+execute if block ~ ~ ~ minecraft:mossy_stone_brick_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10270

@@ -1,0 +1,11 @@
+execute if score block bsc matches 4006 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jack_o_lantern",Properties:{facing:north}}}
+execute if score block bsc matches 4007 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jack_o_lantern",Properties:{facing:south}}}
+execute if score block bsc matches 4008 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jack_o_lantern",Properties:{facing:west}}}
+execute if score block bsc matches 4009 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jack_o_lantern",Properties:{facing:east}}}
+execute if score block bsc matches 4010 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:0}}}
+execute if score block bsc matches 4011 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:1}}}
+execute if score block bsc matches 4012 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:2}}}
+execute if score block bsc matches 4013 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:3}}}
+execute if score block bsc matches 4014 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:4}}}
+execute if score block bsc matches 4015 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:5}}}
+execute if score block bsc matches 4016 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cake",Properties:{bites:6}}}

@@ -1,0 +1,11 @@
+execute if score block bsc matches 6192 run setblock ~ ~ ~ minecraft:hopper[enabled=true,facing=down]
+execute if score block bsc matches 6193 run setblock ~ ~ ~ minecraft:hopper[enabled=true,facing=north]
+execute if score block bsc matches 6194 run setblock ~ ~ ~ minecraft:hopper[enabled=true,facing=south]
+execute if score block bsc matches 6195 run setblock ~ ~ ~ minecraft:hopper[enabled=true,facing=west]
+execute if score block bsc matches 6196 run setblock ~ ~ ~ minecraft:hopper[enabled=true,facing=east]
+execute if score block bsc matches 6197 run setblock ~ ~ ~ minecraft:hopper[enabled=false,facing=down]
+execute if score block bsc matches 6198 run setblock ~ ~ ~ minecraft:hopper[enabled=false,facing=north]
+execute if score block bsc matches 6199 run setblock ~ ~ ~ minecraft:hopper[enabled=false,facing=south]
+execute if score block bsc matches 6200 run setblock ~ ~ ~ minecraft:hopper[enabled=false,facing=west]
+execute if score block bsc matches 6201 run setblock ~ ~ ~ minecraft:hopper[enabled=false,facing=east]
+execute if score block bsc matches 6202 run setblock ~ ~ ~ minecraft:quartz_block

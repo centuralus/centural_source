@@ -1,0 +1,13 @@
+execute if score block bsc matches 8961 run setblock ~ ~ ~ minecraft:dried_kelp_block
+execute if score block bsc matches 8962 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=0]
+execute if score block bsc matches 8963 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=1]
+execute if score block bsc matches 8964 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=1,hatch=2]
+execute if score block bsc matches 8965 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=0]
+execute if score block bsc matches 8966 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=1]
+execute if score block bsc matches 8967 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=2,hatch=2]
+execute if score block bsc matches 8968 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=0]
+execute if score block bsc matches 8969 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=1]
+execute if score block bsc matches 8970 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=3,hatch=2]
+execute if score block bsc matches 8971 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=0]
+execute if score block bsc matches 8972 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=1]
+execute if score block bsc matches 8973 run setblock ~ ~ ~ minecraft:turtle_egg[eggs=4,hatch=2]

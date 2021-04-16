@@ -1,0 +1,17 @@
+execute if score block bsc matches 3945 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:clay"}}
+execute if score block bsc matches 3946 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:0}}}
+execute if score block bsc matches 3947 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:1}}}
+execute if score block bsc matches 3948 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:2}}}
+execute if score block bsc matches 3949 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:3}}}
+execute if score block bsc matches 3950 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:4}}}
+execute if score block bsc matches 3951 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:5}}}
+execute if score block bsc matches 3952 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:6}}}
+execute if score block bsc matches 3953 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:7}}}
+execute if score block bsc matches 3954 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:8}}}
+execute if score block bsc matches 3955 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:9}}}
+execute if score block bsc matches 3956 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:10}}}
+execute if score block bsc matches 3957 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:11}}}
+execute if score block bsc matches 3958 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:12}}}
+execute if score block bsc matches 3959 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:13}}}
+execute if score block bsc matches 3960 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:14}}}
+execute if score block bsc matches 3961 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sugar_cane",Properties:{age:15}}}

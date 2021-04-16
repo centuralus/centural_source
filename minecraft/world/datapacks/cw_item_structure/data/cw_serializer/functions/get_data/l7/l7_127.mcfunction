@@ -1,0 +1,12 @@
+execute if score block bsc matches 5117 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:true,has_bottle_1:true,has_bottle_2:true}}}
+execute if score block bsc matches 5118 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:true,has_bottle_1:true,has_bottle_2:false}}}
+execute if score block bsc matches 5119 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:true,has_bottle_1:false,has_bottle_2:true}}}
+execute if score block bsc matches 5120 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:true,has_bottle_1:false,has_bottle_2:false}}}
+execute if score block bsc matches 5121 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:false,has_bottle_1:true,has_bottle_2:true}}}
+execute if score block bsc matches 5122 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:false,has_bottle_1:true,has_bottle_2:false}}}
+execute if score block bsc matches 5123 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:false,has_bottle_1:false,has_bottle_2:true}}}
+execute if score block bsc matches 5124 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brewing_stand",Properties:{has_bottle_0:false,has_bottle_1:false,has_bottle_2:false}}}
+execute if score block bsc matches 5125 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cauldron",Properties:{level:0}}}
+execute if score block bsc matches 5126 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cauldron",Properties:{level:1}}}
+execute if score block bsc matches 5127 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cauldron",Properties:{level:2}}}
+execute if score block bsc matches 5128 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cauldron",Properties:{level:3}}}

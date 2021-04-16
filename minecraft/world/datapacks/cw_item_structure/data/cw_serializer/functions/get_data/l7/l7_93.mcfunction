@@ -1,0 +1,17 @@
+execute if score block bsc matches 3928 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow_block"}}
+execute if score block bsc matches 3929 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:0}}}
+execute if score block bsc matches 3930 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:1}}}
+execute if score block bsc matches 3931 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:2}}}
+execute if score block bsc matches 3932 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:3}}}
+execute if score block bsc matches 3933 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:4}}}
+execute if score block bsc matches 3934 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:5}}}
+execute if score block bsc matches 3935 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:6}}}
+execute if score block bsc matches 3936 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:7}}}
+execute if score block bsc matches 3937 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:8}}}
+execute if score block bsc matches 3938 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:9}}}
+execute if score block bsc matches 3939 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:10}}}
+execute if score block bsc matches 3940 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:11}}}
+execute if score block bsc matches 3941 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:12}}}
+execute if score block bsc matches 3942 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:13}}}
+execute if score block bsc matches 3943 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:14}}}
+execute if score block bsc matches 3944 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cactus",Properties:{age:15}}}

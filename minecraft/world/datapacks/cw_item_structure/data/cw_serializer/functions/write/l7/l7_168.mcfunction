@@ -1,0 +1,13 @@
+execute if score block bsc matches 6299 run setblock ~ ~ ~ minecraft:dropper[facing=north,triggered=true]
+execute if score block bsc matches 6300 run setblock ~ ~ ~ minecraft:dropper[facing=north,triggered=false]
+execute if score block bsc matches 6301 run setblock ~ ~ ~ minecraft:dropper[facing=east,triggered=true]
+execute if score block bsc matches 6302 run setblock ~ ~ ~ minecraft:dropper[facing=east,triggered=false]
+execute if score block bsc matches 6303 run setblock ~ ~ ~ minecraft:dropper[facing=south,triggered=true]
+execute if score block bsc matches 6304 run setblock ~ ~ ~ minecraft:dropper[facing=south,triggered=false]
+execute if score block bsc matches 6305 run setblock ~ ~ ~ minecraft:dropper[facing=west,triggered=true]
+execute if score block bsc matches 6306 run setblock ~ ~ ~ minecraft:dropper[facing=west,triggered=false]
+execute if score block bsc matches 6307 run setblock ~ ~ ~ minecraft:dropper[facing=up,triggered=true]
+execute if score block bsc matches 6308 run setblock ~ ~ ~ minecraft:dropper[facing=up,triggered=false]
+execute if score block bsc matches 6309 run setblock ~ ~ ~ minecraft:dropper[facing=down,triggered=true]
+execute if score block bsc matches 6310 run setblock ~ ~ ~ minecraft:dropper[facing=down,triggered=false]
+execute if score block bsc matches 6311 run setblock ~ ~ ~ minecraft:white_terracotta

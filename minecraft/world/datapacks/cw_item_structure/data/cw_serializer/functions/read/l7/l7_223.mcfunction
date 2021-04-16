@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:oak_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7764
+execute if block ~ ~ ~ minecraft:oak_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7765
+execute if block ~ ~ ~ minecraft:oak_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7766
+execute if block ~ ~ ~ minecraft:oak_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7767
+execute if block ~ ~ ~ minecraft:oak_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7768
+execute if block ~ ~ ~ minecraft:oak_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7769
+execute if block ~ ~ ~ minecraft:spruce_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7770
+execute if block ~ ~ ~ minecraft:spruce_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7771
+execute if block ~ ~ ~ minecraft:spruce_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7772
+execute if block ~ ~ ~ minecraft:spruce_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7773
+execute if block ~ ~ ~ minecraft:spruce_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7774
+execute if block ~ ~ ~ minecraft:spruce_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7775

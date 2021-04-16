@@ -1,0 +1,16 @@
+execute if score block bsc matches 9040 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 9041 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 9042 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 9043 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 9044 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 9045 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 9046 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 9047 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_bubble_coral_wall_fan",Properties:{facing:east,waterlogged:false}}}
+execute if score block bsc matches 9048 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 9049 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 9050 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 9051 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 9052 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 9053 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 9054 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 9055 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_fire_coral_wall_fan",Properties:{facing:east,waterlogged:false}}}

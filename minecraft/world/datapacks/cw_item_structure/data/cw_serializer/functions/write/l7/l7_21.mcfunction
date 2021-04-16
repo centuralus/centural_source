@@ -1,0 +1,6 @@
+execute if score block bsc matches 90 run setblock ~ ~ ~ minecraft:stripped_spruce_log[axis=x]
+execute if score block bsc matches 91 run setblock ~ ~ ~ minecraft:stripped_spruce_log[axis=y]
+execute if score block bsc matches 92 run setblock ~ ~ ~ minecraft:stripped_spruce_log[axis=z]
+execute if score block bsc matches 93 run setblock ~ ~ ~ minecraft:stripped_birch_log[axis=x]
+execute if score block bsc matches 94 run setblock ~ ~ ~ minecraft:stripped_birch_log[axis=y]
+execute if score block bsc matches 95 run setblock ~ ~ ~ minecraft:stripped_birch_log[axis=z]

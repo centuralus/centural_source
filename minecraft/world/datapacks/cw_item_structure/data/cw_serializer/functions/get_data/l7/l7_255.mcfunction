@@ -1,0 +1,12 @@
+execute if score block bsc matches 8778 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8779 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8780 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8781 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8782 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8783 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pink_shulker_box",Properties:{facing:down}}}
+execute if score block bsc matches 8784 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8785 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8786 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8787 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8788 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8789 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:gray_shulker_box",Properties:{facing:down}}}

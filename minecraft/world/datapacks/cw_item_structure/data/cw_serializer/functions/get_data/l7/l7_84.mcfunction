@@ -1,0 +1,16 @@
+execute if score block bsc matches 3757 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 3758 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 3759 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 3760 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 3761 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 3762 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 3763 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 3764 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_wall_sign",Properties:{facing:east,waterlogged:false}}}
+execute if score block bsc matches 3765 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 3766 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 3767 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 3768 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 3769 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 3770 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 3771 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 3772 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_wall_sign",Properties:{facing:east,waterlogged:false}}}

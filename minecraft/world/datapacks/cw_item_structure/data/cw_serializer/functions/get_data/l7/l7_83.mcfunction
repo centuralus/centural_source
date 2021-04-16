@@ -1,0 +1,16 @@
+execute if score block bsc matches 3741 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 3742 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 3743 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 3744 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 3745 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 3746 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 3747 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 3748 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_wall_sign",Properties:{facing:east,waterlogged:false}}}
+execute if score block bsc matches 3749 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 3750 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 3751 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 3752 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 3753 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 3754 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 3755 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 3756 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_wall_sign",Properties:{facing:east,waterlogged:false}}}

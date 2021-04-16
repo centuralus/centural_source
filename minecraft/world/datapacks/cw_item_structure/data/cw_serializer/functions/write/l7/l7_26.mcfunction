@@ -1,0 +1,6 @@
+execute if score block bsc matches 120 run setblock ~ ~ ~ minecraft:acacia_wood[axis=x]
+execute if score block bsc matches 121 run setblock ~ ~ ~ minecraft:acacia_wood[axis=y]
+execute if score block bsc matches 122 run setblock ~ ~ ~ minecraft:acacia_wood[axis=z]
+execute if score block bsc matches 123 run setblock ~ ~ ~ minecraft:dark_oak_wood[axis=x]
+execute if score block bsc matches 124 run setblock ~ ~ ~ minecraft:dark_oak_wood[axis=y]
+execute if score block bsc matches 125 run setblock ~ ~ ~ minecraft:dark_oak_wood[axis=z]

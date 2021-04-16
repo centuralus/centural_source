@@ -1,0 +1,16 @@
+execute if block ~ ~ ~ minecraft:wheat[age=0] run scoreboard players set block bsc 3355
+execute if block ~ ~ ~ minecraft:wheat[age=1] run scoreboard players set block bsc 3356
+execute if block ~ ~ ~ minecraft:wheat[age=2] run scoreboard players set block bsc 3357
+execute if block ~ ~ ~ minecraft:wheat[age=3] run scoreboard players set block bsc 3358
+execute if block ~ ~ ~ minecraft:wheat[age=4] run scoreboard players set block bsc 3359
+execute if block ~ ~ ~ minecraft:wheat[age=5] run scoreboard players set block bsc 3360
+execute if block ~ ~ ~ minecraft:wheat[age=6] run scoreboard players set block bsc 3361
+execute if block ~ ~ ~ minecraft:wheat[age=7] run scoreboard players set block bsc 3362
+execute if block ~ ~ ~ minecraft:farmland[moisture=0] run scoreboard players set block bsc 3363
+execute if block ~ ~ ~ minecraft:farmland[moisture=1] run scoreboard players set block bsc 3364
+execute if block ~ ~ ~ minecraft:farmland[moisture=2] run scoreboard players set block bsc 3365
+execute if block ~ ~ ~ minecraft:farmland[moisture=3] run scoreboard players set block bsc 3366
+execute if block ~ ~ ~ minecraft:farmland[moisture=4] run scoreboard players set block bsc 3367
+execute if block ~ ~ ~ minecraft:farmland[moisture=5] run scoreboard players set block bsc 3368
+execute if block ~ ~ ~ minecraft:farmland[moisture=6] run scoreboard players set block bsc 3369
+execute if block ~ ~ ~ minecraft:farmland[moisture=7] run scoreboard players set block bsc 3370

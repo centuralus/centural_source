@@ -1,0 +1,11 @@
+execute if score block bsc matches 6192 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:true,facing:down}}}
+execute if score block bsc matches 6193 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:true,facing:north}}}
+execute if score block bsc matches 6194 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:true,facing:south}}}
+execute if score block bsc matches 6195 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:true,facing:west}}}
+execute if score block bsc matches 6196 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:true,facing:east}}}
+execute if score block bsc matches 6197 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:false,facing:down}}}
+execute if score block bsc matches 6198 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:false,facing:north}}}
+execute if score block bsc matches 6199 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:false,facing:south}}}
+execute if score block bsc matches 6200 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:false,facing:west}}}
+execute if score block bsc matches 6201 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:hopper",Properties:{enabled:false,facing:east}}}
+execute if score block bsc matches 6202 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:quartz_block"}}

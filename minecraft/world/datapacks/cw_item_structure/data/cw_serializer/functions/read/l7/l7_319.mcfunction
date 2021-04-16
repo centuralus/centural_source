@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10271
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10272
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10273
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10274
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10275
+execute if block ~ ~ ~ minecraft:polished_diorite_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10276
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10277
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10278
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10279
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10280
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10281
+execute if block ~ ~ ~ minecraft:mossy_cobblestone_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10282

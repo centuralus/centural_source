@@ -1,0 +1,8 @@
+execute if score block bsc matches 7673 run setblock ~ ~ ~ minecraft:red_wall_banner[facing=north]
+execute if score block bsc matches 7674 run setblock ~ ~ ~ minecraft:red_wall_banner[facing=south]
+execute if score block bsc matches 7675 run setblock ~ ~ ~ minecraft:red_wall_banner[facing=west]
+execute if score block bsc matches 7676 run setblock ~ ~ ~ minecraft:red_wall_banner[facing=east]
+execute if score block bsc matches 7677 run setblock ~ ~ ~ minecraft:black_wall_banner[facing=north]
+execute if score block bsc matches 7678 run setblock ~ ~ ~ minecraft:black_wall_banner[facing=south]
+execute if score block bsc matches 7679 run setblock ~ ~ ~ minecraft:black_wall_banner[facing=west]
+execute if score block bsc matches 7680 run setblock ~ ~ ~ minecraft:black_wall_banner[facing=east]

@@ -1,0 +1,12 @@
+execute if score block bsc matches 4752 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:attached_melon_stem",Properties:{facing:north}}}
+execute if score block bsc matches 4753 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:attached_melon_stem",Properties:{facing:south}}}
+execute if score block bsc matches 4754 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:attached_melon_stem",Properties:{facing:west}}}
+execute if score block bsc matches 4755 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:attached_melon_stem",Properties:{facing:east}}}
+execute if score block bsc matches 4756 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:0}}}
+execute if score block bsc matches 4757 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:1}}}
+execute if score block bsc matches 4758 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:2}}}
+execute if score block bsc matches 4759 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:3}}}
+execute if score block bsc matches 4760 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:4}}}
+execute if score block bsc matches 4761 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:5}}}
+execute if score block bsc matches 4762 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:6}}}
+execute if score block bsc matches 4763 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:pumpkin_stem",Properties:{age:7}}}

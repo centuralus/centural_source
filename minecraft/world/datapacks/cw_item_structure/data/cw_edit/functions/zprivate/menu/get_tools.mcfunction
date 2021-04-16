@@ -1,0 +1,2 @@
+give @p minecraft:command_block{display:{Name:'{"text":"Start","color":"light_purple","italic":false,"bold":true}'},BlockEntityTag:{Command:"/function cw_edit:zprivate/start_point",auto:1b}} 1
+give @p minecraft:command_block{display:{Name:'{"text":"End","color":"dark_purple","italic":false,"bold":true}'},BlockEntityTag:{Command:"/function cw_edit:zprivate/end_point",auto:1b}} 1

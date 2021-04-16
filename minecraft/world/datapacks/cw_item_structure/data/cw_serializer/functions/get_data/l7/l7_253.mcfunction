@@ -1,0 +1,12 @@
+execute if score block bsc matches 8754 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8755 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8756 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8757 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8758 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8759 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:magenta_shulker_box",Properties:{facing:down}}}
+execute if score block bsc matches 8760 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8761 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8762 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8763 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8764 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8765 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:light_blue_shulker_box",Properties:{facing:down}}}

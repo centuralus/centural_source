@@ -1,0 +1,15 @@
+execute if block ~ ~ ~ minecraft:jigsaw[facing=north] run scoreboard players set block bsc 11272
+execute if block ~ ~ ~ minecraft:jigsaw[facing=east] run scoreboard players set block bsc 11273
+execute if block ~ ~ ~ minecraft:jigsaw[facing=south] run scoreboard players set block bsc 11274
+execute if block ~ ~ ~ minecraft:jigsaw[facing=west] run scoreboard players set block bsc 11275
+execute if block ~ ~ ~ minecraft:jigsaw[facing=up] run scoreboard players set block bsc 11276
+execute if block ~ ~ ~ minecraft:jigsaw[facing=down] run scoreboard players set block bsc 11277
+execute if block ~ ~ ~ minecraft:composter[level=0] run scoreboard players set block bsc 11278
+execute if block ~ ~ ~ minecraft:composter[level=1] run scoreboard players set block bsc 11279
+execute if block ~ ~ ~ minecraft:composter[level=2] run scoreboard players set block bsc 11280
+execute if block ~ ~ ~ minecraft:composter[level=3] run scoreboard players set block bsc 11281
+execute if block ~ ~ ~ minecraft:composter[level=4] run scoreboard players set block bsc 11282
+execute if block ~ ~ ~ minecraft:composter[level=5] run scoreboard players set block bsc 11283
+execute if block ~ ~ ~ minecraft:composter[level=6] run scoreboard players set block bsc 11284
+execute if block ~ ~ ~ minecraft:composter[level=7] run scoreboard players set block bsc 11285
+execute if block ~ ~ ~ minecraft:composter[level=8] run scoreboard players set block bsc 11286

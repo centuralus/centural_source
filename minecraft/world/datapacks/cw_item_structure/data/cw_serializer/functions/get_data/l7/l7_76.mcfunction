@@ -1,0 +1,16 @@
+execute if score block bsc matches 3355 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:0}}}
+execute if score block bsc matches 3356 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:1}}}
+execute if score block bsc matches 3357 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:2}}}
+execute if score block bsc matches 3358 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:3}}}
+execute if score block bsc matches 3359 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:4}}}
+execute if score block bsc matches 3360 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:5}}}
+execute if score block bsc matches 3361 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:6}}}
+execute if score block bsc matches 3362 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:wheat",Properties:{age:7}}}
+execute if score block bsc matches 3363 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:0}}}
+execute if score block bsc matches 3364 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:1}}}
+execute if score block bsc matches 3365 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:2}}}
+execute if score block bsc matches 3366 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:3}}}
+execute if score block bsc matches 3367 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:4}}}
+execute if score block bsc matches 3368 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:5}}}
+execute if score block bsc matches 3369 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:6}}}
+execute if score block bsc matches 3370 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:farmland",Properties:{moisture:7}}}

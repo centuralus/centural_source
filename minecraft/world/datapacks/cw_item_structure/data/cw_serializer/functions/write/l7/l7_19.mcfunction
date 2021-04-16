@@ -1,0 +1,6 @@
+execute if score block bsc matches 78 run setblock ~ ~ ~ minecraft:birch_log[axis=x]
+execute if score block bsc matches 79 run setblock ~ ~ ~ minecraft:birch_log[axis=y]
+execute if score block bsc matches 80 run setblock ~ ~ ~ minecraft:birch_log[axis=z]
+execute if score block bsc matches 81 run setblock ~ ~ ~ minecraft:jungle_log[axis=x]
+execute if score block bsc matches 82 run setblock ~ ~ ~ minecraft:jungle_log[axis=y]
+execute if score block bsc matches 83 run setblock ~ ~ ~ minecraft:jungle_log[axis=z]

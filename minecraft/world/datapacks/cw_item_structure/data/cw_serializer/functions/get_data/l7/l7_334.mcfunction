@@ -1,0 +1,17 @@
+execute if score block bsc matches 11177 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:north,has_book:true,powered:true}}}
+execute if score block bsc matches 11178 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:north,has_book:true,powered:false}}}
+execute if score block bsc matches 11179 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:north,has_book:false,powered:true}}}
+execute if score block bsc matches 11180 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:north,has_book:false,powered:false}}}
+execute if score block bsc matches 11181 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:south,has_book:true,powered:true}}}
+execute if score block bsc matches 11182 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:south,has_book:true,powered:false}}}
+execute if score block bsc matches 11183 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:south,has_book:false,powered:true}}}
+execute if score block bsc matches 11184 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:south,has_book:false,powered:false}}}
+execute if score block bsc matches 11185 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:west,has_book:true,powered:true}}}
+execute if score block bsc matches 11186 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:west,has_book:true,powered:false}}}
+execute if score block bsc matches 11187 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:west,has_book:false,powered:true}}}
+execute if score block bsc matches 11188 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:west,has_book:false,powered:false}}}
+execute if score block bsc matches 11189 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:east,has_book:true,powered:true}}}
+execute if score block bsc matches 11190 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:east,has_book:true,powered:false}}}
+execute if score block bsc matches 11191 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:east,has_book:false,powered:true}}}
+execute if score block bsc matches 11192 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lectern",Properties:{facing:east,has_book:false,powered:false}}}
+execute if score block bsc matches 11193 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smithing_table"}}

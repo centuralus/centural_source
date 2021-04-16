@@ -1,0 +1,12 @@
+execute if score block bsc matches 7812 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7813 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7814 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7815 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7816 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7817 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sandstone_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7818 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7819 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7820 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7821 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7822 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7823 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cut_sandstone_slab",Properties:{type:double,waterlogged:false}}}

@@ -1,0 +1,13 @@
+execute if block ~ ~ ~ minecraft:fletching_table run scoreboard players set block bsc 11164
+execute if block ~ ~ ~ minecraft:grindstone[face=floor,facing=north] run scoreboard players set block bsc 11165
+execute if block ~ ~ ~ minecraft:grindstone[face=floor,facing=south] run scoreboard players set block bsc 11166
+execute if block ~ ~ ~ minecraft:grindstone[face=floor,facing=west] run scoreboard players set block bsc 11167
+execute if block ~ ~ ~ minecraft:grindstone[face=floor,facing=east] run scoreboard players set block bsc 11168
+execute if block ~ ~ ~ minecraft:grindstone[face=wall,facing=north] run scoreboard players set block bsc 11169
+execute if block ~ ~ ~ minecraft:grindstone[face=wall,facing=south] run scoreboard players set block bsc 11170
+execute if block ~ ~ ~ minecraft:grindstone[face=wall,facing=west] run scoreboard players set block bsc 11171
+execute if block ~ ~ ~ minecraft:grindstone[face=wall,facing=east] run scoreboard players set block bsc 11172
+execute if block ~ ~ ~ minecraft:grindstone[face=ceiling,facing=north] run scoreboard players set block bsc 11173
+execute if block ~ ~ ~ minecraft:grindstone[face=ceiling,facing=south] run scoreboard players set block bsc 11174
+execute if block ~ ~ ~ minecraft:grindstone[face=ceiling,facing=west] run scoreboard players set block bsc 11175
+execute if block ~ ~ ~ minecraft:grindstone[face=ceiling,facing=east] run scoreboard players set block bsc 11176

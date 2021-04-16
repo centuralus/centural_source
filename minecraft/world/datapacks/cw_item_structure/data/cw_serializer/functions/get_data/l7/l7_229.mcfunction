@@ -1,0 +1,12 @@
+execute if score block bsc matches 7836 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7837 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7838 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7839 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7840 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7841 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:brick_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7842 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7843 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7844 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7845 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7846 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7847 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:stone_brick_slab",Properties:{type:double,waterlogged:false}}}

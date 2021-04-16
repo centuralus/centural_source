@@ -1,0 +1,16 @@
+execute if score block bsc matches 9056 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 9057 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 9058 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 9059 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 9060 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 9061 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 9062 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 9063 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dead_horn_coral_wall_fan",Properties:{facing:east,waterlogged:false}}}
+execute if score block bsc matches 9064 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:north,waterlogged:true}}}
+execute if score block bsc matches 9065 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:north,waterlogged:false}}}
+execute if score block bsc matches 9066 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:south,waterlogged:true}}}
+execute if score block bsc matches 9067 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:south,waterlogged:false}}}
+execute if score block bsc matches 9068 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:west,waterlogged:true}}}
+execute if score block bsc matches 9069 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:west,waterlogged:false}}}
+execute if score block bsc matches 9070 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:east,waterlogged:true}}}
+execute if score block bsc matches 9071 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:tube_coral_wall_fan",Properties:{facing:east,waterlogged:false}}}

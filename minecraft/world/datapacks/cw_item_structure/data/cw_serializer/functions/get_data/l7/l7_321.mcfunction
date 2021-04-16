@@ -1,0 +1,12 @@
+execute if score block bsc matches 10295 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10296 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10297 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10298 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10299 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10300 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_quartz_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 10301 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10302 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10303 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10304 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10305 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10306 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:granite_slab",Properties:{type:double,waterlogged:false}}}

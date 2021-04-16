@@ -1,0 +1,12 @@
+execute if score block bsc matches 7824 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7825 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7826 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7827 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7828 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7829 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:petrified_oak_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7830 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7831 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7832 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7833 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7834 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7835 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobblestone_slab",Properties:{type:double,waterlogged:false}}}

@@ -1,0 +1,13 @@
+execute if score block bsc matches 1328 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:north}}}
+execute if score block bsc matches 1329 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:east}}}
+execute if score block bsc matches 1330 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:south}}}
+execute if score block bsc matches 1331 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:west}}}
+execute if score block bsc matches 1332 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:up}}}
+execute if score block bsc matches 1333 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:true,facing:down}}}
+execute if score block bsc matches 1334 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:north}}}
+execute if score block bsc matches 1335 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:east}}}
+execute if score block bsc matches 1336 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:south}}}
+execute if score block bsc matches 1337 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:west}}}
+execute if score block bsc matches 1338 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:up}}}
+execute if score block bsc matches 1339 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:sticky_piston",Properties:{extended:false,facing:down}}}
+execute if score block bsc matches 1340 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cobweb"}}

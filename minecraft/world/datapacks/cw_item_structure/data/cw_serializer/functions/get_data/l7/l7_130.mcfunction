@@ -1,0 +1,14 @@
+execute if score block bsc matches 5140 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:redstone_lamp",Properties:{lit:true}}}
+execute if score block bsc matches 5141 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:redstone_lamp",Properties:{lit:false}}}
+execute if score block bsc matches 5142 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:0,facing:north}}}
+execute if score block bsc matches 5143 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:0,facing:south}}}
+execute if score block bsc matches 5144 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:0,facing:west}}}
+execute if score block bsc matches 5145 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:0,facing:east}}}
+execute if score block bsc matches 5146 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:1,facing:north}}}
+execute if score block bsc matches 5147 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:1,facing:south}}}
+execute if score block bsc matches 5148 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:1,facing:west}}}
+execute if score block bsc matches 5149 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:1,facing:east}}}
+execute if score block bsc matches 5150 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:2,facing:north}}}
+execute if score block bsc matches 5151 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:2,facing:south}}}
+execute if score block bsc matches 5152 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:2,facing:west}}}
+execute if score block bsc matches 5153 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:cocoa",Properties:{age:2,facing:east}}}

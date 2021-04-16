@@ -1,0 +1,12 @@
+execute if score block bsc matches 10283 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10284 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10285 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10286 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10287 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10288 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:end_stone_brick_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 10289 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 10290 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 10291 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 10292 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 10293 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 10294 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:smooth_sandstone_slab",Properties:{type:double,waterlogged:false}}}

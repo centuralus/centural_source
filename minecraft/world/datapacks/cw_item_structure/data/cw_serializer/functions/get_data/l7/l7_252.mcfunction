@@ -1,0 +1,12 @@
+execute if score block bsc matches 8742 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8743 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8744 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8745 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8746 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8747 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:white_shulker_box",Properties:{facing:down}}}
+execute if score block bsc matches 8748 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8749 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8750 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8751 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8752 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8753 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:orange_shulker_box",Properties:{facing:down}}}

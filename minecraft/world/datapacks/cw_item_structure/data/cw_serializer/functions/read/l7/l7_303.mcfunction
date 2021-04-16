@@ -1,0 +1,16 @@
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9056
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9057
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9058
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9059
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9060
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9061
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9062
+execute if block ~ ~ ~ minecraft:dead_horn_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9063
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9064
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9065
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9066
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9067
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9068
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9069
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9070
+execute if block ~ ~ ~ minecraft:tube_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9071

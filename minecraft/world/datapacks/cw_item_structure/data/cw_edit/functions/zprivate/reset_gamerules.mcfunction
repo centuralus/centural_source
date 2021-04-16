@@ -1,0 +1,1 @@
+execute if score #sendFeedback cw_edit matches 1 run gamerule sendCommandFeedback true

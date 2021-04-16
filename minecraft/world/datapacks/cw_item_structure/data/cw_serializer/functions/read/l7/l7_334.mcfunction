@@ -1,0 +1,17 @@
+execute if block ~ ~ ~ minecraft:lectern[facing=north,has_book=true,powered=true] run scoreboard players set block bsc 11177
+execute if block ~ ~ ~ minecraft:lectern[facing=north,has_book=true,powered=false] run scoreboard players set block bsc 11178
+execute if block ~ ~ ~ minecraft:lectern[facing=north,has_book=false,powered=true] run scoreboard players set block bsc 11179
+execute if block ~ ~ ~ minecraft:lectern[facing=north,has_book=false,powered=false] run scoreboard players set block bsc 11180
+execute if block ~ ~ ~ minecraft:lectern[facing=south,has_book=true,powered=true] run scoreboard players set block bsc 11181
+execute if block ~ ~ ~ minecraft:lectern[facing=south,has_book=true,powered=false] run scoreboard players set block bsc 11182
+execute if block ~ ~ ~ minecraft:lectern[facing=south,has_book=false,powered=true] run scoreboard players set block bsc 11183
+execute if block ~ ~ ~ minecraft:lectern[facing=south,has_book=false,powered=false] run scoreboard players set block bsc 11184
+execute if block ~ ~ ~ minecraft:lectern[facing=west,has_book=true,powered=true] run scoreboard players set block bsc 11185
+execute if block ~ ~ ~ minecraft:lectern[facing=west,has_book=true,powered=false] run scoreboard players set block bsc 11186
+execute if block ~ ~ ~ minecraft:lectern[facing=west,has_book=false,powered=true] run scoreboard players set block bsc 11187
+execute if block ~ ~ ~ minecraft:lectern[facing=west,has_book=false,powered=false] run scoreboard players set block bsc 11188
+execute if block ~ ~ ~ minecraft:lectern[facing=east,has_book=true,powered=true] run scoreboard players set block bsc 11189
+execute if block ~ ~ ~ minecraft:lectern[facing=east,has_book=true,powered=false] run scoreboard players set block bsc 11190
+execute if block ~ ~ ~ minecraft:lectern[facing=east,has_book=false,powered=true] run scoreboard players set block bsc 11191
+execute if block ~ ~ ~ minecraft:lectern[facing=east,has_book=false,powered=false] run scoreboard players set block bsc 11192
+execute if block ~ ~ ~ minecraft:smithing_table run scoreboard players set block bsc 11193

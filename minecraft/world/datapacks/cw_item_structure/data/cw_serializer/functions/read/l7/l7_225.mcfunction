@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:acacia_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7788
+execute if block ~ ~ ~ minecraft:acacia_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7789
+execute if block ~ ~ ~ minecraft:acacia_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7790
+execute if block ~ ~ ~ minecraft:acacia_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7791
+execute if block ~ ~ ~ minecraft:acacia_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7792
+execute if block ~ ~ ~ minecraft:acacia_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7793
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7794
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7795
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7796
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7797
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7798
+execute if block ~ ~ ~ minecraft:dark_oak_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7799

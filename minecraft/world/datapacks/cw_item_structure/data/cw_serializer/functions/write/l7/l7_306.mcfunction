@@ -1,0 +1,9 @@
+execute if score block bsc matches 9104 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=1,waterlogged=true]
+execute if score block bsc matches 9105 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=1,waterlogged=false]
+execute if score block bsc matches 9106 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=2,waterlogged=true]
+execute if score block bsc matches 9107 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=2,waterlogged=false]
+execute if score block bsc matches 9108 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=3,waterlogged=true]
+execute if score block bsc matches 9109 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=3,waterlogged=false]
+execute if score block bsc matches 9110 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=4,waterlogged=true]
+execute if score block bsc matches 9111 run setblock ~ ~ ~ minecraft:sea_pickle[pickles=4,waterlogged=false]
+execute if score block bsc matches 9112 run setblock ~ ~ ~ minecraft:blue_ice

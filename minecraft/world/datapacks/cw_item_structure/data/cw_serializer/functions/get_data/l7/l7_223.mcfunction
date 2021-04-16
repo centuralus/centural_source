@@ -1,0 +1,12 @@
+execute if score block bsc matches 7764 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7765 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7766 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7767 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7768 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7769 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:oak_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7770 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7771 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7772 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7773 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7774 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7775 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:spruce_slab",Properties:{type:double,waterlogged:false}}}

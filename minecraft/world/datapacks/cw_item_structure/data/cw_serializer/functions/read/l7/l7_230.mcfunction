@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7848
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7849
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7850
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7851
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7852
+execute if block ~ ~ ~ minecraft:nether_brick_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7853
+execute if block ~ ~ ~ minecraft:quartz_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7854
+execute if block ~ ~ ~ minecraft:quartz_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7855
+execute if block ~ ~ ~ minecraft:quartz_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7856
+execute if block ~ ~ ~ minecraft:quartz_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7857
+execute if block ~ ~ ~ minecraft:quartz_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7858
+execute if block ~ ~ ~ minecraft:quartz_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7859

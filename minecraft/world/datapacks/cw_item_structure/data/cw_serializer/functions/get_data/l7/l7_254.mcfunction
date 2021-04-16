@@ -1,0 +1,12 @@
+execute if score block bsc matches 8766 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8767 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8768 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8769 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8770 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8771 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:yellow_shulker_box",Properties:{facing:down}}}
+execute if score block bsc matches 8772 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:north}}}
+execute if score block bsc matches 8773 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:east}}}
+execute if score block bsc matches 8774 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:south}}}
+execute if score block bsc matches 8775 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:west}}}
+execute if score block bsc matches 8776 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:up}}}
+execute if score block bsc matches 8777 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:lime_shulker_box",Properties:{facing:down}}}

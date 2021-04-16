@@ -1,0 +1,14 @@
+execute if block ~ ~ ~ minecraft:redstone_lamp[lit=true] run scoreboard players set block bsc 5140
+execute if block ~ ~ ~ minecraft:redstone_lamp[lit=false] run scoreboard players set block bsc 5141
+execute if block ~ ~ ~ minecraft:cocoa[age=0,facing=north] run scoreboard players set block bsc 5142
+execute if block ~ ~ ~ minecraft:cocoa[age=0,facing=south] run scoreboard players set block bsc 5143
+execute if block ~ ~ ~ minecraft:cocoa[age=0,facing=west] run scoreboard players set block bsc 5144
+execute if block ~ ~ ~ minecraft:cocoa[age=0,facing=east] run scoreboard players set block bsc 5145
+execute if block ~ ~ ~ minecraft:cocoa[age=1,facing=north] run scoreboard players set block bsc 5146
+execute if block ~ ~ ~ minecraft:cocoa[age=1,facing=south] run scoreboard players set block bsc 5147
+execute if block ~ ~ ~ minecraft:cocoa[age=1,facing=west] run scoreboard players set block bsc 5148
+execute if block ~ ~ ~ minecraft:cocoa[age=1,facing=east] run scoreboard players set block bsc 5149
+execute if block ~ ~ ~ minecraft:cocoa[age=2,facing=north] run scoreboard players set block bsc 5150
+execute if block ~ ~ ~ minecraft:cocoa[age=2,facing=south] run scoreboard players set block bsc 5151
+execute if block ~ ~ ~ minecraft:cocoa[age=2,facing=west] run scoreboard players set block bsc 5152
+execute if block ~ ~ ~ minecraft:cocoa[age=2,facing=east] run scoreboard players set block bsc 5153

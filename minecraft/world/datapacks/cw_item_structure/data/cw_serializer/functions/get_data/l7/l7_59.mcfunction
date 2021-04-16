@@ -1,0 +1,13 @@
+execute if score block bsc matches 1398 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:black_wool"}}
+execute if score block bsc matches 1399 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:north,type:normal}}}
+execute if score block bsc matches 1400 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:north,type:sticky}}}
+execute if score block bsc matches 1401 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:east,type:normal}}}
+execute if score block bsc matches 1402 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:east,type:sticky}}}
+execute if score block bsc matches 1403 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:south,type:normal}}}
+execute if score block bsc matches 1404 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:south,type:sticky}}}
+execute if score block bsc matches 1405 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:west,type:normal}}}
+execute if score block bsc matches 1406 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:west,type:sticky}}}
+execute if score block bsc matches 1407 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:up,type:normal}}}
+execute if score block bsc matches 1408 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:up,type:sticky}}}
+execute if score block bsc matches 1409 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:down,type:normal}}}
+execute if score block bsc matches 1410 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:moving_piston",Properties:{facing:down,type:sticky}}}

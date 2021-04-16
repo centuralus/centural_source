@@ -1,0 +1,9 @@
+execute if score block bsc matches 3919 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:1}}}
+execute if score block bsc matches 3920 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:2}}}
+execute if score block bsc matches 3921 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:3}}}
+execute if score block bsc matches 3922 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:4}}}
+execute if score block bsc matches 3923 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:5}}}
+execute if score block bsc matches 3924 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:6}}}
+execute if score block bsc matches 3925 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:7}}}
+execute if score block bsc matches 3926 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:snow",Properties:{layers:8}}}
+execute if score block bsc matches 3927 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:ice"}}

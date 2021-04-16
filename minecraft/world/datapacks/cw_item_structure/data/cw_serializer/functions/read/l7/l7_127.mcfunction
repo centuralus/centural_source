@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=true,has_bottle_2=true] run scoreboard players set block bsc 5117
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=true,has_bottle_2=false] run scoreboard players set block bsc 5118
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=false,has_bottle_2=true] run scoreboard players set block bsc 5119
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=false,has_bottle_2=false] run scoreboard players set block bsc 5120
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=true,has_bottle_2=true] run scoreboard players set block bsc 5121
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=true,has_bottle_2=false] run scoreboard players set block bsc 5122
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=true] run scoreboard players set block bsc 5123
+execute if block ~ ~ ~ minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false] run scoreboard players set block bsc 5124
+execute if block ~ ~ ~ minecraft:cauldron[level=0] run scoreboard players set block bsc 5125
+execute if block ~ ~ ~ minecraft:cauldron[level=1] run scoreboard players set block bsc 5126
+execute if block ~ ~ ~ minecraft:cauldron[level=2] run scoreboard players set block bsc 5127
+execute if block ~ ~ ~ minecraft:cauldron[level=3] run scoreboard players set block bsc 5128

@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10283
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10284
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10285
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10286
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10287
+execute if block ~ ~ ~ minecraft:end_stone_brick_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10288
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10289
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10290
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10291
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10292
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10293
+execute if block ~ ~ ~ minecraft:smooth_sandstone_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10294

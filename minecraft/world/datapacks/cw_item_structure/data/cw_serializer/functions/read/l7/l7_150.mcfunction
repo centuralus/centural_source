@@ -1,0 +1,16 @@
+execute if block ~ ~ ~ minecraft:carrots[age=0] run scoreboard players set block bsc 5794
+execute if block ~ ~ ~ minecraft:carrots[age=1] run scoreboard players set block bsc 5795
+execute if block ~ ~ ~ minecraft:carrots[age=2] run scoreboard players set block bsc 5796
+execute if block ~ ~ ~ minecraft:carrots[age=3] run scoreboard players set block bsc 5797
+execute if block ~ ~ ~ minecraft:carrots[age=4] run scoreboard players set block bsc 5798
+execute if block ~ ~ ~ minecraft:carrots[age=5] run scoreboard players set block bsc 5799
+execute if block ~ ~ ~ minecraft:carrots[age=6] run scoreboard players set block bsc 5800
+execute if block ~ ~ ~ minecraft:carrots[age=7] run scoreboard players set block bsc 5801
+execute if block ~ ~ ~ minecraft:potatoes[age=0] run scoreboard players set block bsc 5802
+execute if block ~ ~ ~ minecraft:potatoes[age=1] run scoreboard players set block bsc 5803
+execute if block ~ ~ ~ minecraft:potatoes[age=2] run scoreboard players set block bsc 5804
+execute if block ~ ~ ~ minecraft:potatoes[age=3] run scoreboard players set block bsc 5805
+execute if block ~ ~ ~ minecraft:potatoes[age=4] run scoreboard players set block bsc 5806
+execute if block ~ ~ ~ minecraft:potatoes[age=5] run scoreboard players set block bsc 5807
+execute if block ~ ~ ~ minecraft:potatoes[age=6] run scoreboard players set block bsc 5808
+execute if block ~ ~ ~ minecraft:potatoes[age=7] run scoreboard players set block bsc 5809

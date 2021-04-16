@@ -1,0 +1,13 @@
+execute if score block bsc matches 1328 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=north]
+execute if score block bsc matches 1329 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=east]
+execute if score block bsc matches 1330 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=south]
+execute if score block bsc matches 1331 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=west]
+execute if score block bsc matches 1332 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=up]
+execute if score block bsc matches 1333 run setblock ~ ~ ~ minecraft:sticky_piston[extended=true,facing=down]
+execute if score block bsc matches 1334 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=north]
+execute if score block bsc matches 1335 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=east]
+execute if score block bsc matches 1336 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=south]
+execute if score block bsc matches 1337 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=west]
+execute if score block bsc matches 1338 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=up]
+execute if score block bsc matches 1339 run setblock ~ ~ ~ minecraft:sticky_piston[extended=false,facing=down]
+execute if score block bsc matches 1340 run setblock ~ ~ ~ minecraft:cobweb

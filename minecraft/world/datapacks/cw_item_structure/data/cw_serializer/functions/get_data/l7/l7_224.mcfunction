@@ -1,0 +1,12 @@
+execute if score block bsc matches 7776 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7777 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7778 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7779 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7780 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7781 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:birch_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7782 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7783 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7784 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7785 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7786 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7787 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:jungle_slab",Properties:{type:double,waterlogged:false}}}

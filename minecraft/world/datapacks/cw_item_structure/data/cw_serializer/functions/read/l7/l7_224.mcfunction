@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:birch_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7776
+execute if block ~ ~ ~ minecraft:birch_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7777
+execute if block ~ ~ ~ minecraft:birch_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7778
+execute if block ~ ~ ~ minecraft:birch_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7779
+execute if block ~ ~ ~ minecraft:birch_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7780
+execute if block ~ ~ ~ minecraft:birch_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7781
+execute if block ~ ~ ~ minecraft:jungle_slab[type=top,waterlogged=true] run scoreboard players set block bsc 7782
+execute if block ~ ~ ~ minecraft:jungle_slab[type=top,waterlogged=false] run scoreboard players set block bsc 7783
+execute if block ~ ~ ~ minecraft:jungle_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 7784
+execute if block ~ ~ ~ minecraft:jungle_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 7785
+execute if block ~ ~ ~ minecraft:jungle_slab[type=double,waterlogged=true] run scoreboard players set block bsc 7786
+execute if block ~ ~ ~ minecraft:jungle_slab[type=double,waterlogged=false] run scoreboard players set block bsc 7787

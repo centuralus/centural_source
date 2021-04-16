@@ -1,0 +1,14 @@
+execute if block ~ ~ ~ minecraft:tall_seagrass[half=upper] run scoreboard players set block bsc 1345
+execute if block ~ ~ ~ minecraft:tall_seagrass[half=lower] run scoreboard players set block bsc 1346
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=north] run scoreboard players set block bsc 1347
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=east] run scoreboard players set block bsc 1348
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=south] run scoreboard players set block bsc 1349
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=west] run scoreboard players set block bsc 1350
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=up] run scoreboard players set block bsc 1351
+execute if block ~ ~ ~ minecraft:piston[extended=true,facing=down] run scoreboard players set block bsc 1352
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=north] run scoreboard players set block bsc 1353
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=east] run scoreboard players set block bsc 1354
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=south] run scoreboard players set block bsc 1355
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=west] run scoreboard players set block bsc 1356
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=up] run scoreboard players set block bsc 1357
+execute if block ~ ~ ~ minecraft:piston[extended=false,facing=down] run scoreboard players set block bsc 1358

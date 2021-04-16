@@ -1,0 +1,13 @@
+execute if score block bsc matches 11164 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:fletching_table"}}
+execute if score block bsc matches 11165 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:floor,facing:north}}}
+execute if score block bsc matches 11166 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:floor,facing:south}}}
+execute if score block bsc matches 11167 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:floor,facing:west}}}
+execute if score block bsc matches 11168 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:floor,facing:east}}}
+execute if score block bsc matches 11169 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:wall,facing:north}}}
+execute if score block bsc matches 11170 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:wall,facing:south}}}
+execute if score block bsc matches 11171 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:wall,facing:west}}}
+execute if score block bsc matches 11172 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:wall,facing:east}}}
+execute if score block bsc matches 11173 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:ceiling,facing:north}}}
+execute if score block bsc matches 11174 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:ceiling,facing:south}}}
+execute if score block bsc matches 11175 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:ceiling,facing:west}}}
+execute if score block bsc matches 11176 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:grindstone",Properties:{face:ceiling,facing:east}}}

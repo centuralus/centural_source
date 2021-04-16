@@ -1,0 +1,12 @@
+execute if score block bsc matches 7788 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7789 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7790 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7791 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7792 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7793 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:acacia_slab",Properties:{type:double,waterlogged:false}}}
+execute if score block bsc matches 7794 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:top,waterlogged:true}}}
+execute if score block bsc matches 7795 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:top,waterlogged:false}}}
+execute if score block bsc matches 7796 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:bottom,waterlogged:true}}}
+execute if score block bsc matches 7797 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:bottom,waterlogged:false}}}
+execute if score block bsc matches 7798 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:double,waterlogged:true}}}
+execute if score block bsc matches 7799 run data modify storage cw_serializer:nbt block set value {BlockState:{Name:"minecraft:dark_oak_slab",Properties:{type:double,waterlogged:false}}}

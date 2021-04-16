@@ -1,0 +1,12 @@
+execute if block ~ ~ ~ minecraft:andesite_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10307
+execute if block ~ ~ ~ minecraft:andesite_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10308
+execute if block ~ ~ ~ minecraft:andesite_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10309
+execute if block ~ ~ ~ minecraft:andesite_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10310
+execute if block ~ ~ ~ minecraft:andesite_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10311
+execute if block ~ ~ ~ minecraft:andesite_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10312
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=top,waterlogged=true] run scoreboard players set block bsc 10313
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=top,waterlogged=false] run scoreboard players set block bsc 10314
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=bottom,waterlogged=true] run scoreboard players set block bsc 10315
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=bottom,waterlogged=false] run scoreboard players set block bsc 10316
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=double,waterlogged=true] run scoreboard players set block bsc 10317
+execute if block ~ ~ ~ minecraft:red_nether_brick_slab[type=double,waterlogged=false] run scoreboard players set block bsc 10318

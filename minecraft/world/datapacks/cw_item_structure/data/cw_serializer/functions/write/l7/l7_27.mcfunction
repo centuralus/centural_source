@@ -1,0 +1,6 @@
+execute if score block bsc matches 126 run setblock ~ ~ ~ minecraft:stripped_oak_wood[axis=x]
+execute if score block bsc matches 127 run setblock ~ ~ ~ minecraft:stripped_oak_wood[axis=y]
+execute if score block bsc matches 128 run setblock ~ ~ ~ minecraft:stripped_oak_wood[axis=z]
+execute if score block bsc matches 129 run setblock ~ ~ ~ minecraft:stripped_spruce_wood[axis=x]
+execute if score block bsc matches 130 run setblock ~ ~ ~ minecraft:stripped_spruce_wood[axis=y]
+execute if score block bsc matches 131 run setblock ~ ~ ~ minecraft:stripped_spruce_wood[axis=z]

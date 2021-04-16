@@ -1,0 +1,9 @@
+execute if score block bsc matches 3919 run setblock ~ ~ ~ minecraft:snow[layers=1]
+execute if score block bsc matches 3920 run setblock ~ ~ ~ minecraft:snow[layers=2]
+execute if score block bsc matches 3921 run setblock ~ ~ ~ minecraft:snow[layers=3]
+execute if score block bsc matches 3922 run setblock ~ ~ ~ minecraft:snow[layers=4]
+execute if score block bsc matches 3923 run setblock ~ ~ ~ minecraft:snow[layers=5]
+execute if score block bsc matches 3924 run setblock ~ ~ ~ minecraft:snow[layers=6]
+execute if score block bsc matches 3925 run setblock ~ ~ ~ minecraft:snow[layers=7]
+execute if score block bsc matches 3926 run setblock ~ ~ ~ minecraft:snow[layers=8]
+execute if score block bsc matches 3927 run setblock ~ ~ ~ minecraft:ice

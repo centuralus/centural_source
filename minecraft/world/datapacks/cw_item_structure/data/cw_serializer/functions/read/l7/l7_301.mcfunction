@@ -1,0 +1,16 @@
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9024
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9025
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9026
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9027
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9028
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9029
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9030
+execute if block ~ ~ ~ minecraft:dead_tube_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9031
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9032
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9033
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9034
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9035
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9036
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9037
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9038
+execute if block ~ ~ ~ minecraft:dead_brain_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9039

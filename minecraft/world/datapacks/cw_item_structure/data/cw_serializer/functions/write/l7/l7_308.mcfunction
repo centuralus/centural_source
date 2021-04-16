@@ -1,0 +1,13 @@
+execute if score block bsc matches 9116 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=none,stage=0]
+execute if score block bsc matches 9117 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=none,stage=1]
+execute if score block bsc matches 9118 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=small,stage=0]
+execute if score block bsc matches 9119 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=small,stage=1]
+execute if score block bsc matches 9120 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=large,stage=0]
+execute if score block bsc matches 9121 run setblock ~ ~ ~ minecraft:bamboo[age=0,leaves=large,stage=1]
+execute if score block bsc matches 9122 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=none,stage=0]
+execute if score block bsc matches 9123 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=none,stage=1]
+execute if score block bsc matches 9124 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=small,stage=0]
+execute if score block bsc matches 9125 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=small,stage=1]
+execute if score block bsc matches 9126 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=large,stage=0]
+execute if score block bsc matches 9127 run setblock ~ ~ ~ minecraft:bamboo[age=1,leaves=large,stage=1]
+execute if score block bsc matches 9128 run setblock ~ ~ ~ minecraft:potted_bamboo

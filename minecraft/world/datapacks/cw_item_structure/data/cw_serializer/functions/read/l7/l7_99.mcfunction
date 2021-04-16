@@ -1,0 +1,11 @@
+execute if block ~ ~ ~ minecraft:jack_o_lantern[facing=north] run scoreboard players set block bsc 4006
+execute if block ~ ~ ~ minecraft:jack_o_lantern[facing=south] run scoreboard players set block bsc 4007
+execute if block ~ ~ ~ minecraft:jack_o_lantern[facing=west] run scoreboard players set block bsc 4008
+execute if block ~ ~ ~ minecraft:jack_o_lantern[facing=east] run scoreboard players set block bsc 4009
+execute if block ~ ~ ~ minecraft:cake[bites=0] run scoreboard players set block bsc 4010
+execute if block ~ ~ ~ minecraft:cake[bites=1] run scoreboard players set block bsc 4011
+execute if block ~ ~ ~ minecraft:cake[bites=2] run scoreboard players set block bsc 4012
+execute if block ~ ~ ~ minecraft:cake[bites=3] run scoreboard players set block bsc 4013
+execute if block ~ ~ ~ minecraft:cake[bites=4] run scoreboard players set block bsc 4014
+execute if block ~ ~ ~ minecraft:cake[bites=5] run scoreboard players set block bsc 4015
+execute if block ~ ~ ~ minecraft:cake[bites=6] run scoreboard players set block bsc 4016

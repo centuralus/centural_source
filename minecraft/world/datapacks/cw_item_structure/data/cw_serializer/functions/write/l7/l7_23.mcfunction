@@ -1,0 +1,6 @@
+execute if score block bsc matches 102 run setblock ~ ~ ~ minecraft:stripped_dark_oak_log[axis=x]
+execute if score block bsc matches 103 run setblock ~ ~ ~ minecraft:stripped_dark_oak_log[axis=y]
+execute if score block bsc matches 104 run setblock ~ ~ ~ minecraft:stripped_dark_oak_log[axis=z]
+execute if score block bsc matches 105 run setblock ~ ~ ~ minecraft:stripped_oak_log[axis=x]
+execute if score block bsc matches 106 run setblock ~ ~ ~ minecraft:stripped_oak_log[axis=y]
+execute if score block bsc matches 107 run setblock ~ ~ ~ minecraft:stripped_oak_log[axis=z]

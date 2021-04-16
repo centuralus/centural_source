@@ -1,0 +1,16 @@
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9072
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9073
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9074
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9075
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9076
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9077
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9078
+execute if block ~ ~ ~ minecraft:brain_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9079
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=north,waterlogged=true] run scoreboard players set block bsc 9080
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=north,waterlogged=false] run scoreboard players set block bsc 9081
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=south,waterlogged=true] run scoreboard players set block bsc 9082
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=south,waterlogged=false] run scoreboard players set block bsc 9083
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=west,waterlogged=true] run scoreboard players set block bsc 9084
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=west,waterlogged=false] run scoreboard players set block bsc 9085
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=east,waterlogged=true] run scoreboard players set block bsc 9086
+execute if block ~ ~ ~ minecraft:bubble_coral_wall_fan[facing=east,waterlogged=false] run scoreboard players set block bsc 9087
