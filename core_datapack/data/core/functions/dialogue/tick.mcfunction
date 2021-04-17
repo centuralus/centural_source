@@ -12,7 +12,7 @@ execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] run tag @
 # Default dialogue Timeout
 execute if entity @p[tag=talk_timer] as @a[tag=talk_timer] if entity @s[scores={talk_timer=20..},tag=rotation] run tag @s remove rotation
 
-execute if entity @p[tag=talk_timer] as @a[tag=talk_timer] if entity @s[scores={talk_timer=20..}] at @s if entity @e[tag=closest_villager] run tag @s remove closest_villager
+execute if entity @p[tag=talk_timer] as @a[tag=talk_timer] if entity @s[scores={talk_timer=20..}] at @s if entity @e[tag=closest_villager] run tag @e[tag=closest_villager] remove closest_villager
 
 execute if entity @p[tag=talk_timer] as @a[tag=talk_timer] if entity @s[scores={talk_timer=20..}] run tag @s remove talk_timer
 execute unless entity @p[tag=talk_timer] run scoreboard objectives remove talk_timer
