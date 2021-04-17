@@ -11,8 +11,8 @@ execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512] as 
 execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512,team=player] as @a[distance=..512,team=player] run effect give @s minecraft:mining_fatigue 2 200 true
 
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run tag @s add spawn
-execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:spawn run tp @s ~ ~ ~
-execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:spawn run tag @s remove spawn
+execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tp @s ~ ~ ~
+execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tag @s remove spawn
 
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players reset @s spawn
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..32] as @a[distance=..32] at @s if block ~ ~-1 ~ minecraft:smooth_quartz align x align y align z positioned ~.5 ~2.5 ~.5 unless entity @e[type=item,tag=icon,distance=..1] run summon item ~ ~ ~ {NoGravity:1b,Glowing:1b,CustomNameVisible:1b,Age:-32768,PickupDelay:32767,Tags:["icon"],Item:{id:"minecraft:small_amethyst_bud",Count:1b}}
