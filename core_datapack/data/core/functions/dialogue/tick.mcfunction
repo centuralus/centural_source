@@ -48,4 +48,6 @@ execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] run score
 execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] run tag @s remove talk_to_villager
 
 #
+
+execute if entity @e[tag=closest_villager] as @e[tag=closest_villager] run tellraw @a [{"selector":"@s"}," found closest villager"]
 execute if entity @e[tag=closest_villager] as @e[tag=closest_villager] run tag @s remove closest_villager
