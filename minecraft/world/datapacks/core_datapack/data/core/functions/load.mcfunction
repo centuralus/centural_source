@@ -53,6 +53,9 @@ function core:wild/load
 function core:gamemode/load
 function core:role/load
 function core:dialogue/load
+
+
+function core:spawn/load
 #function centural:load
 
 #Start Builder
