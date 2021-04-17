@@ -1,6 +1,6 @@
 execute as @a unless entity @s[scores={spawn=-2147483648..2147483647}] run scoreboard players enable @s spawn
 
-execute if entity @p[team=,scores={walk_one_cm=0}] as @a[team=,scores={walk_one_cm=0}] in minecraft:spawn run tp @s @e[tag=spawn,limit=1,type=armor_stand]
+execute if entity @p[team=,scores={walk_one_cm=0}] as @a[team=,scores={walk_one_cm=0}] in minecraft:overworld run tp @s @e[tag=spawn,limit=1,type=armor_stand]
 
 execute in minecraft:spawn if entity @e[tag=wild,type=armor_stand] at @e[tag=wild,type=armor_stand] if entity @p[distance=..32] as @a[distance=..32] run particle minecraft:dripping_water ~ ~1 ~ 1 1 1 1 1 force @s
 
