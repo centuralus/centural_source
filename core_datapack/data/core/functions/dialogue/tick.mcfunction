@@ -1,5 +1,5 @@
 # Start Handle Right Click Villager Stat
-execute if entity @p[scores={talk_to_villager=1..}] as @a[scores={talk_to_villager=1..}] at @s if entity @e[tag=dialogue,distance=..8] positioned ~ ~1.58 ~ positioned ^ ^ ^1.25 run function core:raycast/closest_villager
+execute if entity @p[scores={talk_to_villager=1..}] as @a[scores={talk_to_villager=1..}] at @s if entity @e[tag=dialogue,distance=..8] positioned ~ ~1.58 ~ positioned ^ ^ ^2 run function core:raycast/closest_villager
 
 execute if entity @p[scores={talk_to_villager=1..}] as @a[scores={talk_to_villager=1..}] at @s if entity @e[tag=dialogue,tag=closest_villager,distance=..8] run tag @s add talk_to_villager
 execute if entity @p[scores={talk_to_villager=1..}] as @a[scores={talk_to_villager=1..}] at @s if entity @e[tag=dialogue,distance=..8] run tag @s add rotation
