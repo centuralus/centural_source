@@ -23,17 +23,17 @@ execute if entity @p[tag=set_return] as @a[tag=set_return] run tag @s remove set
 #return
 execute if entity @p[scores={return=1..}] as @a[scores={return=1..}] run tag @s add return
 
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -100 0 run setblock 0 -100 0 minecraft:end_gateway{ExactTeleport:1b}
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -101 0 run setblock 0 -101 0 bedrock
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 1 0 run setblock 0 1 0 minecraft:end_gateway{ExactTeleport:1b}
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 0 0 run setblock 0 0 0 bedrock
 
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -100 0 store result block 0 -100 0 ExitPortal.X int 1 run scoreboard players get @s return_x
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -100 0 store result block 0 -100 0 ExitPortal.Y int 1 run scoreboard players get @s return_y
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -100 0 store result block 0 -100 0 ExitPortal.Z int 1 run scoreboard players get @s return_z
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 1 0 store result block 0 1 0 ExitPortal.X int 1 run scoreboard players get @s return_x
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 1 0 store result block 0 1 0 ExitPortal.Y int 1 run scoreboard players get @s return_y
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 1 0 store result block 0 1 0 ExitPortal.Z int 1 run scoreboard players get @s return_z
 
-execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 -100 0 positioned 0 -100 0 run tp ~ ~ ~
+execute if entity @p[tag=return,scores={return_dimension=1}] as @p[tag=return,scores={return_dimension=1}] in minecraft:overworld positioned 0 1 0 positioned 0 1 0 run tp ~ ~ ~
 
-execute in minecraft:overworld if block 0 -100 0 end_gateway positioned 0 -100 0 unless entity @p[distance=..2] unless entity @p[tag=return] run setblock 0 -100 0 air
-execute in minecraft:overworld if block 0 -101 0 bedrock positioned 0 -101 0 unless entity @p[distance=..2] unless entity @p[tag=return] run setblock 0 -101 0 air
+execute in minecraft:overworld if block 0 1 0 end_gateway positioned 0 1 0 unless entity @p[distance=..2] unless entity @p[tag=return] run setblock 0 1 0 air
+execute in minecraft:overworld if block 0 0 0 bedrock positioned 0 0 0 unless entity @p[distance=..2] unless entity @p[tag=return] run setblock 0 0 0 air
 
 execute if entity @p[tag=return,scores={return_dimension=2}] as @p[tag=return,scores={return_dimension=2}] in minecraft:the_nether positioned 0 200 0 run setblock 0 200 0 minecraft:end_gateway{ExactTeleport:1b}
 execute if entity @p[tag=return,scores={return_dimension=2}] as @p[tag=return,scores={return_dimension=2}] in minecraft:the_nether positioned 0 199 0 run setblock 0 199 0 bedrock
