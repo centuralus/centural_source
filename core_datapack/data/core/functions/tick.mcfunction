@@ -21,6 +21,8 @@ execute if entity @p[tag=!joined] as @a[tag=monitor] at @s run playsound minecra
 
 
 #
+
+function core:elevator/tick
 function core:logout/tick
 function core:protected/tick
 function core:menu/tick
