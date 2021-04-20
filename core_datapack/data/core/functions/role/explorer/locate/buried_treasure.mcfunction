@@ -7,13 +7,13 @@ execute if entity @p[tag=locate_buried_treasure] as @p[tag=locate_buried_treasur
 
 execute if entity @e[tag=locate_buried_treasure,type=item] unless entity @p[tag=locate_buried_treasure,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_one_minute "Temporary Timer"
 
-execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=1}] as @e[tag=locate_buried_treasure,type=item] at @s run fill ~ -65 ~ ~ -65 ~ command_block{Command:"locate buried_treasure",auto:1b} replace air
+execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=1}] as @e[tag=locate_buried_treasure,type=item] at @s run fill ~ 0 ~ ~ 0 ~ command_block{Command:"locate buried_treasure",auto:1b} replace air
 
-execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=5}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify entity @s Item.tag.pages[0] set from block ~ -65 ~ LastOutput
+execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=5}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify entity @s Item.tag.pages[0] set from block ~ 0 ~ LastOutput
 
 execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=6}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify storage string:io queue append value {string:"",maxchars:15,ignore:'{"extra":[{"translate":"commands.locate.success","with":["buried_treasure",{"color":"green","clickEvent":{"action":"suggest_command","value":"/tp @s ',callback:{command:"function string:call",id:1},async:{iterations:10}}
 
-execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=6}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify storage string:io queue[0].string set from block ~ -65 ~ LastOutput
+execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=6}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify storage string:io queue[0].string set from block ~ 0 ~ LastOutput
 
 execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=6}] as @e[tag=locate_buried_treasure,type=item] at @s run tellraw @a[team=explorer] ["[#01] Input: ",{"storage":"string:io","nbt":"queue[-1].string","interpret":false}]
 
@@ -25,7 +25,7 @@ execute if score $callback string matches 1 run function core:role/explorer/loca
 
 
 
-execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=10}] as @e[tag=locate_buried_treasure,type=item] at @s run fill ~ -65 ~ ~ -65 ~ air replace command_block
+execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=10}] as @e[tag=locate_buried_treasure,type=item] at @s run fill ~ 0 ~ ~ 0 ~ air replace command_block
 
 execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=12}] as @e[tag=locate_buried_treasure,type=item] at @s run data modify entity @s PickupDelay set value 0
 
