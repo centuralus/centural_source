@@ -22,8 +22,6 @@ execute as @a unless entity @s[scores={poll_create=-2147483648..2147483647}] run
 execute if entity @p[scores={poll_create=2}] as @a[scores={poll_create=2}] run tag @s add poll_create
 
 
-execute if entity @p[tag=poll_create] as @a[tag=poll_create] 
-
 execute if entity @p[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] as @a[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] run tellraw @s {"text":"You already have a Poll Create book and quil, deleing existing one and giving a new one now.","color":"yellow"}
 execute if entity @p[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] as @a[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] run clear @s writable_book{poll_create:1b} 1
 
@@ -38,5 +36,14 @@ execute if entity @p[tag=poll_create] as @a[tag=poll_create] run tag @s remove p
 
 
 execute if entity @p[scores={poll_create=1..}] as @a[scores={poll_create=1..}] run scoreboard players reset @s poll_create
+
+execute if entity @p[scores={poll_create=3}] as @a[scores={poll_create=3}] run tag @s add poll_list
+execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run summon writable_book{Tags:["poll_list"],PickupDelay:32767s,tag:{poll_list:1b}} ~ ~ ~
+
+execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run data modify entity @e[tag=poll_list,distance=..1,limit=1] Display set from storage core:poll player_polls[0]
+
+execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run data modify entity @e[tag=poll_list,distance=..1,limit=1] PickupDelay set value 0
+
+execute if entity @p[tag=poll_list] as @a[tag=poll_list] run tag @s remove poll_list 
 
 #End Create Poll
