@@ -15,4 +15,4 @@ scoreboard objectives remove poll_reset
 scoreboard objectives add poll_reset trigger ["",{"text":"Click Below to reset casted vote for specfic poll"},"\n",{"text":"- Teleport Poll","clickEvent":{"action":"run_command","value":"/trigger poll_reset set 2"},"hoverEvent":{"text":"Click here to reset your /trigger poll_teleport"},"color":"yellow"}]
 
 scoreboard objectives remove poll_create
-scoreboard ojbecitves add poll_create trigger ["",{"text":[ Create ],"clickEvent":{"action":"run_command","value":"/trigger poll_create set 2"},"color":"red"}]
+scoreboard objectives add poll_create trigger ["",{"text":[ Create ],"clickEvent":{"action":"run_command","value":"/trigger poll_create set 2"},"color":"red"}]
