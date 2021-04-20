@@ -36,7 +36,7 @@ execute if entity @p[tag=poll_create] as @a[tag=poll_create] run tag @s remove p
 
 
 execute if entity @p[scores={poll_create=3}] as @a[scores={poll_create=3}] run tag @s add poll_list
-execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run summon writable_book{Tags:["poll_list"],PickupDelay:32767s,tag:{poll_list:1b}} ~ ~ ~
+execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run summon item ~ ~ ~ {PickupDelay:32767,Tags:["poll_list"],Item:{id:"minecraft:written_book",Count:1b,tag:{title:"",author:""}}}
 
 execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run data modify entity @e[tag=poll_list,distance=..1,limit=1] Display set from storage core:poll player_polls[0]
 
