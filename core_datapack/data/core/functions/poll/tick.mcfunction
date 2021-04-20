@@ -14,3 +14,22 @@ execute if entity @p[scores={poll_reset=1}] as @a[scores={poll_reset=1}] run sco
 
 execute if entity @p[scores={poll_reset=2}] as @a[scores={poll_reset=2}] run scoreboard players reset @s poll_teleport
 execute if entity @p[scores={poll_reset=2}] as @a[scores={poll_reset=2}] run scoreboard players reset @s poll_reset
+
+
+#Start Create Poll
+execute as @a unless entity @s[scores={poll_create=-2147483648..2147483647}] run scoreboard players enable @s poll_create
+
+execute if entity @p[scores={poll_create=2}] as @a[scores={poll_create=2}] run tag @s add poll_create
+
+
+execute if entity @p[tag=poll_create] as @a[tag=poll_create] run give @s written_book{display:{Name:'{"text":"Poll Create"}',Lore:['{"text":"Use this book to create a Poll."}']},poll_create:1b,title:"",author:""} 1
+
+execute if entity @p[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] as @a[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] run data modify storage core:poll player_polls insert 0 from entity @s Inventory[{id:"minecraft:written_book",tag:{poll_create:1b}}]
+execute if entity @p[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] as @a[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] run clear @s written_book{poll_create:1b} 1
+
+execute if entity @p[tag=poll_create] as @a[tag=poll_create] run tag @s remove poll_create
+
+
+execute if entity @p[scores={poll_create=1..}] as @a[scores={poll_create=1..}] run scoreboard players reset @s poll_create
+
+#End Create Poll
