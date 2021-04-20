@@ -7,11 +7,11 @@ execute if entity @p[tag=locate_desert_pyramid] as @p[tag=locate_desert_pyramid]
 
 execute if entity @e[tag=locate_desert_pyramid,type=item] unless entity @p[tag=locate_desert_pyramid,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_one_minute "Temporary Timer"
 
-execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=1}] as @e[tag=locate_desert_pyramid,type=item] at @s run fill ~ -65 ~ ~ -65 ~ command_block{Command:"locate desert_pyramid",auto:1b} replace air
+execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=1}] as @e[tag=locate_desert_pyramid,type=item] at @s run fill ~ 0 ~ ~ 0 ~ command_block{Command:"locate desert_pyramid",auto:1b} replace air
 
-execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=5}] as @e[tag=locate_desert_pyramid,type=item] at @s run data modify entity @s Item.tag.pages[0] set from block ~ -65 ~ LastOutput
+execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=5}] as @e[tag=locate_desert_pyramid,type=item] at @s run data modify entity @s Item.tag.pages[0] set from block ~ 0 ~ LastOutput
 
-execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=7}] as @e[tag=locate_desert_pyramid,type=item] at @s run fill ~ -65 ~ ~ -65 ~ air replace command_block
+execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=7}] as @e[tag=locate_desert_pyramid,type=item] at @s run fill ~ 0 ~ ~ 0 ~ air replace command_block
 
 execute if entity @e[tag=locate_desert_pyramid,type=item] if entity @p[tag=locate_desert_pyramid,scores={temporary_timer=10}] as @e[tag=locate_desert_pyramid,type=item] at @s run data modify entity @s PickupDelay set value 0
 
