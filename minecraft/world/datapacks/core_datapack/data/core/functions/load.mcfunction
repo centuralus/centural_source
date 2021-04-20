@@ -42,6 +42,7 @@ execute if data storage core:scoreboard {status:load} run function core:scoreboa
 
 #function city:load
 
+function core:player/load
 function core:hostile/load
 #function core:save/load
 function elevator:load
