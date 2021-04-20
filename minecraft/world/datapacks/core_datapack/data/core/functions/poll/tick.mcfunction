@@ -22,6 +22,13 @@ execute as @a unless entity @s[scores={poll_create=-2147483648..2147483647}] run
 execute if entity @p[scores={poll_create=2}] as @a[scores={poll_create=2}] run tag @s add poll_create
 
 
+execute if entity @p[tag=poll_create] as @a[tag=poll_create] 
+
+execute if entity @p[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] as @a[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] run tellraw @s {"text":"You already have a Poll Create book and quil, deleing existing one and giving a new one now.","color":"yellow"}
+execute if entity @p[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] as @a[tag=poll_create,nbt={Inventory:[{id:"minecraft:writable_book",tag:{poll_create:1b}}]}] run clear @s writable_book{poll_create:1b} 1
+
+
+
 execute if entity @p[tag=poll_create] as @a[tag=poll_create] run give @s writable_book{display:{Name:'{"text":"Poll Create"}',Lore:['{"text":"Use this book to create a Poll."}']},poll_create:1b,title:"",author:""} 1
 
 execute if entity @p[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] as @a[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_create:1b}}]}] run data modify storage core:poll player_polls insert 0 from entity @s Inventory[{id:"minecraft:written_book",tag:{poll_create:1b}}]
