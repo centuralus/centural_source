@@ -1,1 +1,1 @@
-execute if entity @e[tag=spacecraft] as @e[tag=spacecraft] at @s if entity @e[type=cow,dy=0,distance=1..] as @e[type=cow,dy=0,distance=1..] run data modify entity @s[type=cow] Motion set value [0.0,0.1,0.0]
+execute if entity @e[tag=spacecraft] as @e[tag=spacecraft] at @s positioned ~ 0 ~ if entity @e[type=cow,dx=1,dz=1,dy=256,distance=1..] as @e[type=cow,dx=1,dz=1,dy=256,distance=1..] positioned ~ ~1 ~ unless entity @e[type=cow,distance=..1] run data modify entity @s[type=cow] Motion set value [0.0,0.1,0.0]
