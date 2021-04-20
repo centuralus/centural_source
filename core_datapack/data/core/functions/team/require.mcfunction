@@ -44,6 +44,11 @@ execute store success storage core:team/require add_player byte 1 run function c
 execute if data storage core:team/require {add_player:0b} if entity @p[tag=verbose] as @a[tag=verbose] run tellraw @s [{"text":" [ ERROR ] ","color":"red"},{"text":"Missing Core Function File core/functions/team/add/player","color":"white"}]
 execute if data storage core:team/require {add_player:1b} if entity @p[tag=verbose] as @a[tag=verbose] run tellraw @s [{"text":" [ REQUIRE ] ","color":"dark_green"},{"text":"function core:team/add/player","clickEvent":{"action":"suggest_command","value":"/function core:team/add/player"},"color":"light_purple"}]
 
+#Add Hostile Team
+execute store success storage core:team/require add_hostile byte 1 run function core:team/add/hostile
+execute if data storage core:team/require {add_hostile:0b} if entity @p[tag=verbose] as @a[tag=verbose] run tellraw @s [{"text":" [ ERROR ] ","color":"red"},{"text":"Missing Core Function File core/functions/team/add/hostile","color":"white"}]
+execute if data storage core:team/require {add_hostile:1b} if entity @p[tag=verbose] as @a[tag=verbose] run tellraw @s [{"text":" [ REQUIRE ] ","color":"dark_green"},{"text":"function core:team/add/hostile","clickEvent":{"action":"suggest_command","value":"/function core:team/add/hostile"},"color":"light_purple"}]
+
 
 #Add Away Team
 execute store success storage core:team/require add_away byte 1 run function core:team/add/away
