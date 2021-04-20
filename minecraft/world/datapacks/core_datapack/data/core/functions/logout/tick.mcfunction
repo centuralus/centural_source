@@ -66,6 +66,8 @@ execute if entity @p[tag=logout_reset,team=!builder,name=Maxicode] run team join
 execute if entity @p[tag=logout_reset,team=!explorer,name=Paxolot] run team join explorer Paxolot
 execute if entity @p[tag=logout_reset,team=!explorer,name=Frumple12] run team join explorer Frumple12
 execute if entity @p[tag=logout_reset,team=!explorer,name=frampalino67] run team join explorer Frampalino67
+execute if entity @p[tag=logout_reset,team=!explorer,name=EvilCashew83008] run team join explorer EvilCashew83008
+
 # End Explorers
 
 
