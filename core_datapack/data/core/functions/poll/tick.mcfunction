@@ -35,8 +35,6 @@ execute if entity @p[nbt={Inventory:[{id:"minecraft:written_book",tag:{poll_crea
 execute if entity @p[tag=poll_create] as @a[tag=poll_create] run tag @s remove poll_create
 
 
-execute if entity @p[scores={poll_create=1..}] as @a[scores={poll_create=1..}] run scoreboard players reset @s poll_create
-
 execute if entity @p[scores={poll_create=3}] as @a[scores={poll_create=3}] run tag @s add poll_list
 execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run summon writable_book{Tags:["poll_list"],PickupDelay:32767s,tag:{poll_list:1b}} ~ ~ ~
 
@@ -45,5 +43,9 @@ execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run data modify e
 execute if entity @p[tag=poll_list] as @a[tag=poll_list] at @s run data modify entity @e[tag=poll_list,distance=..1,limit=1] PickupDelay set value 0
 
 execute if entity @p[tag=poll_list] as @a[tag=poll_list] run tag @s remove poll_list 
+
+
+
+execute if entity @p[scores={poll_create=1..}] as @a[scores={poll_create=1..}] run scoreboard players reset @s poll_create
 
 #End Create Poll
