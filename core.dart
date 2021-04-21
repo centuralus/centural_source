@@ -189,7 +189,10 @@ String operator_menu() {
   for (var index = 2; index <= 71; index++) {
     String raw_operator_menu =
         '{"selector":"@p[scores={teleport_unique=${index}}]","clickEvent":{"action":"run_command","value":"/trigger clone_inventory set ${index}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Clone Inventory of "},{"selector":"@p[scores={teleport_unique=${index}}]"},{"text":" ID ~ "},{"score":{"name":"@p[scores={teleport_unique=${index}}]","objective":"teleport_unique"}}]}}';
-    current_string = '${current_string},${raw_operator_menu}';
+
+    current_string = index == 2
+        ? '${raw_operator_menu}'
+        : '${current_string},${raw_operator_menu}';
   }
 
   final_string = '${command} ${current_string}]';
