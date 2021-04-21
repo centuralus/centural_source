@@ -1,1 +1,1 @@
-scoreboard objectives add save_all minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add save_all minecraft.custom:minecraft.play_time

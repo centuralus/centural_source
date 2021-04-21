@@ -5,7 +5,7 @@ execute if entity @p[scores={locate=3}] as @a[scores={locate=3}] run tag @s add 
 
 execute if entity @p[tag=locate_buried_treasure] as @p[tag=locate_buried_treasure] unless entity @p[tag=locate_buried_treasure,scores={temporary_timer=1..}] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 unless entity @e[tag=locate_buried_treasure,type=item] run summon item ~ -66 ~ {PickupDelay:32767,Item:{id:"minecraft:written_book",Count:1b,tag:{display:{Name:'{"text":"Locate Buried Treasure"}'},explorer:1b,title:"Locate Buried Treasure",author:"explorer",generation:0,resolved:1b,pages:['{"text":"test"}']}},NoGravity:1b,Tags:["locate_buried_treasure"]}
 
-execute if entity @e[tag=locate_buried_treasure,type=item] unless entity @p[tag=locate_buried_treasure,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_one_minute "Temporary Timer"
+execute if entity @e[tag=locate_buried_treasure,type=item] unless entity @p[tag=locate_buried_treasure,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_time "Temporary Timer"
 
 execute if entity @e[tag=locate_buried_treasure,type=item] if entity @p[tag=locate_buried_treasure,scores={temporary_timer=1}] as @e[tag=locate_buried_treasure,type=item] at @s run fill ~ 0 ~ ~ 0 ~ command_block{Command:"locate buried_treasure",auto:1b} replace air
 

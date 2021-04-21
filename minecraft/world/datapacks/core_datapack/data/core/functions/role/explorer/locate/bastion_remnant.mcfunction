@@ -5,7 +5,7 @@ execute if entity @s[scores={locate=2}] run tag @s add locate_bastion_remnant
 
 execute if entity @s[tag=locate_bastion_remnant] unless entity @p[tag=locate_bastion_remnant,scores={temporary_timer=1..}] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 unless entity @e[tag=locate_bastion_remnant,type=item] run summon item ~ -66 ~ {PickupDelay:32767,Item:{id:"minecraft:written_book",Count:1b,tag:{display:{Name:'{"text":"Locate Bastion Remnant"}'},explorer:1b,title:"Locate Bastion Remnant",author:"explorer",generation:0,resolved:1b,pages:['{"text":"test"}']}},NoGravity:1b,Tags:["locate_bastion_remnant"]}
 
-execute if entity @e[tag=locate_bastion_remnant,type=item] unless entity @p[tag=locate_bastion_remnant,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_one_minute "Temporary Timer"
+execute if entity @e[tag=locate_bastion_remnant,type=item] unless entity @p[tag=locate_bastion_remnant,scores={temporary_timer=1..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_time "Temporary Timer"
 
 execute if entity @e[tag=locate_bastion_remnant,type=item] if entity @p[tag=locate_bastion_remnant,scores={temporary_timer=1}] as @e[tag=locate_bastion_remnant,type=item] at @s run fill ~ 0 ~ ~ 0 ~ command_block{Command:"execute in the_nether run locate bastion_remnant",auto:1b} replace air
 

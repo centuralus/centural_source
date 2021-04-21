@@ -17,7 +17,7 @@ execute if entity @p[scores={teleport_unique=0}] as @p[scores={teleport_unique=0
 execute if entity @p[tag=teleport,tag=!teleport_receiver] as @a[tag=!teleport,tag=!teleport_receiver] if score @s[tag=!teleport_receiver] teleport_unique = @p[tag=teleport,tag=!teleport_receiver] teleport run tellraw @s ["Would like to teleport to you. Click their name above to accept. (Warning if you click this after the cooldown you will trigger a request to the other player instead)"]
 execute if entity @p[tag=teleport,tag=!teleport_receiver] as @a[tag=!teleport,tag=!teleport_receiver] if score @s[tag=!teleport_receiver] teleport_unique = @p[tag=teleport,tag=!teleport_receiver] teleport run tag @s add teleport_receiver
 
-execute if entity @p[tag=teleport] as @a[tag=teleport] unless entity @s[scores={teleport_timer=0..}] run scoreboard objectives add teleport_timer minecraft.custom:minecraft.play_one_minute
+execute if entity @p[tag=teleport] as @a[tag=teleport] unless entity @s[scores={teleport_timer=0..}] run scoreboard objectives add teleport_timer minecraft.custom:minecraft.play_time
 
 execute if entity @p[tag=teleport_receiver] as @a if score @p[tag=teleport_receiver] teleport = @s[tag=teleport] teleport_unique at @p[tag=teleport_receiver] run tp @s ~ ~ ~
 

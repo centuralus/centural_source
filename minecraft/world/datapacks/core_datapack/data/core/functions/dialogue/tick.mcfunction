@@ -8,7 +8,7 @@ execute if entity @p[scores={talk_to_villager=1..}] as @a[scores={talk_to_villag
 # End Handle Right Click Villager Stat
 
 # Start Setup Talk Timer
-execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] unless entity @s[scores={talk_timer=0..}] run scoreboard objectives add talk_timer minecraft.custom:minecraft.play_one_minute
+execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] unless entity @s[scores={talk_timer=0..}] run scoreboard objectives add talk_timer minecraft.custom:minecraft.play_time
 execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] run tag @s add talk_timer
 # Default dialogue Timeout
 execute if entity @p[tag=talk_timer] as @a[tag=talk_timer] if entity @s[scores={talk_timer=20..},tag=rotation] run tag @s remove rotation
