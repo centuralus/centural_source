@@ -47,7 +47,9 @@ execute in minecraft:spawn if entity @e[tag=spacecraft_hub] as @e[tag=spacecraft
 
 
 #
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] at @a[distance=..16] unless entity @e[tag=guard,distance=0,type=slime] run summon slime ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:5,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] at @a[distance=..16] unless entity @e[tag=guard,distance=0,type=slime] run summon slime ~ 256 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:5,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
+
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] at @a[distance=..16] unless entity @e[tag=guard,distance=0,type=slime] positioned ~ 256 ~ run tp @e[tag=guard,distance=0,type=slime] @s
 
 execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=0] run tp @s[type=slime] 0 -100 0
 
