@@ -8,7 +8,7 @@ execute if entity @p[tag=hostile] as @a[tag=hostile] run team join hostile
 
 execute if entity @p[tag=hostile] as @a[tag=hostile] run tag @s remove hostile
 
-execute if entity @p[team=hostile] as @a[team=hostile] run title @s actionbar ["","Hostile Time Left",{"score":{"name":"@s","objective":"hostile_timer"}}]
+execute if entity @p[team=hostile] as @a[team=hostile] run title @s actionbar [{"color":"red"},"Hostile Time Left",{"score":{"name":"@s","objective":"hostile_timer"}}]
 
 execute if entity @p[scores={hostile_timer=1..},team=hostile] as @a[scores={hostile_timer=1..},team=hostile] run team join player @s
 
