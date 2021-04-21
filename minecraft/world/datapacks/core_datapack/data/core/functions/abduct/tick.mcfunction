@@ -4,4 +4,4 @@ execute if entity @e[tag=spacecraft] as @e[tag=spacecraft] at @s positioned ~ ~-
 
 
 
-execute if entity @e[tag=spacecraft] as @e[tag=spacecraft] at @s positioned ~ 0 ~ if entity @p[dx=1,dz=1,dy=256,distance=1..] as @p[dx=1,dz=1,dy=256,distance=1..] at @s unless entity @e[tag=spacecraft,distance=0] run tp @s ~ ~0.1 ~
+execute if entity @e[tag=spacecraft] as @e[tag=spacecraft] at @s positioned ~ 0 ~ if entity @p[dx=1,dz=1,dy=256,distance=1..] as @p[dx=1,dz=1,dy=256,distance=1..] at @s unless entity @e[tag=spacecraft,distance=..1] run tp @s ~ ~0.1 ~
