@@ -185,7 +185,7 @@ String operator_menu() {
   String command =
       'execute if entity @p[team=operator,scores={clone_inventory=1}] as @a[team=operator,scores={clone_inventory=1}] run tellraw @s';
 
-  String current_string = "[";
+  String current_string = "";
   for (var index = 2; index <= 71; index++) {
     String raw_operator_menu =
         '{"selector":"@p[scores={teleport_unique=${index}}]","clickEvent":{"action":"run_command","value":"/trigger clone_inventory set ${index}"},"hoverEvent":{"action":"show_text","contents":[{"text":"Clone Inventory of "},{"selector":"@p[scores={teleport_unique=${index}}]"},{"text":" ID ~ "},{"score":{"name":"@p[scores={teleport_unique=${index}}]","objective":"teleport_unique"}}]}}';
@@ -195,7 +195,7 @@ String operator_menu() {
         : '${current_string},${raw_operator_menu}';
   }
 
-  final_string = '${command} ${current_string}]';
+  final_string = '${command} [${current_string}]';
   return final_string;
 }
 
