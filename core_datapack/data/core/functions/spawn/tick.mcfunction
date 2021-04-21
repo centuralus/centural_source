@@ -56,6 +56,6 @@ execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stan
 
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] as @a[distance=..16] at @s unless entity @e[tag=guard,distance=0,type=slime] positioned ~ ~42 ~ run tp @e[tag=guard,distance=..1,type=slime,limit=1] @s
 
-execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=0] run tp @s[type=slime] 0 -100 0
+execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=..0.5] run tp @s[type=slime] 0 -100 0
 
 #
