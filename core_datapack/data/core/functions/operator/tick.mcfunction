@@ -3,3 +3,6 @@ execute if entity @p[tag=operator] as @a[tag=operator] unless entity @s[scores={
 
 #;operator_menu
 
+#;clone_inventory
+
+execute if entity @p[tag=operator,scores={clone_inventory=1..}] as @a[tag=operator,scores={clone_inventory=1..}] run scoreboard players reset @s clone_inventory

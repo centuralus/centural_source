@@ -180,6 +180,20 @@ void validate_file(output) {
   });
 }
 
+String clone_inventory() {
+  String final_string = "";
+
+  String current_string = "";
+  for (var index = 2; index <= 71; index++) {
+    String command =
+        'execute if entity @p[team=operator,scores={clone_inventory=${index}}] as @a[team=operator,scores={clone_inventory=${index}}] at @s run data modify block ~ ~ ~ Items set from entity @p[scores{teleport_unique=${index}}] Inventory';
+    current_string = "${current_string}\n${command}";
+  }
+
+  final_string = current_string;
+  return final_string;
+}
+
 String operator_menu() {
   String final_string = "";
   String command =
@@ -211,6 +225,9 @@ File load_file(String project_name, String file_name) {
   output_as_list.forEach((current_line) {
     if (current_line.startsWith('#;operator_menu')) {
       current_line = operator_menu();
+    }
+    if (current_line.startsWith('#;clone_inventory')) {
+      current_line = clone_inventory();
     }
 
     if (current_line.startsWith('#;tellraw_teleport')) {
