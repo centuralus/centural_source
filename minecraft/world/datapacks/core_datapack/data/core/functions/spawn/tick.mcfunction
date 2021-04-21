@@ -54,7 +54,7 @@ execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stan
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=arrow,distance=..16] run kill @e[type=arrow,distance=..16]
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] at @a[distance=..16] unless entity @e[tag=guard,distance=0,type=slime] run summon slime ~ ~42 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:5,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
 
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] at @a[distance=..16] unless entity @e[tag=guard,distance=0,type=slime] positioned ~ ~42 ~ run tp @e[tag=guard,distance=..1,type=slime,limit=1] @s
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] as @a[distance=..16] at @s unless entity @e[tag=guard,distance=0,type=slime] positioned ~ ~42 ~ run tp @e[tag=guard,distance=..1,type=slime,limit=1] @s
 
 execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=0] run tp @s[type=slime] 0 -100 0
 
