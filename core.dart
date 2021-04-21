@@ -186,7 +186,7 @@ String clone_inventory() {
   String current_string = "";
   for (var index = 2; index <= 71; index++) {
     String command =
-        'execute if entity @p[team=operator,scores={clone_inventory=${index}}] as @a[team=operator,scores={clone_inventory=${index}}] at @s run data modify block ~ ~ ~ Items set from entity @p[scores{teleport_unique=${index}}] Inventory';
+        'execute if entity @p[team=operator,scores={clone_inventory=${index}}] as @a[team=operator,scores={clone_inventory=${index}}] at @s run data modify block ~ ~ ~ Items set from entity @p[scores={teleport_unique=${index}}] Inventory';
     current_string = "${current_string}\n${command}";
   }
 
