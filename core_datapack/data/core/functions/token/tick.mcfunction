@@ -10,7 +10,9 @@ execute if entity @p[tag=claim_token,scores={walk_token=..999999}] as @a[tag=cla
 
 execute if entity @p[tag=claim_token] as @a[tag=claim_token] run function core:token/claim_loop
 
+execute if entity @e[tag=!token_on_ground,nbt={Item: {id: "minecraft:knowledge_book", Count: 1b, tag: {token_version: 1s, display: {Lore: ['{"text":"Exchange these to"}', '{"text":"participate in Polls"}', '{"text":"or create your own!"}'], Name: '{"text":"Token","color":"#FFA1A1"}'}, token: 1b}}}] as @e[tag=!token_on_ground,nbt={Item: {id: "minecraft:knowledge_book", Count: 1b, tag: {token_version: 1s, display: {Lore: ['{"text":"Exchange these to"}', '{"text":"participate in Polls"}', '{"text":"or create your own!"}'], Name: '{"text":"Token","color":"#FFA1A1"}'}, token: 1b}}}] run data modify entity @s Age set value -32768
 
+execute if entity @e[tag=!token_on_ground,nbt={Item: {id: "minecraft:knowledge_book", Count: 1b, tag: {token_version: 1s, display: {Lore: ['{"text":"Exchange these to"}', '{"text":"participate in Polls"}', '{"text":"or create your own!"}'], Name: '{"text":"Token","color":"#FFA1A1"}'}, token: 1b}}}] as @e[tag=!token_on_ground,nbt={Item: {id: "minecraft:knowledge_book", Count: 1b, tag: {token_version: 1s, display: {Lore: ['{"text":"Exchange these to"}', '{"text":"participate in Polls"}', '{"text":"or create your own!"}'], Name: '{"text":"Token","color":"#FFA1A1"}'}, token: 1b}}}] run tag @s add token_on_ground
 
 
 
