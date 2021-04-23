@@ -43,7 +43,7 @@ execute if entity @p[scores={grow_seeds=2..}] as @a[scores={grow_seeds=2..}] at 
 #Guide dialogue
 
 execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] at @s as @e[tag=dialogue,tag=guide,tag=closest_villager,distance=..12] run tellraw @p[tag=talk_to_villager,distance=..12] ["[",{"selector":"@s"},"]"," Hello ",{"selector":"@p[tag=talk_to_villager,distance=..12]"}," how may I help you today?"]
-execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] at @s as @e[tag=dialogue,tag=guide,tag=closest_villager,distance=..12] run tellraw @p[tag=talk_to_villager,distance=..12] [{"text":"✎ How do I open my player menu?","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger menu"}},"\n",{"text":"✎ Nothing for now!","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger bye"}}]
+execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] at @s as @e[tag=dialogue,tag=guide,tag=closest_villager,distance=..12] run tellraw @p[tag=talk_to_villager,distance=..12] [{"text":"✎ How do I open my player menu?","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger menu"}},"\n",{"text":"✎ What is a player token?","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger token"}},"\n",{"text":"✎ Nothing for now!","color":"yellow","clickEvent":{"action":"suggest_command","value":"/trigger bye"}}]
 
 #execute if entity @p[tag=talk_to_villager] as @a[tag=talk_to_villager] at @s as @e[tag=dialogue,tag=guide,tag=closest_villager,distance=..12] at @s facing entity @p[tag=talk_to_villager] eyes run tp @s ~ ~ ~
 
