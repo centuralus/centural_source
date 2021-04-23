@@ -2,3 +2,7 @@ scoreboard objectives add token trigger ["",{"text":"[ Claim ]","clickEvent":{"a
 
 scoreboard objectives add walk_token minecraft.custom:minecraft.walk_one_cm ["","[ Walk Token ]"]
 
+scoreboard objectives add token_count dummy ["","[ Toke Count ]"]
+
+scoreboard objectives add token_result dummy ["","[ Token Result ]"]
+
