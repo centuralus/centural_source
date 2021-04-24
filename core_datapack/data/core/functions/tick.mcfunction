@@ -24,20 +24,20 @@ execute if entity @p[tag=!joined] as @a[tag=monitor] at @s run playsound minecra
 
 
 #function core:token/tick
-function core:operator/tick
-function core:player/tick
-function core:hostile/tick
+execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
+execute if entity @p run function core:player/tick
+execute if entity @p run function core:hostile/tick
 #function core:abduct/tick
 #function core:save/tick
 #function core:elevator/tick
-function core:logout/tick
-function core:protected/tick
+execute if entity @p run function core:logout/tick
+execute if entity @p run function core:protected/tick
 function core:menu/tick
 function core:teleport/tick
 function core:team/tick
 #function core:hub/tick
 function core:return/tick
-function core:poll/tick
+#function core:poll/tick
 function core:wild/tick
 function core:role/tick
 function core:spawn/tick
