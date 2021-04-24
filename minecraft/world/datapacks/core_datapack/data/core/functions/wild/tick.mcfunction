@@ -1,7 +1,7 @@
 execute as @a unless entity @s[scores={wild=-2147483648..2147483647}] run scoreboard players enable @s wild
 
 
-execute if entity @p[scores={wild=2..}] as @a[scores={wild=2..}] if entity @s[scores={wild_timer=-2000..0}] run tellraw @s {"text":"Cooldown active ~ Please wait approximately 20 secondsbefore use","text":"yellow"}
+execute if entity @p[scores={wild=2..}] as @a[scores={wild=2..}] if entity @s[scores={wild_timer=-2000..0}] run tellraw @s {"text":"Cooldown active ~ Please wait approximately 20 secondsbefore use","color":"yellow"}
 
 execute if entity @p[scores={wild=2..}] as @a[scores={wild=2..}] unless entity @s[scores={wild_timer=-2000..0}] run tag @s add wild
 
