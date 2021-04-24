@@ -23,26 +23,26 @@ execute if entity @p[tag=!joined] as @a[tag=monitor] at @s run playsound minecra
 #
 
 
-function core:token/tick
+#function core:token/tick
 function core:operator/tick
 function core:player/tick
 function core:hostile/tick
-function core:abduct/tick
-function core:save/tick
-function core:elevator/tick
+#function core:abduct/tick
+#function core:save/tick
+#function core:elevator/tick
 function core:logout/tick
 function core:protected/tick
 function core:menu/tick
 function core:teleport/tick
 function core:team/tick
-function core:hub/tick
+#function core:hub/tick
 function core:return/tick
 function core:poll/tick
 function core:wild/tick
 function core:role/tick
 function core:spawn/tick
-function core:dialogue/tick
-function core:rotation/tick
+#function core:dialogue/tick
+#function core:rotation/tick
 function core:gamemode/tick
 execute if entity @p[tag=raycast] as @a[tag=raycast] at @a[tag=raycast] positioned ~ ~2 ~ run function core:raycast/tick
 #execute if entity @p[gamemode=adventure,team=player] at @a[gamemode=adventure,team=player] unless entity @e[tag=protected,type=armor_stand,distance=..64] run tellraw @s "You have now left the builder zone."
