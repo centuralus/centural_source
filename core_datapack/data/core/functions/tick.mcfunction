@@ -33,6 +33,7 @@ execute if entity @p run function core:hostile/tick
 execute if entity @p run function core:logout/tick
 execute if entity @p run function core:protected/tick
 function core:menu/tick
+function core:preload/tick
 function core:teleport/tick
 function core:team/tick
 #function core:hub/tick
