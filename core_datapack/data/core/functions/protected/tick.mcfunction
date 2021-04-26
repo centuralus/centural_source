@@ -111,7 +111,7 @@ execute if entity @p[team=builder,tag=load_protected] as @a[team=builder,tag=loa
 execute if entity @p[team=builder,tag=load_protected] as @a[team=builder,tag=load_protected] at @s at @e[tag=protected,tag=target,limit=1,sort=nearest,distance=..48] if entity @e[tag=protected,tag=!target,distance=..1] run kill @e[tag=protected,tag=!target,distance=..1]
 
 execute if entity @p[team=builder,tag=load_protected] as @a[team=builder,tag=load_protected] at @s as @e[tag=protected,tag=target,limit=1,sort=nearest,distance=..48] run tag @s remove target
-execute if entity @p[team=builder,tag=load_protected] as @a[team=builder,tag=load_protected] at @s at @e[tag=protected,limit=1,sort=nearest,distance=..48] unless block ~ ~1 ~ lectern run setblock ~ ~1 ~ lectern[has_book=true]{Book:{id:"minecraft:writable_book",Count:1b,tag:{load:1b,pages:["ign:structure_name","author (Please write your name here)","metadata (Details about your building should go here)"]}}} replace
+execute if entity @p[team=builder,tag=load_protected] as @a[team=builder,tag=load_protected] at @s at @e[tag=protected,limit=1,sort=nearest,distance=..48] unless block ~ ~1 ~ lectern run setblock ~ ~1 ~ lectern[has_book=true]{Book:{id:"minecraft:writable_book",Count:1b,tag:{load:1b,pages:["ign:structure_name","author (Please write your name here)",""]}}} replace
 
 
 

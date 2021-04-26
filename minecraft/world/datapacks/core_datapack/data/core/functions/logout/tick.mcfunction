@@ -15,7 +15,6 @@ execute if entity @e[type=item,nbt={Item:{id:"minecraft:written_book",Count:1b,t
 # Welcome Back Message
 execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run tellraw @s "Welcome back to Centural!"
 
-execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run tellraw @s "If you are missing items/structures please join the server pre.centural.us and grab the coordinates/items then contact an administrator."
 execute if entity @p[tag=logout_reset,team=player] as @a[tag=logout_reset,team=player] run tellraw @s ["[REMINDER] This is a test/development server","\n","For more help click or type ",{"text":"/trigger menu","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger menu"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to open your player menu.","color":"yellow"}]}}]
 execute if entity @p[tag=logout_reset,team=helper] as @a[tag=logout_reset,team=helper] run tellraw @s [{"text":"/trigger helper_menu","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger helper_menu"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to open your Helper Menu.","color":"light_purple"}]}}]
 
