@@ -23,6 +23,6 @@ execute if entity @p[tag=dropped_ender_chest] as @a[tag=dropped_ender_chest] at 
 
 
 
-execute if entity @p[scores={echest_mined=1..}] as @a[scores={echest_mined=1..}] run scoreboard players reset @s echest_mined
+execute if entity @p[scores={echest_mined=1..},tag=!dropped_ender_chest] as @a[scores={echest_mined=1..},tag=!dropped_ender_chest] run scoreboard players reset @s echest_mined
 
 execute if entity @p[scores={ender_chest=1..}] as @a[scores={ender_chest=1..}] run scoreboard players reset @s ender_chest
