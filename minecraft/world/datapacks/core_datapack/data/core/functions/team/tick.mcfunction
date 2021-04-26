@@ -8,6 +8,6 @@ execute if entity @p[team=] as @a[team=] unless entity @s[scores={walk_one_cm=0.
 execute if entity @p[team=] as @a[team=] unless entity @s[scores={walk_one_cm=0..}] run tellraw @s ["To join our ",{"text":"Discord Server Click Here","clickEvent":{"action":"open_url","value":"https://discord.com/invite/YV4fEuE9fm"},"hoverEvent":{"action":"show_text","contents":[{"text":"Invite Code ~ YV4fEuE9fm"}]},"color":"red"}]
 
 
-execute if entity @p[team=] as @p[team=] unless entity @s[scores={walk_on_cm=0..}] run tp @s @e[tag=spawn,limit=1]
+execute if entity @p[team=] as @p[team=] unless entity @s[scores={walk_one_cm=0..}] run tp @s @e[tag=spawn,limit=1]
 
 execute if entity @p[team=] as @p[team=] run team join player
