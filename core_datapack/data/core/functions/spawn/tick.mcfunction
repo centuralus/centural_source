@@ -59,3 +59,9 @@ execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stan
 execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=..0.5] run tp @s[type=slime] 0 -100 0
 
 #
+
+
+# NPC Protect
+execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!player,type=!villager,type=!slime,type=!armor_stand,distance=..26] run spreadplayers ~ ~ 25 32 true @e[type=!player,type=!villager,type=!slime,type=!armor_stand,type=!item,distance=..20]
+
+# NPC Protect
