@@ -56,7 +56,7 @@ execute if entity @p[tag=logout_reset,team=!builder,name=Tahlia_Cluffy] run team
 execute if entity @p[tag=logout_reset,team=!builder,name=heribone64] run team join builder heribone64
 execute if entity @p[tag=logout_reset,team=!builder,name=Spike40211] run team join builder Spike40211
 execute if entity @p[tag=logout_reset,team=!builder,name=Obsidi4nEye] run team join builder Obsidi4nEye
-
+execute if entity @p[tag=logout_reset,team=!builder,name=Grayscale_Block] run team join builder Grayscale_Block
 execute if entity @p[tag=logout_reset,team=!builder,name=Gameio_YT] run team join builder Gameio_YT
 
 execute if entity @p[tag=logout_reset,team=!builder,name=maxicode] as @p[nbt={UUID:[I;1451173037,1723482750,-1832450951,-1964160116]}] run team join explorer @s
