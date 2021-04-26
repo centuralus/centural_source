@@ -3,5 +3,5 @@ execute if entity @e[tag=shop,type=armor_stand] at @e[tag=shop,type=armor_stand]
 
 execute if entity @p[scores={shop=1..}] run scoreboard players reset @s shop
 
-execute if entity @p[scores={shop=0}] unless entity @e[tag=shop,type=armor_stand,distance=..8] run scoreboard players reset @s shop
+execute if entity @p[scores={shop=0}] as @a[scores={shop=0}] at @s unless entity @e[tag=shop,type=armor_stand,distance=..8] run scoreboard players reset @s shop
 
