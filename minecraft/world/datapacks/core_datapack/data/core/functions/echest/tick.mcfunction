@@ -18,6 +18,9 @@ execute if entity @e[tag=ender_chest,type=armor_stand] as @e[tag=ender_chest,typ
 
 execute if entity @p[tag=dropped_ender_chest] as @a[tag=dropped_ender_chest] at @s if entity @e[tag=ender_chest,type=armor_stand,distance=..2] at @e[tag=ender_chest,type=armor_stand,distance=..2] unless block ~ ~ ~ ender_chest run clear @s[scores={echest_mined=1..}] ender_chest 1
 
+execute if entity @p[tag=dropped_ender_chest] as @a[tag=dropped_ender_chest] at @s if entity @e[tag=ender_chest,type=armor_stand,distance=..2] at @e[tag=ender_chest,type=armor_stand,distance=..2] unless block ~ ~ ~ ender_chest run clear @s[scores={echest_mined=1..}] obsidian 8
+
+
 execute if entity @p[tag=dropped_ender_chest] as @a[tag=dropped_ender_chest] at @s unless entity @e[tag=ender_chest,type=armor_stand,distance=..2] run scoreboard players reset @s echest_usage
 execute if entity @p[tag=dropped_ender_chest] as @a[tag=dropped_ender_chest] at @s unless entity @e[tag=ender_chest,type=armor_stand,distance=..2] run tag @s remove dropped_ender_chest
 
