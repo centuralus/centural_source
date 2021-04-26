@@ -8,7 +8,7 @@ execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run setblock ~ ~ ~ ender_chest
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run scoreboard players add @s echest_usage 1
 
-execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run tag @s dropped_ender_chest
+execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run tag @s add dropped_ender_chest
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] run tag @s remove drop_ender_chest
 
 
