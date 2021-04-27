@@ -110,6 +110,15 @@ execute if entity @p[tag=logout_reset,team=player,gamemode=creative] as @a[tag=l
 # End Gamemode Rules
 
 
+# Reset
+execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s set_home
+execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s home
+execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s set_return
+execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s return
+
+
+#
+
 # Reset logout_reset scoreboard
 execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s logout_reset
 # Remove logout_reset tag
