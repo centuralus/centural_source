@@ -46,7 +46,7 @@ execute if entity @p[team=] as @a[team=] if score current teleport_unique <= max
 # Builders
 
 execute if entity @p[tag=logout_reset,team=!builder,name=SHADOWWOLF6497] run team join builder SHADOWWOLF6497
-execute if entity @p[tag=logout_reset,team=!builder,name=IRIN2021] run team join builder IRIN2021
+#execute if entity @p[tag=logout_reset,team=!builder,name=IRIN2021] run team join builder IRIN2021
 execute if entity @p[tag=logout_reset,team=!operator,name=Nardwe] run team join operator Nardwe
 execute if entity @p[tag=logout_reset,team=!builder,name=_LilPug] run team join builder _LilPug
 execute if entity @p[tag=logout_reset,team=!builder,name=_Magic_Man] run team join builder _Magic_Man
