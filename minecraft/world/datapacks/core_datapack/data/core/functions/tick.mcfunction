@@ -10,6 +10,7 @@ execute if entity @p run function core:hostile/tick
 execute if entity @p run function core:logout/tick
 execute if entity @p run function core:protected/tick
 execute if entity @e[tag=kill,type=!player] as @e[tag=kill,type=!player] run function core:kill/tick
+execute if entity @p[team=away] run function core:shop/tick
 function core:shop/tick
 function core:menu/tick
 function core:preload/tick
