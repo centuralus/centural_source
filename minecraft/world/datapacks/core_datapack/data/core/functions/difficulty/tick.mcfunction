@@ -31,6 +31,8 @@ execute if @p[scores={difficulty=5}] as @a[scores={difficulty=5}] if entity @s[s
 execute if @p[scores={difficulty=5}] as @a[scores={difficulty=5}] if entity @s[scores={difficulty_timer=250..}] run tag @s add reset_difficulty
 
 
+execute if @p[scores={difficulty=..-1}] as @a[scores={difficulty=..-1}] run scoreboard players reset @s difficulty
+execute if @p[scores={difficulty=1}] as @a[scores={difficulty=1}] run scoreboard players reset @s difficulty
 execute if @p[tag=reset_difficulty] as @a[tag=reset_difficulty] run scoreboard players reset @s difficulty
 execute if @p[tag=reset_difficulty] as @a[tag=reset_difficulty] run scoreboard objectives remove difficulty_timer
 
