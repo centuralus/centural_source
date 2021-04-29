@@ -9,7 +9,7 @@ scoreboard players set arrow entity_count 0
 scoreboard players set axolotl entity_count 0
 
 scoreboard players set bat entity_count 0
-scoreboard players set bat_max entity_count 10
+scoreboard players set bat_max entity_count 7
 
 execute as @e run scoreboard players add all entity_count 1
 
