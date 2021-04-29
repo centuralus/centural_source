@@ -34,6 +34,17 @@ execute as @e[type=minecraft:chicken] run scoreboard players add chicken entity_
 execute as @e[type=minecraft:cod] run scoreboard players add cod entity_count 1
 execute as @e[type=minecraft:command_block_minecart] run scoreboard players add command_block_minecart entity_count 1
 execute as @e[type=minecraft:cow] run scoreboard players add cow entity_count 1
+execute as @e[type=minecraft:creeper] run scoreboard players add creeper entity_count 1
+execute as @e[type=minecraft:dolphin] run scoreboard players add dolphin entity_count 1
+execute as @e[type=minecraft:donkey] run scoreboard players add donkey entity_count 1
+execute as @e[type=minecraft:dragon_fireball] run scoreboard players add dragon_fireball entity_count 1
+execute as @e[type=minecraft:drowned] run scoreboard players add drowned entity_count 1
+execute as @e[type=minecraft:egg] run scoreboard players add egg entity_count 1
+execute as @e[type=minecraft:ender_dragon] run scoreboard players add ender_dragon entity_count 1
+
+
+
+execute as @e[type=minecraft:end_crystal] run scoreboard players add end_crystal entity_count 1
 
 
 execute as @e[type=minecraft:pig] run scoreboard players add pig entity_count 1
