@@ -13,6 +13,8 @@ execute if entity @e[tag=kill,type=!player] as @e[tag=kill,type=!player] run fun
 execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
 #function core:shop/tick
+
+function core:difficulty/tick
 function core:home/tick
 function core:menu/tick
 function core:preload/tick
