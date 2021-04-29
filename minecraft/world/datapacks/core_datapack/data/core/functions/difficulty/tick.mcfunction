@@ -30,6 +30,8 @@ execute if entity @p[scores={difficulty=5}] as @a[scores={difficulty=5}] unless 
 execute if entity @p[scores={difficulty=5}] as @a[scores={difficulty=5}] if entity @s[scores={difficulty_timer=250..}] run tellraw @s "Canceled change in difficulty"
 execute if entity @p[scores={difficulty=5}] as @a[scores={difficulty=5}] if entity @s[scores={difficulty_timer=250..}] run tag @s add reset_difficulty
 
+execite if entity @p[scores={difficulty_timer=250..}] as @a[scores={difficulty_timer=250..}] run tag @s add reset_difficulty
+
 
 execute if entity @p[scores={difficulty=..-1}] as @a[scores={difficulty=..-1}] run scoreboard players reset @s difficulty
 execute if entity @p[scores={difficulty=1}] as @a[scores={difficulty=1}] run scoreboard players reset @s difficulty
