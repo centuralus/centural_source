@@ -11,7 +11,7 @@ execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] run tag @s remove drop_ender_chest
 
 
-execute if entity @e[tag=ender_chest,type=armor_stand] as @e[tag=ender_chest,type=armor_stand] at @s unless entity @p[distance=..2] run fill ~ ~ ~ ~ ~ ~ air replace ender_chest 
+execute if entity @e[tag=ender_chest,type=armor_stand] as @e[tag=ender_chest,type=armor_stand] at @s unless entity @p[team=!away,distance=..2] run fill ~ ~ ~ ~ ~ ~ air replace ender_chest 
 
 execute if entity @e[tag=ender_chest,type=armor_stand] as @e[tag=ender_chest,type=armor_stand] at @s if block ~ ~ ~ air run kill @e[type=item,distance=..1]
 
