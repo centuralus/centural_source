@@ -8,7 +8,7 @@ execute if entity @p[tag=spectated] as @a[tag=spectated] at @s if entity @p[tag=
 
 execute if entity @p[tag=spectated] as @a[tag=spectated] run tag @s remove spectated
 
-execute if entity @p[tag=spectating] as @a[tag=specating] run tag @s remove specating
+execute if entity @p[tag=spectating] as @a[tag=spectating] run tag @s remove spectating
 
 
 #execute if entity @p[team=away] as @a[team=away] at @s unless entity @p[distance=..32,team=!away] run tag @r[team=!away] add spectated
