@@ -1,7 +1,9 @@
 #Mark as active unless storage has information alread.
 #execute unless data storage core:tick * run data modify storage core:tick tick set value 1b
 
+execute if entity @p run function core:unique/tick
 execute if entity @p run function core:echest/tick
+execute if entity @p run function core:trade/tick
 
 execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
 execute if entity @p run function core:player/tick
