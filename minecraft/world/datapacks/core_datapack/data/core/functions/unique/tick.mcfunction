@@ -6,7 +6,7 @@ execute if entity @p[tag=reset_unique] as @a[tag=reset_unique] run scoreboard pl
 
 execute if entity @p[tag=reset_unique] as @a[tag=reset_unique] at @s if entity @p[distance=1..]
 
-execute if entity @p[tag=reset_unique] as @a[tag=reset_unique] at @a[distance=1..] if score @p[distance=0,limit=1] unique = @s unique run tag @s duplicate_unique
+execute if entity @p[tag=reset_unique] as @a[tag=reset_unique] at @a[distance=1..] if score @p[distance=0,limit=1] unique = @s unique run tag @s add duplicate_unique
 
 execute if entity @p[tag=reset_unique] as @a[tag=reset_unique] if score unique_current unique > unique_max unique run scoreboard players set unique_current 2
 
