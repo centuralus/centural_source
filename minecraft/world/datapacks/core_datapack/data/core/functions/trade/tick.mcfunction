@@ -3,7 +3,7 @@ execute as @r unless entity @s[scores={trade=-2147483648..2147483647}] run score
 
 execute if entity @p[scores={trade=1}] as @p[scores={trade=1}] run tag @s add reset_trade
 
-execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] unless @s[scores={trade_timer=0..}] run scoreboard objectives add trade_timer minecraft.custom:minecraft.play_time
+execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] unless entity @s[scores={trade_timer=0..}] run scoreboard objectives add trade_timer minecraft.custom:minecraft.play_time
 
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s add offer_trade
 
