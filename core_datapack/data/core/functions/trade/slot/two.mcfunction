@@ -1,6 +1,6 @@
 #Store the items data in storage
 
-execute unless entity @s[tag=send_offer_two] unless entity @e[tag=send,tag=slot_two,type=armor_stand] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Small:1b,Invisible:1b,NoGravity:1b,NoBasePlate:1b,PersistenceRequired:1b,Health:1f,DisabledSlots:4144703,HandItems:[{},{}],Tags:["keep","send","slot","slot_two"]}
+execute unless entity @s[tag=send_offer_two] unless entity @e[tag=send,tag=slot_two,type=armor_stand] at @s positioned ^ ^1 ^ positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Invulnerable:1b,Small:1b,Invisible:1b,NoGravity:1b,NoBasePlate:1b,PersistenceRequired:1b,Health:1f,DisabledSlots:4144703,HandItems:[{},{}],Tags:["keep","send","slot","slot_two"]}
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @e[tag=send,tag=slot_two,limit=1] weapon.offhand copy entity @s weapon.offhand
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_two
@@ -25,8 +25,3 @@ execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=rece
 
 
 
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s add reset_trade
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove reset_offer_two
