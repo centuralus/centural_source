@@ -1,10 +1,10 @@
 #Store the items data in storage
 
 execute unless entity @s[tag=send_offer_two] unless entity @e[tag=send,tag=slot_two,type=armor_stand] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Small:1b,Invisible:1b,NoGravity:1b,NoBasePlate:1b,PersistenceRequired:1b,Health:1f,DisabledSlots:4144703,HandItems:[{},{}],Tags:["keep","send","slot","slot_two"]}
-execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
-execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer_two] run item entity @e[tag=send,tag=slot_two,limit=1] weapon.offhand copy entity @s weapon.offhand
-execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer_two] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_two
-execute unless entity @s[tag=send_offer_two] if entity @p[tag=receive_offer_two] run tellraw @p[tag=receive_offer_two] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_two,tag=send]"},"\n",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set 2"}}]
+execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
+execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @e[tag=send,tag=slot_two,limit=1] weapon.offhand copy entity @s weapon.offhand
+execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_two
+execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] if entity @p[tag=receive_offer_two] run tellraw @p[tag=receive_offer_two] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_two,tag=send]"},"\n",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set 2"}}]
 execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer_two] run tag @s[tag=!receive_offer_two,tag=!send_offer_two] add send_offer_two
 
 
