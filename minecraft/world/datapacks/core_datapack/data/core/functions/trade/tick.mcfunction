@@ -3,9 +3,17 @@ execute as @r unless entity @s[scores={trade=-2147483648..2147483647}] run score
 
 #
 execute if entity @p[scores={trade_timer=250..}] as @a[scores={trade_timer=250..}] run tag @s add reset_trade
+execute if entity @p[scores={trade_timer=250..}] as @a[scores={trade_timer=250..}] run tag @s add reset_offer_two
 execute if entity @p[scores={trade_timer=250..}] as @a[scores={trade_timer=250..}] run scoreboard players set @s trade_timer -250
 execute if entity @p[scores={trade_timer=..0}] as @a[scores={trade_timer=..0}] unless entity @p[scores={trade_timer=0..}] run scoreboard objectives remove trade_timer
 #
+
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove reset_offer_two
+
 
 
 
