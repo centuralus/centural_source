@@ -11,11 +11,12 @@ execute if entity @p run function core:hostile/tick
 
 execute if entity @p run function core:logout/tick
 execute if entity @p run function core:protected/tick
-execute if entity @e[tag=kill,type=!player] as @e[tag=kill,type=!player] run function core:kill/tick
+execute if entity @e[tag=kill,type=!player,tag=!keep] as @e[tag=kill,type=!player,tag=!keep] run function core:kill/tick
 execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
 #function core:shop/tick
 
+function core:keep/tick
 function core:difficulty/tick
 function core:home/tick
 function core:menu/tick

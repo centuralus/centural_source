@@ -1,6 +1,6 @@
 #Store the items data in storage
 
-execute unless entity @s[tag=send_offer_two] unless entity @e[tag=slot_two,type=armor_stand] run summon armor_stand 0 0 0 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["slot","slot_two"]}
+execute unless entity @s[tag=send_offer_two] unless entity @e[tag=slot_two,type=armor_stand] run summon armor_stand 0 0 0 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["send","slot","slot_two"]}
 execute unless entity @s[tag=send_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
 execute unless entity @s[tag=send_offer_two] run item entity @e[tag=slot_two] weapon.offhand copy entity @s weapon.offhand
 execute unless entity @s[tag=send_offer_two] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_two
