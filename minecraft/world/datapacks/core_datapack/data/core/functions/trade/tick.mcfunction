@@ -14,6 +14,8 @@ execute if entity @p[tag=receive_offer,tag=!received_offer] as @a[tag=receive_of
 execute if entity @p[tag=receive_offer,tag=!received_offer] as @p[tag=receive_offer,tag=!received_offer] run tag @s add received_offer
 execute if entity @p[tag=receive_offer,tag=received_offer] as @p[tag=receive_offer,tag=received_offer] run tag @s remove receive_offer
 
+execute if entity @p[tag=received_offer] as @p[tag=received_offer,scores={trade=-3}] at @s at @a[distance=1..] if score @p[tag=offer_trade,distance=0] trade = @s unique run tag @p[tag=offer_trade,distance=0] add offer_receive_trade
+
 execute if entity @p[tag=received_offer] as @p[tag=received_offer,scores={trade=-3}] at @s at @a[distance=1..] if score @p[tag=offer_trade,distance=0] trade = @s unique run tellraw @p[tag=offer_trade,distance=0] [{"selector":"@s"}," would like to trade ",{"nbt":"Inventory[{Slot:-106b}].Count","entity":"@s"}," ",{"nbt":"Inventory[{Slot:-106b}].id","entity":"@s"}," Details: ",{"nbt":"Inventory[{Slot:-106b}].tag","entity":"@s"}," for ","\n",{"selector":"@p[tag=offer_trade,distance=0]"}," would like to trade ",{"nbt":"Inventory[{Slot:-106b}].Count","entity":"@p[tag=offer_trade,distance=0]"}," ",{"nbt":"Inventory[{Slot:-106b}].id","entity":"@p[tag=offer_trade,distance=0]"}," Details: ",{"nbt":"Inventory[{Slot:-106b}].tag","entity":"@p[tag=offer_trade,distance=0]"},"\n",{"color":"light_purple","text":"To accept click here","clickEvent":{"action":"run_command","value":"/trigger trade set -1"}}]
 
 
