@@ -12,6 +12,7 @@ execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] unless entit
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run data modify storage core:trade live[2].receive set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run item entity @e[tag=receive,tag=slot_two,limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run tellraw @p[tag=send_offer_two] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"live[2].receive","storage":"core:trade"}," in exchange for your ",{"nbt":"live[2].send","storage":"core:trade"},"\n",{"color":"light_purple","text":"To accept click here.","clickEvent":{"action":"run_command","value":"/trigger trade set -1"}}]
+execute if entity @s[tag=receive_offer_two,tag=!recieved_offer_two] run scoreboard players enable @p[tag=send_offer_two] trade
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run tag @s add received_offer_two
 execute if entity @s[tag=receive_offer_two,tag=received_offer_two] run tag @s remove receive_offer_two
 
