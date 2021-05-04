@@ -7,9 +7,13 @@ execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] unless entity
 
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s add offer_trade
 
+execute if entity @p[tag=offer_trade,scores={trade=2}] as @p[tag=offer_trade,scores={trade=2}] run data modify storage core:trade live[2] set from entity @s Inventory[{Slot:-106b}]
+execute if entity @p[tag=offer_trade,scores={trade=3}] as @p[tag=offer_trade,scores={trade=3}] run data modify storage core:trade live[3] set from entity @s Inventory[{Slot:-106b}]
+#;core_trade_live
+
 execute if entity @p[tag=offer_trade] as @p[tag=offer_trade] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer
 
-execute if entity @p[tag=receive_offer,tag=!received_offer] as @a[tag=receive_offer,tag=!received_offer] run tellraw @s [{"selector":"@p[tag=offer_trade]"}," would like to trade ",{"nbt":"Inventory[{Slot:-106b}].Count","entity":"@p[tag=offer_trade]"}," ",{"nbt":"Inventory[{Slot:-106b}].id","entity":"@p[tag=offer_trade]"}," Details: ",{"nbt":"Inventory[{Slot:-106b}].tag","entity":"@p[tag=offer_trade]"},"\n",{"color":"light_purple","text":"To offer the item in your left hand in exchange click here","clickEvent":{"action":"run_command","value":"/trigger trade set -3"}}]
+execute if entity @p[tag=receive_offer,tag=!received_offer] as @a[tag=receive_offer,tag=!received_offer] run tellraw @s [{"selector":"@p[tag=offer_trade]"},{"text":" would like to trade ","color":"yellow"},{"nbt":"live","storage":"core:trade"},"\n",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set -3"}}]
 
 execute if entity @p[tag=receive_offer,tag=!received_offer] as @p[tag=receive_offer,tag=!received_offer] run tag @s add received_offer
 execute if entity @p[tag=receive_offer,tag=received_offer] as @p[tag=receive_offer,tag=received_offer] run tag @s remove receive_offer
