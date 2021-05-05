@@ -10,8 +10,8 @@ execute if entity @p[scores={trade_timer=..0}] as @a[scores={trade_timer=..0}] u
 
 
 
-execute if entity @e[tag=slot,tag=send] as @e[tag=slot,tag=send] unless entity @p[distance=..12] run kill @s
-execute if entity @e[tag=slot,tag=receive] as @e[tag=slot,tag=receive] unless entity @p[distance=..12] run kill @s
+execute if entity @e[tag=slot,tag=send] as @e[tag=slot,tag=send] at @s unless entity @p[distance=..12] run kill @s
+execute if entity @e[tag=slot,tag=receive] as @e[tag=slot,tag=receive] at @s unless entity @p[distance=..12] run kill @s
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=armor_stand]
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
