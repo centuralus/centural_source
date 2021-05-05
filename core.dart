@@ -240,6 +240,8 @@ execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${i
          ''';
       }
     }
+
+    if (current_line.startsWith('#;handle_decline')) {}
     if (current_line.startsWith('#;trade_slot')) {
       for (var index = 2; index <= 71; index++) {
         String index_as_word =
@@ -249,7 +251,7 @@ execute if entity @p[scores={trade=${index}}] as @a[scores={trade=${index}},tag=
         String new_line =
             "\\n"; //ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}]
         String this_final_line = '''
-execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] unless entity @e[tag=send,tag=slot_${index_as_word},type=villager] at @s anchored eyes positioned ^ ^-1 ^1 run summon villager ~ ~ ~ {Invulnerable:1b,Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress","color":"blue"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],Tags:["keep","send","slot","slot_${index_as_word}"]}
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] unless entity @e[tag=send,tag=slot_${index_as_word},type=villager] at @s anchored eyes positioned ^ ^-1 ^1 run summon villager ~ ~ ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress","color":"blue"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],Tags:["keep","send","slot","slot_${index_as_word}"]}
 execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] run item entity @e[tag=send,tag=slot_${index_as_word},limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] run item entity @s weapon.offhand replace air
 execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tellraw @p[distance=0] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_${index_as_word},tag=send]"},"${new_line}",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set ${index}"}}]
@@ -258,7 +260,7 @@ execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @s[tag=r
 
 
 
-execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] unless entity @e[tag=receive,tag=slot_${index_as_word},type=villager] at @s anchored eyes positioned ^ ^-1 ^1 run summon villager ~ ~ ~ {Invulnerable:1b,Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],Tags:["keep","receive","slot","slot_${index_as_word}"]}
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] unless entity @e[tag=receive,tag=slot_${index_as_word},type=villager] at @s anchored eyes positioned ^ ^-1 ^1 run summon villager ~ ~ ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],Tags:["keep","receive","slot","slot_${index_as_word}"]}
 #execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run data modify storage core:trade live[${index}].receive set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run item entity @e[tag=receive,tag=slot_${index_as_word},limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run item entity @s weapon.offhand replace air

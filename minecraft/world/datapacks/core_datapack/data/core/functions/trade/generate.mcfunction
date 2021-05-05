@@ -494,6 +494,7 @@ execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_
 execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s remove reset_offer_seventy_one
 #;reset_offer
 
+#;handle_decline
 
 
 
