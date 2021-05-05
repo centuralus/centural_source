@@ -16,3 +16,5 @@ execute if entity @p[tag=leave_alpha_tester] as @a[tag=leave_alpha_tester] if en
 execute if entity @p[tag=leave_alpha_tester] as @a[tag=leave_alpha_tester] run tag @s remove leave_alpha_tester
 
 execute if entity @p[tag=reset_alpha_tester] as @a[tag=reset_alpha_tester] run scoreboard players reset @s alpha_tester
+
+execute if entity @p[tag=reset_alpha_tester] as @a[tag=reset_alpha_tester] run tag @s remove reset_alpha_tester
