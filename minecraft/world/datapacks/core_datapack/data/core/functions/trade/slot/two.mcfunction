@@ -1,6 +1,6 @@
 #Store the items data in storage
 
-execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] unless entity @e[tag=send,tag=slot_two,type=villager] at @s positioned ^ ^ ^1 positioned ~ ~ ~ run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,Health:1f,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","send","slot","slot_two"]}
+execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] unless entity @e[tag=send,tag=slot_two,type=villager] at @s positioned ^ ^ ^1 positioned ~ ~ ~ run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","send","slot","slot_two"]}
 #execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @e[tag=send,tag=slot_two,limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @s weapon.offhand replace air
@@ -10,7 +10,7 @@ execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer
 
 
 
-execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] unless entity @e[tag=receive,tag=slot_two,type=villager] at @s run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,Health:1f,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","receive","slot","slot_two"]}
+execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] unless entity @e[tag=receive,tag=slot_two,type=villager] at @s run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","receive","slot","slot_two"]}
 #execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run data modify storage core:trade live[2].receive set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run item entity @e[tag=receive,tag=slot_two,limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run item entity @s weapon.offhand replace air
