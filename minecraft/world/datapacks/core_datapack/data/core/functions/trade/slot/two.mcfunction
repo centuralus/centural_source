@@ -24,9 +24,11 @@ execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=rece
 execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run item entity @p[tag=send_offer_two,scores={trade=-1}] weapon.offhand copy entity @e[tag=slot_two,tag=receive,limit=1] weapon.mainhand
 
 execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run tag @s add reset_offer_two
+
 execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run tag @p[tag=send_offer_two,scores={trade=-1}] add reset_offer_two
 
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=armor_stand]
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run scoreboard players reset @s trade
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
