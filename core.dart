@@ -226,7 +226,7 @@ File load_file(String project_name, String file_name) {
   List output_as_list = output.split("\n");
   String final_line = "";
   output_as_list.forEach((current_line) {
-    if (current_line.startsWith('#reset_offer')) {
+    if (current_line.startsWith('#;reset_offer')) {
       for (var index = 2; index <= 71; index++) {
         String index_as_word =
             NumberToWords.convert(index, "en").trim().replaceAll(" ", "_");

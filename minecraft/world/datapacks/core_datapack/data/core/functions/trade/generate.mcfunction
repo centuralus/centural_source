@@ -72,6 +72,426 @@ execute if entity @p[scores={trade=70}] as @a[scores={trade=70},tag=alpha_tester
 execute if entity @p[scores={trade=71}] as @a[scores={trade=71},tag=alpha_tester] run function core:trade/slot/seventy_one
 #;trade_slot
 
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=villager]
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove reset_offer_two
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run kill @e[tag=slot_three,type=villager]
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run tag @s remove send_offer_three
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run tag @s remove receive_offer_three
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run tag @s remove received_offer_three
+execute if entity @p[tag=reset_offer_three] as @a[tag=reset_offer_three] run tag @s remove reset_offer_three
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run kill @e[tag=slot_four,type=villager]
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run tag @s remove send_offer_four
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run tag @s remove receive_offer_four
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run tag @s remove received_offer_four
+execute if entity @p[tag=reset_offer_four] as @a[tag=reset_offer_four] run tag @s remove reset_offer_four
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run kill @e[tag=slot_five,type=villager]
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run tag @s remove send_offer_five
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run tag @s remove receive_offer_five
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run tag @s remove received_offer_five
+execute if entity @p[tag=reset_offer_five] as @a[tag=reset_offer_five] run tag @s remove reset_offer_five
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run kill @e[tag=slot_six,type=villager]
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run tag @s remove send_offer_six
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run tag @s remove receive_offer_six
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run tag @s remove received_offer_six
+execute if entity @p[tag=reset_offer_six] as @a[tag=reset_offer_six] run tag @s remove reset_offer_six
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run kill @e[tag=slot_seven,type=villager]
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run tag @s remove send_offer_seven
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run tag @s remove receive_offer_seven
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run tag @s remove received_offer_seven
+execute if entity @p[tag=reset_offer_seven] as @a[tag=reset_offer_seven] run tag @s remove reset_offer_seven
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run kill @e[tag=slot_eight,type=villager]
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run tag @s remove send_offer_eight
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run tag @s remove receive_offer_eight
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run tag @s remove received_offer_eight
+execute if entity @p[tag=reset_offer_eight] as @a[tag=reset_offer_eight] run tag @s remove reset_offer_eight
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run kill @e[tag=slot_nine,type=villager]
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run tag @s remove send_offer_nine
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run tag @s remove receive_offer_nine
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run tag @s remove received_offer_nine
+execute if entity @p[tag=reset_offer_nine] as @a[tag=reset_offer_nine] run tag @s remove reset_offer_nine
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run kill @e[tag=slot_ten,type=villager]
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run tag @s remove send_offer_ten
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run tag @s remove receive_offer_ten
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run tag @s remove received_offer_ten
+execute if entity @p[tag=reset_offer_ten] as @a[tag=reset_offer_ten] run tag @s remove reset_offer_ten
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run kill @e[tag=slot_eleven,type=villager]
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run tag @s remove send_offer_eleven
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run tag @s remove receive_offer_eleven
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run tag @s remove received_offer_eleven
+execute if entity @p[tag=reset_offer_eleven] as @a[tag=reset_offer_eleven] run tag @s remove reset_offer_eleven
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run kill @e[tag=slot_twelve,type=villager]
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run tag @s remove send_offer_twelve
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run tag @s remove receive_offer_twelve
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run tag @s remove received_offer_twelve
+execute if entity @p[tag=reset_offer_twelve] as @a[tag=reset_offer_twelve] run tag @s remove reset_offer_twelve
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run kill @e[tag=slot_thirteen,type=villager]
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run tag @s remove send_offer_thirteen
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run tag @s remove receive_offer_thirteen
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run tag @s remove received_offer_thirteen
+execute if entity @p[tag=reset_offer_thirteen] as @a[tag=reset_offer_thirteen] run tag @s remove reset_offer_thirteen
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run kill @e[tag=slot_fourteen,type=villager]
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run tag @s remove send_offer_fourteen
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run tag @s remove receive_offer_fourteen
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run tag @s remove received_offer_fourteen
+execute if entity @p[tag=reset_offer_fourteen] as @a[tag=reset_offer_fourteen] run tag @s remove reset_offer_fourteen
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run kill @e[tag=slot_fifteen,type=villager]
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run tag @s remove send_offer_fifteen
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run tag @s remove receive_offer_fifteen
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run tag @s remove received_offer_fifteen
+execute if entity @p[tag=reset_offer_fifteen] as @a[tag=reset_offer_fifteen] run tag @s remove reset_offer_fifteen
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run kill @e[tag=slot_sixteen,type=villager]
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run tag @s remove send_offer_sixteen
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run tag @s remove receive_offer_sixteen
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run tag @s remove received_offer_sixteen
+execute if entity @p[tag=reset_offer_sixteen] as @a[tag=reset_offer_sixteen] run tag @s remove reset_offer_sixteen
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run kill @e[tag=slot_seventeen,type=villager]
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run tag @s remove send_offer_seventeen
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run tag @s remove receive_offer_seventeen
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run tag @s remove received_offer_seventeen
+execute if entity @p[tag=reset_offer_seventeen] as @a[tag=reset_offer_seventeen] run tag @s remove reset_offer_seventeen
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run kill @e[tag=slot_eighteen,type=villager]
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run tag @s remove send_offer_eighteen
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run tag @s remove receive_offer_eighteen
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run tag @s remove received_offer_eighteen
+execute if entity @p[tag=reset_offer_eighteen] as @a[tag=reset_offer_eighteen] run tag @s remove reset_offer_eighteen
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run kill @e[tag=slot_nineteen,type=villager]
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run tag @s remove send_offer_nineteen
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run tag @s remove receive_offer_nineteen
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run tag @s remove received_offer_nineteen
+execute if entity @p[tag=reset_offer_nineteen] as @a[tag=reset_offer_nineteen] run tag @s remove reset_offer_nineteen
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run kill @e[tag=slot_twenty,type=villager]
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run tag @s remove send_offer_twenty
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run tag @s remove receive_offer_twenty
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run tag @s remove received_offer_twenty
+execute if entity @p[tag=reset_offer_twenty] as @a[tag=reset_offer_twenty] run tag @s remove reset_offer_twenty
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run kill @e[tag=slot_twenty_one,type=villager]
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run tag @s remove send_offer_twenty_one
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run tag @s remove receive_offer_twenty_one
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run tag @s remove received_offer_twenty_one
+execute if entity @p[tag=reset_offer_twenty_one] as @a[tag=reset_offer_twenty_one] run tag @s remove reset_offer_twenty_one
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run kill @e[tag=slot_twenty_two,type=villager]
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run tag @s remove send_offer_twenty_two
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run tag @s remove receive_offer_twenty_two
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run tag @s remove received_offer_twenty_two
+execute if entity @p[tag=reset_offer_twenty_two] as @a[tag=reset_offer_twenty_two] run tag @s remove reset_offer_twenty_two
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run kill @e[tag=slot_twenty_three,type=villager]
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run tag @s remove send_offer_twenty_three
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run tag @s remove receive_offer_twenty_three
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run tag @s remove received_offer_twenty_three
+execute if entity @p[tag=reset_offer_twenty_three] as @a[tag=reset_offer_twenty_three] run tag @s remove reset_offer_twenty_three
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run kill @e[tag=slot_twenty_four,type=villager]
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run tag @s remove send_offer_twenty_four
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run tag @s remove receive_offer_twenty_four
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run tag @s remove received_offer_twenty_four
+execute if entity @p[tag=reset_offer_twenty_four] as @a[tag=reset_offer_twenty_four] run tag @s remove reset_offer_twenty_four
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run kill @e[tag=slot_twenty_five,type=villager]
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run tag @s remove send_offer_twenty_five
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run tag @s remove receive_offer_twenty_five
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run tag @s remove received_offer_twenty_five
+execute if entity @p[tag=reset_offer_twenty_five] as @a[tag=reset_offer_twenty_five] run tag @s remove reset_offer_twenty_five
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run kill @e[tag=slot_twenty_six,type=villager]
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run tag @s remove send_offer_twenty_six
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run tag @s remove receive_offer_twenty_six
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run tag @s remove received_offer_twenty_six
+execute if entity @p[tag=reset_offer_twenty_six] as @a[tag=reset_offer_twenty_six] run tag @s remove reset_offer_twenty_six
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run kill @e[tag=slot_twenty_seven,type=villager]
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run tag @s remove send_offer_twenty_seven
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run tag @s remove receive_offer_twenty_seven
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run tag @s remove received_offer_twenty_seven
+execute if entity @p[tag=reset_offer_twenty_seven] as @a[tag=reset_offer_twenty_seven] run tag @s remove reset_offer_twenty_seven
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run kill @e[tag=slot_twenty_eight,type=villager]
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run tag @s remove send_offer_twenty_eight
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run tag @s remove receive_offer_twenty_eight
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run tag @s remove received_offer_twenty_eight
+execute if entity @p[tag=reset_offer_twenty_eight] as @a[tag=reset_offer_twenty_eight] run tag @s remove reset_offer_twenty_eight
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run kill @e[tag=slot_twenty_nine,type=villager]
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run tag @s remove send_offer_twenty_nine
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run tag @s remove receive_offer_twenty_nine
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run tag @s remove received_offer_twenty_nine
+execute if entity @p[tag=reset_offer_twenty_nine] as @a[tag=reset_offer_twenty_nine] run tag @s remove reset_offer_twenty_nine
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run kill @e[tag=slot_thirty,type=villager]
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run tag @s remove send_offer_thirty
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run tag @s remove receive_offer_thirty
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run tag @s remove received_offer_thirty
+execute if entity @p[tag=reset_offer_thirty] as @a[tag=reset_offer_thirty] run tag @s remove reset_offer_thirty
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run kill @e[tag=slot_thirty_one,type=villager]
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run tag @s remove send_offer_thirty_one
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run tag @s remove receive_offer_thirty_one
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run tag @s remove received_offer_thirty_one
+execute if entity @p[tag=reset_offer_thirty_one] as @a[tag=reset_offer_thirty_one] run tag @s remove reset_offer_thirty_one
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run kill @e[tag=slot_thirty_two,type=villager]
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run tag @s remove send_offer_thirty_two
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run tag @s remove receive_offer_thirty_two
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run tag @s remove received_offer_thirty_two
+execute if entity @p[tag=reset_offer_thirty_two] as @a[tag=reset_offer_thirty_two] run tag @s remove reset_offer_thirty_two
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run kill @e[tag=slot_thirty_three,type=villager]
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run tag @s remove send_offer_thirty_three
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run tag @s remove receive_offer_thirty_three
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run tag @s remove received_offer_thirty_three
+execute if entity @p[tag=reset_offer_thirty_three] as @a[tag=reset_offer_thirty_three] run tag @s remove reset_offer_thirty_three
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run kill @e[tag=slot_thirty_four,type=villager]
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run tag @s remove send_offer_thirty_four
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run tag @s remove receive_offer_thirty_four
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run tag @s remove received_offer_thirty_four
+execute if entity @p[tag=reset_offer_thirty_four] as @a[tag=reset_offer_thirty_four] run tag @s remove reset_offer_thirty_four
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run kill @e[tag=slot_thirty_five,type=villager]
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run tag @s remove send_offer_thirty_five
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run tag @s remove receive_offer_thirty_five
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run tag @s remove received_offer_thirty_five
+execute if entity @p[tag=reset_offer_thirty_five] as @a[tag=reset_offer_thirty_five] run tag @s remove reset_offer_thirty_five
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run kill @e[tag=slot_thirty_six,type=villager]
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run tag @s remove send_offer_thirty_six
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run tag @s remove receive_offer_thirty_six
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run tag @s remove received_offer_thirty_six
+execute if entity @p[tag=reset_offer_thirty_six] as @a[tag=reset_offer_thirty_six] run tag @s remove reset_offer_thirty_six
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run kill @e[tag=slot_thirty_seven,type=villager]
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run tag @s remove send_offer_thirty_seven
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run tag @s remove receive_offer_thirty_seven
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run tag @s remove received_offer_thirty_seven
+execute if entity @p[tag=reset_offer_thirty_seven] as @a[tag=reset_offer_thirty_seven] run tag @s remove reset_offer_thirty_seven
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run kill @e[tag=slot_thirty_eight,type=villager]
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run tag @s remove send_offer_thirty_eight
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run tag @s remove receive_offer_thirty_eight
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run tag @s remove received_offer_thirty_eight
+execute if entity @p[tag=reset_offer_thirty_eight] as @a[tag=reset_offer_thirty_eight] run tag @s remove reset_offer_thirty_eight
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run kill @e[tag=slot_thirty_nine,type=villager]
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run tag @s remove send_offer_thirty_nine
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run tag @s remove receive_offer_thirty_nine
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run tag @s remove received_offer_thirty_nine
+execute if entity @p[tag=reset_offer_thirty_nine] as @a[tag=reset_offer_thirty_nine] run tag @s remove reset_offer_thirty_nine
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run kill @e[tag=slot_forty,type=villager]
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run tag @s remove send_offer_forty
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run tag @s remove receive_offer_forty
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run tag @s remove received_offer_forty
+execute if entity @p[tag=reset_offer_forty] as @a[tag=reset_offer_forty] run tag @s remove reset_offer_forty
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run kill @e[tag=slot_forty_one,type=villager]
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run tag @s remove send_offer_forty_one
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run tag @s remove receive_offer_forty_one
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run tag @s remove received_offer_forty_one
+execute if entity @p[tag=reset_offer_forty_one] as @a[tag=reset_offer_forty_one] run tag @s remove reset_offer_forty_one
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run kill @e[tag=slot_forty_two,type=villager]
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run tag @s remove send_offer_forty_two
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run tag @s remove receive_offer_forty_two
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run tag @s remove received_offer_forty_two
+execute if entity @p[tag=reset_offer_forty_two] as @a[tag=reset_offer_forty_two] run tag @s remove reset_offer_forty_two
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run kill @e[tag=slot_forty_three,type=villager]
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run tag @s remove send_offer_forty_three
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run tag @s remove receive_offer_forty_three
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run tag @s remove received_offer_forty_three
+execute if entity @p[tag=reset_offer_forty_three] as @a[tag=reset_offer_forty_three] run tag @s remove reset_offer_forty_three
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run kill @e[tag=slot_forty_four,type=villager]
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run tag @s remove send_offer_forty_four
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run tag @s remove receive_offer_forty_four
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run tag @s remove received_offer_forty_four
+execute if entity @p[tag=reset_offer_forty_four] as @a[tag=reset_offer_forty_four] run tag @s remove reset_offer_forty_four
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run kill @e[tag=slot_forty_five,type=villager]
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run tag @s remove send_offer_forty_five
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run tag @s remove receive_offer_forty_five
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run tag @s remove received_offer_forty_five
+execute if entity @p[tag=reset_offer_forty_five] as @a[tag=reset_offer_forty_five] run tag @s remove reset_offer_forty_five
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run kill @e[tag=slot_forty_six,type=villager]
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run tag @s remove send_offer_forty_six
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run tag @s remove receive_offer_forty_six
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run tag @s remove received_offer_forty_six
+execute if entity @p[tag=reset_offer_forty_six] as @a[tag=reset_offer_forty_six] run tag @s remove reset_offer_forty_six
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run kill @e[tag=slot_forty_seven,type=villager]
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run tag @s remove send_offer_forty_seven
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run tag @s remove receive_offer_forty_seven
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run tag @s remove received_offer_forty_seven
+execute if entity @p[tag=reset_offer_forty_seven] as @a[tag=reset_offer_forty_seven] run tag @s remove reset_offer_forty_seven
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run kill @e[tag=slot_forty_eight,type=villager]
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run tag @s remove send_offer_forty_eight
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run tag @s remove receive_offer_forty_eight
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run tag @s remove received_offer_forty_eight
+execute if entity @p[tag=reset_offer_forty_eight] as @a[tag=reset_offer_forty_eight] run tag @s remove reset_offer_forty_eight
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run kill @e[tag=slot_forty_nine,type=villager]
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run tag @s remove send_offer_forty_nine
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run tag @s remove receive_offer_forty_nine
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run tag @s remove received_offer_forty_nine
+execute if entity @p[tag=reset_offer_forty_nine] as @a[tag=reset_offer_forty_nine] run tag @s remove reset_offer_forty_nine
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run kill @e[tag=slot_fifty,type=villager]
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run tag @s remove send_offer_fifty
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run tag @s remove receive_offer_fifty
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run tag @s remove received_offer_fifty
+execute if entity @p[tag=reset_offer_fifty] as @a[tag=reset_offer_fifty] run tag @s remove reset_offer_fifty
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run kill @e[tag=slot_fifty_one,type=villager]
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run tag @s remove send_offer_fifty_one
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run tag @s remove receive_offer_fifty_one
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run tag @s remove received_offer_fifty_one
+execute if entity @p[tag=reset_offer_fifty_one] as @a[tag=reset_offer_fifty_one] run tag @s remove reset_offer_fifty_one
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run kill @e[tag=slot_fifty_two,type=villager]
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run tag @s remove send_offer_fifty_two
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run tag @s remove receive_offer_fifty_two
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run tag @s remove received_offer_fifty_two
+execute if entity @p[tag=reset_offer_fifty_two] as @a[tag=reset_offer_fifty_two] run tag @s remove reset_offer_fifty_two
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run kill @e[tag=slot_fifty_three,type=villager]
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run tag @s remove send_offer_fifty_three
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run tag @s remove receive_offer_fifty_three
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run tag @s remove received_offer_fifty_three
+execute if entity @p[tag=reset_offer_fifty_three] as @a[tag=reset_offer_fifty_three] run tag @s remove reset_offer_fifty_three
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run kill @e[tag=slot_fifty_four,type=villager]
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run tag @s remove send_offer_fifty_four
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run tag @s remove receive_offer_fifty_four
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run tag @s remove received_offer_fifty_four
+execute if entity @p[tag=reset_offer_fifty_four] as @a[tag=reset_offer_fifty_four] run tag @s remove reset_offer_fifty_four
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run kill @e[tag=slot_fifty_five,type=villager]
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run tag @s remove send_offer_fifty_five
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run tag @s remove receive_offer_fifty_five
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run tag @s remove received_offer_fifty_five
+execute if entity @p[tag=reset_offer_fifty_five] as @a[tag=reset_offer_fifty_five] run tag @s remove reset_offer_fifty_five
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run kill @e[tag=slot_fifty_six,type=villager]
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run tag @s remove send_offer_fifty_six
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run tag @s remove receive_offer_fifty_six
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run tag @s remove received_offer_fifty_six
+execute if entity @p[tag=reset_offer_fifty_six] as @a[tag=reset_offer_fifty_six] run tag @s remove reset_offer_fifty_six
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run kill @e[tag=slot_fifty_seven,type=villager]
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run tag @s remove send_offer_fifty_seven
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run tag @s remove receive_offer_fifty_seven
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run tag @s remove received_offer_fifty_seven
+execute if entity @p[tag=reset_offer_fifty_seven] as @a[tag=reset_offer_fifty_seven] run tag @s remove reset_offer_fifty_seven
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run kill @e[tag=slot_fifty_eight,type=villager]
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run tag @s remove send_offer_fifty_eight
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run tag @s remove receive_offer_fifty_eight
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run tag @s remove received_offer_fifty_eight
+execute if entity @p[tag=reset_offer_fifty_eight] as @a[tag=reset_offer_fifty_eight] run tag @s remove reset_offer_fifty_eight
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run kill @e[tag=slot_fifty_nine,type=villager]
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run tag @s remove send_offer_fifty_nine
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run tag @s remove receive_offer_fifty_nine
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run tag @s remove received_offer_fifty_nine
+execute if entity @p[tag=reset_offer_fifty_nine] as @a[tag=reset_offer_fifty_nine] run tag @s remove reset_offer_fifty_nine
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run kill @e[tag=slot_sixty,type=villager]
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run tag @s remove send_offer_sixty
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run tag @s remove receive_offer_sixty
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run tag @s remove received_offer_sixty
+execute if entity @p[tag=reset_offer_sixty] as @a[tag=reset_offer_sixty] run tag @s remove reset_offer_sixty
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run kill @e[tag=slot_sixty_one,type=villager]
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run tag @s remove send_offer_sixty_one
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run tag @s remove receive_offer_sixty_one
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run tag @s remove received_offer_sixty_one
+execute if entity @p[tag=reset_offer_sixty_one] as @a[tag=reset_offer_sixty_one] run tag @s remove reset_offer_sixty_one
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run kill @e[tag=slot_sixty_two,type=villager]
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run tag @s remove send_offer_sixty_two
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run tag @s remove receive_offer_sixty_two
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run tag @s remove received_offer_sixty_two
+execute if entity @p[tag=reset_offer_sixty_two] as @a[tag=reset_offer_sixty_two] run tag @s remove reset_offer_sixty_two
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run kill @e[tag=slot_sixty_three,type=villager]
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run tag @s remove send_offer_sixty_three
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run tag @s remove receive_offer_sixty_three
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run tag @s remove received_offer_sixty_three
+execute if entity @p[tag=reset_offer_sixty_three] as @a[tag=reset_offer_sixty_three] run tag @s remove reset_offer_sixty_three
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run kill @e[tag=slot_sixty_four,type=villager]
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run tag @s remove send_offer_sixty_four
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run tag @s remove receive_offer_sixty_four
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run tag @s remove received_offer_sixty_four
+execute if entity @p[tag=reset_offer_sixty_four] as @a[tag=reset_offer_sixty_four] run tag @s remove reset_offer_sixty_four
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run kill @e[tag=slot_sixty_five,type=villager]
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run tag @s remove send_offer_sixty_five
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run tag @s remove receive_offer_sixty_five
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run tag @s remove received_offer_sixty_five
+execute if entity @p[tag=reset_offer_sixty_five] as @a[tag=reset_offer_sixty_five] run tag @s remove reset_offer_sixty_five
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run kill @e[tag=slot_sixty_six,type=villager]
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run tag @s remove send_offer_sixty_six
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run tag @s remove receive_offer_sixty_six
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run tag @s remove received_offer_sixty_six
+execute if entity @p[tag=reset_offer_sixty_six] as @a[tag=reset_offer_sixty_six] run tag @s remove reset_offer_sixty_six
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run kill @e[tag=slot_sixty_seven,type=villager]
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run tag @s remove send_offer_sixty_seven
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run tag @s remove receive_offer_sixty_seven
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run tag @s remove received_offer_sixty_seven
+execute if entity @p[tag=reset_offer_sixty_seven] as @a[tag=reset_offer_sixty_seven] run tag @s remove reset_offer_sixty_seven
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run kill @e[tag=slot_sixty_eight,type=villager]
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run tag @s remove send_offer_sixty_eight
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run tag @s remove receive_offer_sixty_eight
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run tag @s remove received_offer_sixty_eight
+execute if entity @p[tag=reset_offer_sixty_eight] as @a[tag=reset_offer_sixty_eight] run tag @s remove reset_offer_sixty_eight
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run kill @e[tag=slot_sixty_nine,type=villager]
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run tag @s remove send_offer_sixty_nine
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run tag @s remove receive_offer_sixty_nine
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run tag @s remove received_offer_sixty_nine
+execute if entity @p[tag=reset_offer_sixty_nine] as @a[tag=reset_offer_sixty_nine] run tag @s remove reset_offer_sixty_nine
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run kill @e[tag=slot_seventy,type=villager]
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run tag @s remove send_offer_seventy
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run tag @s remove receive_offer_seventy
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run tag @s remove received_offer_seventy
+execute if entity @p[tag=reset_offer_seventy] as @a[tag=reset_offer_seventy] run tag @s remove reset_offer_seventy
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run kill @e[tag=slot_seventy_one,type=villager]
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s remove send_offer_seventy_one
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s remove receive_offer_seventy_one
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s remove received_offer_seventy_one
+execute if entity @p[tag=reset_offer_seventy_one] as @a[tag=reset_offer_seventy_one] run tag @s remove reset_offer_seventy_one
 #;reset_offer
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=armor_stand]
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s add reset_trade
