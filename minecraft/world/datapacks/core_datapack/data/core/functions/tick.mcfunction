@@ -16,6 +16,7 @@ execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
 #function core:shop/tick
 
+function core:alpha/tick
 function core:keep/tick
 function core:difficulty/tick
 function core:home/tick
