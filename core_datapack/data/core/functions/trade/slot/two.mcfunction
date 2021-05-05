@@ -13,6 +13,7 @@ execute unless entity @s[tag=send_offer_two] unless entity @s[tag=received_offer
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] unless entity @e[tag=receive,tag=slot_two,type=armor_stand] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1b,Small:1b,Invisible:1b,NoGravity:1b,NoBasePlate:1b,PersistenceRequired:1b,Health:1f,DisabledSlots:4144703,HandItems:[{},{}],Tags:["keep","receive","slot","slot_two"]}
 #execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run data modify storage core:trade live[2].receive set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run item entity @e[tag=receive,tag=slot_two,limit=1] weapon.mainhand copy entity @s weapon.offhand
+execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run item entity @s weapon.offhand replace air
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run tellraw @p[tag=send_offer_two] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_two,tag=receive]"}," in exchange for your ",{"nbt":"HandItems[0]","entity":"@e[tag=slot_two,tag=send]"},"\n",{"color":"light_purple","text":"To accept click here.","clickEvent":{"action":"run_command","value":"/trigger trade set -1"}}]
 execute if entity @s[tag=receive_offer_two,tag=!recieved_offer_two] run scoreboard players enable @p[tag=send_offer_two] trade
 execute if entity @s[tag=receive_offer_two,tag=!received_offer_two] run tag @s add received_offer_two
