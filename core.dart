@@ -232,7 +232,7 @@ File load_file(String project_name, String file_name) {
             NumberToWords.convert(index, "en").trim().replaceAll(" ", "_");
         final_line = '''${final_line}
 execute if entity @p[scores={trade=${index}}] as @a[scores={trade=${index}},tag=alpha_tester] run function core:trade/slot/${index_as_word}''';
-        String new_line = "/n";
+        String new_line = "\n";
         String this_final_line = '''
 execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] unless entity @e[tag=send,tag=slot_${index_as_word},type=villager] at @s run summon villager ~ ~1 ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress","color":"blue"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","send","slot","slot_${index_as_word}"]}
 execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] run item entity @e[tag=send,tag=slot_${index_as_word},limit=1] weapon.mainhand copy entity @s weapon.offhand
