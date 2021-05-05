@@ -226,6 +226,20 @@ File load_file(String project_name, String file_name) {
   List output_as_list = output.split("\n");
   String final_line = "";
   output_as_list.forEach((current_line) {
+    if(current_line.startsWith{'#reset_offer'}) {
+       for (var index = 2; index <= 71; index++) {
+          String index_as_word =
+            NumberToWords.convert(index, "en").trim().replaceAll(" ", "_");
+         final_line = '''${final_line}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run kill @e[tag=slot_${index_as_word},type=villager]
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s add reset_trade
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove send_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove receive_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove received_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove reset_offer_${index_as_word}
+         ''';
+       }
+    }
     if (current_line.startsWith('#;trade_slot')) {
       for (var index = 2; index <= 71; index++) {
         String index_as_word =
