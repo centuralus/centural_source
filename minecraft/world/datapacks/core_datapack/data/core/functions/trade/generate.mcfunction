@@ -1,9 +1,5 @@
 
 
-#If there is a player making an offer
-execute if entity @p[scores={trade=2}] as @a[scores={trade=2},tag=alpha_tester] run function core:trade/slot/two
-execute if entity @p[scores={trade=3}] as @a[scores={trade=3},tag=alpha_tester] run function core:trade/slot/three
-#... TODO
 execute if entity @p[scores={trade=2}] as @a[scores={trade=2},tag=alpha_tester] run function core:trade/slot/two
 execute if entity @p[scores={trade=3}] as @a[scores={trade=3},tag=alpha_tester] run function core:trade/slot/three
 execute if entity @p[scores={trade=4}] as @a[scores={trade=4},tag=alpha_tester] run function core:trade/slot/four
@@ -76,7 +72,7 @@ execute if entity @p[scores={trade=70}] as @a[scores={trade=70},tag=alpha_tester
 execute if entity @p[scores={trade=71}] as @a[scores={trade=71},tag=alpha_tester] run function core:trade/slot/seventy_one
 #;trade_slot
 
-
+#;reset_offer
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=armor_stand]
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s add reset_trade
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
