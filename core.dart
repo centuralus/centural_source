@@ -8,6 +8,7 @@ import 'package:logger/logger.dart';
 import 'dart:cli';
 import 'dart:io' as dart show File;
 import 'package:path/path.dart';
+import 'package:numbers_to_words/numbers_to_words.dart';
 
 /* End Import Libraries */
 var core_directory = './core_datapack';
@@ -213,7 +214,9 @@ String operator_menu() {
   return final_string;
 }
 
-var fix_count = 0;
+var fix_count = 0; //
+var append_files_array = [];
+
 File load_file(String project_name, String file_name) {
   String output = waitFor(dart.File(
           '${core_directory}/data/${project_name}/functions/${file_name}.mcfunction')
@@ -223,6 +226,64 @@ File load_file(String project_name, String file_name) {
   List output_as_list = output.split("\n");
   String final_line = "";
   output_as_list.forEach((current_line) {
+    if (current_line.startsWith('#;trade_slot')) {
+      for (var index = 2; index <= 71; index++) {
+        String index_as_word =
+            NumberToWords.convert(index, "en").trim().replaceAll(" ", "_");
+        final_line = '''${final_line}
+execute if entity @p[scores={trade=${index}}] as @a[scores={trade=${index}},tag=alpha_tester] run function core:trade/slot/${index_as_word}''';
+        String this_final_line = '''
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] unless entity @e[tag=send,tag=slot_${index_as_word},type=villager] at @s run summon villager ~ ~1 ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress","color":"blue"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","send","slot","slot_${index_as_word}"]}
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] run item entity @e[tag=send,tag=slot_${index_as_word},limit=1] weapon.mainhand copy entity @s weapon.offhand
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] run item entity @s weapon.offhand replace air
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tellraw @p[distance=0] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_${index_as_word},tag=send]"},"\n",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set ${index}"}}]
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @p[tag=received_offer_${index_as_word}] unless entity @p[tag=receive_offer_${index_as_word}] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_${index_as_word}
+execute unless entity @s[tag=send_offer_${index_as_word}] unless entity @s[tag=received_offer_${index_as_word}] run tag @s[tag=!receive_offer_${index_as_word},tag=!send_offer_${index_as_word}] add send_offer_${index_as_word}
+
+
+
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] unless entity @e[tag=receive,tag=slot_${index_as_word},type=villager] at @s run summon villager ~ ~1 ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","receive","slot","slot_${index_as_word}"]}
+#execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run data modify storage core:trade live[${index}].receive set from entity @s Inventory[{Slot:-106b}]
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run item entity @e[tag=receive,tag=slot_${index_as_word},limit=1] weapon.mainhand copy entity @s weapon.offhand
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run item entity @s weapon.offhand replace air
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run tellraw @p[tag=send_offer_${index_as_word}] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_${index_as_word},tag=receive]"}," in exchange for your ",{"nbt":"HandItems[0]","entity":"@e[tag=slot_${index_as_word},tag=send]"},"\n",{"color":"light_purple","text":"To accept click here.","clickEvent":{"action":"run_command","value":"/trigger trade set -1"}}]
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!recieved_offer_${index_as_word}] run scoreboard players enable @p[tag=send_offer_${index_as_word}] trade
+execute if entity @s[tag=receive_offer_${index_as_word},tag=!received_offer_${index_as_word}] run tag @s add received_offer_${index_as_word}
+execute if entity @s[tag=receive_offer_${index_as_word},tag=received_offer_${index_as_word}] run tag @s remove receive_offer_${index_as_word}
+
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] run item entity @s weapon.offhand copy entity @e[tag=slot_${index_as_word},tag=send,limit=1] weapon.mainhand
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] unless entity @e[tag=slot_${index_as_word},tag=receive] run tellraw @s {"text":"Trade has been canceled"}
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] unless entity @e[tag=slot_${index_as_word},tag=receive] run tellraw @p[tag=send_offer_${index_as_word},scores={trade=-1}] {"text":"Trade has been canceled"}
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] run item entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] weapon.offhand copy entity @e[tag=slot_${index_as_word},tag=receive,limit=1] weapon.mainhand
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] unless entity @e[tag=slot_${index_as_word},tag=send] run tellraw @s {"text":"Trade has been canceled"}
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] unless entity @e[tag=slot_${index_as_word},tag=send] run tellraw @p[tag=send_offer_${index_as_word},scores={trade=-1}] {"text":"Trade has been canceled"}
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] at @s run tp @e[tag=slot_${index_as_word},tag=send,limit=1] 0 0 0
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] at @p[tag=send_offer_${index_as_word},scores={trade=-1}] run tp @e[tag=slot_${index_as_word},tag=receive,limit=1] 0 0 0
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] at @p[tag=send_offer_${index_as_word},scores={trade=-1}] run kill @e[tag=slot_${index_as_word},tag=receive,limit=1]
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] if entity @e[tag=slot_${index_as_word},tag=send] if entity @e[tag=slot_${index_as_word},tag=receive] at @s run kill @e[tag=slot_${index_as_word},tag=send,limit=1]
+
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] run tag @s add reset_offer_${index_as_word}
+
+execute if entity @p[tag=send_offer_${index_as_word},scores={trade=-1}] if entity @s[tag=received_offer_${index_as_word},scores={trade=${index}}] run tag @p[tag=send_offer_${index_as_word},scores={trade=-1}] add reset_offer_${index_as_word}
+
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run scoreboard players reset @s trade
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run scoreboard players set @s trade_timer -1
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove send_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove receive_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove received_offer_${index_as_word}
+execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove reset_offer_${index_as_word}
+''';
+        append_files_array.add(File("trade/slot/${index_as_word}",
+            child: CommandList.str(this_final_line)));
+      }
+    }
     if (current_line.startsWith('#;operator_menu')) {
       current_line = operator_menu();
     }
@@ -267,8 +328,11 @@ File load_file(String project_name, String file_name) {
 
 List<File> load_files(String project_name, Map files_map) {
   List<File> file_list = [];
-  files_map.forEach((function_file, function_details) {
-    file_list.add(load_file(project_name, function_file));
+  files_map.forEach((file_name, function_details) {
+    file_list.add(load_file(project_name, file_name));
+  });
+  append_files_array.forEach((item) {
+    file_list.add(item);
   });
 
   //print(fix_count);
