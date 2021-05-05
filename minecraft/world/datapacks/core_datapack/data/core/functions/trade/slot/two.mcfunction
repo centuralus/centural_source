@@ -21,12 +21,12 @@ execute if entity @s[tag=receive_offer_two,tag=received_offer_two] run tag @s re
 
 
 #execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run item entity @s weapon.offhand copy entity @e[tag=slot_two,tag=send,limit=1] weapon.mainhand
-execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @s run loot give @s kill @e[tag=slot_two,tag=send,limit=1]
-execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @s run tp @e[tag=slot_two,tag=send,limit=1] 0 -100 0
+execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @s run tp @e[tag=slot_two,tag=send,limit=1] ~ ~ ~
+execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @s run kill @e[tag=slot_two,tag=send,limit=1]
 
 #execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run item entity @p[tag=send_offer_two,scores={trade=-1}] weapon.offhand copy entity @e[tag=slot_two,tag=receive,limit=1] weapon.mainhand
-execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @p[tag=send_offer_two,scores={trade=-1}] run loot give @s kill @e[tag=slot_two,tag=receive,limit=1]
-execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @p[tag=send_offer_two,scores={trade=-1}] run tp @e[tag=slot_two,tag=receive,limit=1] 0 -100 0
+execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @p[tag=send_offer_two,scores={trade=-1}] run tp @e[tag=slot_two,tag=receive,limit=1] ~ ~ ~
+execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] at @p[tag=send_offer_two,scores={trade=-1}] run kill @e[tag=slot_two,tag=receive,limit=1]
 
 #execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run item entity @p[tag=send_offer_two,scores={trade=-1}] weapon.offhand copy entity @e[tag=slot_two,tag=receive,limit=1] weapon.mainhand
 
