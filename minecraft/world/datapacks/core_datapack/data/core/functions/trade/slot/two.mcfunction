@@ -1,7 +1,6 @@
 #Store the items data in storage
 
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] unless entity @e[tag=send,tag=slot_two,type=villager] at @s positioned ^ ^ ^1 positioned ~ ~ ~ run summon villager ~ ~ ~ {Health:1f,NoGravity:1b,Silent:1b,CustomNameVisible:1b,PersistenceRequired:1b,NoAI:1b,CustomName:'{"text":"Trade in progress","color":"blue"}',HandItems:[{},{}],HandDropChances:[1.000F,1.000F],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}],Tags:["keep","send","slot","slot_two"]}
-#execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run data modify storage core:trade live[2].send set from entity @s Inventory[{Slot:-106b}]
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @e[tag=send,tag=slot_two,limit=1] weapon.mainhand copy entity @s weapon.offhand
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] run item entity @s weapon.offhand replace air
 execute unless entity @s[tag=send_offer_two] unless entity @p[tag=received_offer_two] unless entity @p[tag=receive_offer_two] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tellraw @p[distance=0] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"HandItems[0]","entity":"@e[tag=slot_two,tag=send]"},"\n",{"color":"light_purple","text":"To offer an item hold the item in your left hand then Click Here.","clickEvent":{"action":"run_command","value":"/trigger trade set 2"}}]
@@ -36,6 +35,7 @@ execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=rece
 execute if entity @p[tag=send_offer_two,scores={trade=-1}] if entity @s[tag=received_offer_two,scores={trade=2}] run tag @p[tag=send_offer_two,scores={trade=-1}] add reset_offer_two
 
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run scoreboard players reset @s trade
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run scoreboard players set @s trade_timer -1
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
