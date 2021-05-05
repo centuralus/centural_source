@@ -5,7 +5,7 @@ execute if entity @p[scores={trade=3}] as @a[scores={trade=3}] run function core
 #... TODO
 
 
-execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[type=slot_two,type=armor_stand]
+execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run kill @e[tag=slot_two,type=armor_stand]
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove send_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove receive_offer_two
 execute if entity @p[tag=reset_offer_two] as @a[tag=reset_offer_two] run tag @s remove received_offer_two
