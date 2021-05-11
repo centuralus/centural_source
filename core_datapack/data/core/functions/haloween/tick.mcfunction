@@ -10,3 +10,5 @@ execute if entity @p[scores={haloween=-1}] as @a[scores={haloween=-1}] run tag @
 
 
 execute if entity @p[tag=reset_haloween] as @a[tag=reset_haloween] run scoreboard players reset @s haloween
+
+execute if entity @p[tag=reset_haloween] as @a[tag=reset_haloween] run tag @s remove reset_haloween
