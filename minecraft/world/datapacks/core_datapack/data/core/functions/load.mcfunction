@@ -41,7 +41,7 @@ execute if data storage core:scoreboard {status:load} run function core:scoreboa
 #function music:as_the_world_falls_down/load
 
 #function city:load
-
+function core:music/as_the_world_falls_down/load
 function core:alpha/load
 function core:keep/load
 function core:unique/load

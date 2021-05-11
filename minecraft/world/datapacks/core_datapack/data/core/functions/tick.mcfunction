@@ -17,6 +17,7 @@ execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
 #function core:shop/tick
 
+execute if entity @p[tag=nbs_astheworld] run function core:music/as_the_world_falls_down/tick
 function core:alpha/tick
 function core:keep/tick
 function core:difficulty/tick
