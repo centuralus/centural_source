@@ -1,0 +1,4 @@
+playsound minecraft:block.note_block.harp music @s ^0 ^ ^ 0.63 0.943874 1
+playsound minecraft:block.note_block.harp music @s ^0 ^ ^ 0.77 1.259921 1
+playsound minecraft:block.note_block.harp music @s ^0 ^ ^ 0.66 0.529732 1
+scoreboard players set @s nbs_songofheal_t 504
