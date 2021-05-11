@@ -464,7 +464,8 @@ class project_main extends Widget {
     return generate_project_from_map({
       "core": "core",
       "plugins": {
-        "core": {"full": {}}
+        "core": {"full": {}},
+        "music":{"full":{}}
       }
     });
   }
