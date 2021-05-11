@@ -465,7 +465,7 @@ class project_main extends Widget {
       "core": "core",
       "plugins": {
         "core": {"full": {}},
-        "music":{"full":{}}
+        "music": {"full": {}}
       }
     });
   }

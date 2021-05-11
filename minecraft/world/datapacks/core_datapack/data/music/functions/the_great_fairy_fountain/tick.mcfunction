@@ -1,0 +1,9 @@
+execute if entity @p[tag=music_play_the_great_fairy_fountain] as @a[tag=music_play_the_great_fairy_fountain] at @s run function music:the_great_fairy_fountain/play
+execute if entity @e[tag=great_fairy_fountain] as @e[tag=great_fairy_fountain] at @s if entity @p[tag=!music_play_the_great_fairy_fountain,distance=..32] as @a[tag=!music_play_the_great_fairy_fountain,distance=..32] unless entity @s[tag=nbs_deathsong] run tag @s add music_play_the_great_fairy_fountain
+execute if entity @p[tag=music_play_the_great_fairy_fountain] as @a[tag=music_play_the_great_fairy_fountain] at @s unless entity @e[tag=great_fairy_fountain,distance=..32] run tag @s remove music_play_the_great_fairy_fountain
+
+
+execute if entity @e[tag=great_fairy_fountain] at @e[tag=great_fairy_fountain] run particle minecraft:falling_water ~ ~5 ~ 5 5 5 1 10 force @a[distance=..32]
+execute if entity @e[tag=great_fairy_fountain] as @e[tag=great_fairy_fountain] at @s if entity @p[distance=..16] as @a[distance=..16] at @s if block ~ ~ ~ water unless entity @s[nbt={Health:20.0f}] run playsound minecraft:entity.villager.work_cleric master @s ~ ~ ~ 1 1
+execute if entity @e[tag=great_fairy_fountain] as @e[tag=great_fairy_fountain] at @s if entity @p[distance=..16] as @a[distance=..16] at @s if block ~ ~ ~ water unless entity @s[nbt={Health:20.0f}] run particle minecraft:heart ~ ~ ~ 1 1 1 1 1 force @a[distance=..16]
+execute if entity @e[tag=great_fairy_fountain] as @e[tag=great_fairy_fountain] at @s if entity @p[distance=..16] as @a[distance=..16] at @s if block ~ ~ ~ water unless entity @s[nbt={Health:20.0f}] run effect give @s minecraft:instant_health 1 1
