@@ -23,7 +23,7 @@ eng.traineddata
 package-lock.json
 
 # Bloated Code that should be in git
-**/data/music/
+
 
 # Dart
 pubspec.lock
