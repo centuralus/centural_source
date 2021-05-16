@@ -1,4 +1,4 @@
-function rx.playerdb:api/get_self
+execute as @s run function rx.playerdb:api/get_self
 execute store result score @s barter run data get storage rx:io playerdb.player.data.centural.core.offer
 execute if entity @s[scores={barter=0}] run tellraw @s {"text":"Setting up new offer","color":"yellow"} 
 execute if entity @s[scores={barter=1}] run tellraw @s [{"nbt":"rx:io","storage":"playerdb.player.data.centural.core.offer"},"\n",{"text":"Item found in offer, please claim before adding a new offer."}]
