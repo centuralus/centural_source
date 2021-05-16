@@ -14,3 +14,4 @@ execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run scoreboard pl
 execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run scoreboard players enable @s barter
 execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run tag @s remove reset_barter
 #
+#test
