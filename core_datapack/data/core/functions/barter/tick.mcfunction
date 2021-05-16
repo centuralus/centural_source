@@ -1,6 +1,6 @@
 execute as @a unless entity @s[scores={barter=-2147483648..2147483647}] run tag @s add reset_barter
 execute if entity @p[scores={barter=1..}] as @a[scores={barter=1..}] run tag @s add reset_barter
-execute if entity @p[scores={barter=..-1}] as @a[scores={barter=-..1}] run tag @s add reset_barter
+execute if entity @p[scores={barter=..-1}] as @a[scores={barter=..-1}] run tag @s add reset_barter
 
 
 execute if entity @p[scores={barter=2}] as @a[scores={barter=2}] run tag @s add claim_barter
