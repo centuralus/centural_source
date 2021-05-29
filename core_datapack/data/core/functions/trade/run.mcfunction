@@ -8,7 +8,7 @@ execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s ad
 
 execute if entity @p[tag=offer_trade,scores={trade=2}] as @p[tag=offer_trade,scores={trade=2}] run data modify storage core:trade live[2] set from entity @s Inventory[{Slot:-106b}]
 execute if entity @p[tag=offer_trade,scores={trade=3}] as @p[tag=offer_trade,scores={trade=3}] run data modify storage core:trade live[3] set from entity @s Inventory[{Slot:-106b}]
-#;core_trade_live
+#;;core_trade_live
 
 #
 execute if entity @p[tag=offer_trade,scores={trade=2}] as @p[tag=offer_trade,scores={trade=2}] at @s at @a[distance=1..] if score @p[distance=0] unique = @s trade run tag @p[distance=0] add receive_offer_two

@@ -1,10 +1,10 @@
 
 
-#;trade_slot
+#;;trade_slot
 
-#;reset_offer
+#;;reset_offer
 
-#;handle_decline
+#;;handle_decline
 
 
 

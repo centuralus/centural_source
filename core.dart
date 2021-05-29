@@ -195,6 +195,23 @@ String clone_inventory() {
   return final_string;
 }
 
+String view_all_barter() {
+  String final_string = "";
+  String command = "";
+
+  String new_line = "\\n";
+  for (var index = 2; index <= 71; index++) {
+    command = '''
+  execute if entity @s[scores={unique=${index}}] run tellraw @p[tag=view_all_barter] [{"text":"[ Trade ]","clickEvent":{"action":"run_command","value":"/trigger trade set ${index}"},"color":"#e2c4f1","hoverEvent":{"action":"show_text","contents":[{"text":"Click here to trade with "},{"selector":"@s[scores={unique=${index}}]"}]}}," ",{"nbt":"playerdb.player.info.name","storage":"rx:io","color":"aqua"}," ~ Count:",{"nbt":"playerdb.player.data.centural.core.barter.offer.Count","storage":"rx:io","color":"light_purple"}," Item:",{"nbt":"playerdb.player.data.centural.core.barter.offer.id","storage":"rx:io","color":"light_purple"},"${new_line}","Extra:",{"nbt":"playerdb.player.data.centural.core.barter.offer.tag","storage":"rx:io","color":"light_purple"}]
+  ''';
+    final_string = '''
+    ${final_string}
+    ${command}
+  ''';
+  }
+  return final_string;
+}
+
 String operator_menu() {
   String final_string = "";
   String command =
@@ -226,6 +243,10 @@ File load_file(String project_name, String file_name) {
   List output_as_list = output.split("\n");
   String final_line = "";
   output_as_list.forEach((current_line) {
+    if (current_line.startsWith("#;view_all_barter")) {
+      current_line = view_all_barter();
+    }
+
     if (current_line.startsWith('#;reset_offer')) {
       for (var index = 2; index <= 71; index++) {
         String index_as_word =
@@ -464,8 +485,7 @@ class project_main extends Widget {
     return generate_project_from_map({
       "core": "core",
       "plugins": {
-        "core": {"full": {}},
-        "music": {"full": {}}
+        "core": {"full": {}}
       }
     });
   }

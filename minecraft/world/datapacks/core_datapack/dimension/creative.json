@@ -1,0 +1,29 @@
+{
+  "type": {
+    "name": "minecraft:creative",
+    "ultrawarm": false,
+    "natural": true,
+    "piglin_safe": false,
+    "respawn_anchor_works": false,
+    "bed_works": true,
+    "has_raids": false,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 1,
+    "ambient_light": 0,
+    "logical_height": 1024,
+    "infiniburn": "minecraft:infiniburn_overworld",
+    "min_y": -1024,
+    "height": 2048
+  },
+  "generator": {
+    "type": "minecraft:flat",
+    "seed": 17871,
+    "settings": {
+      "layers": [],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}
