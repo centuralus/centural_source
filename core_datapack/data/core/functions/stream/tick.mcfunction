@@ -63,3 +63,8 @@ execute if entity @p[tag=unlock_stream_chat] as @p[tag=unlock_stream_chat] run f
 #Particles
 execute if entity @p[tag=stream_particle_heart] run function core:stream/particle/heart
 execute if entity @p[tag=unlock_stream_particle_heart] as @p[tag=unlock_stream_particle_heart] run function core:stream/unlock/heart
+
+
+#execute
+execute as Bonesdog at @s unless entity @p[distance=..3,team=!away] anchored eyes facing entity @p[distance=3..32,team=!away,tag=!block_stream] eyes positioned ^ ^ ^0.5 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ~ ~ ~ ~ ~
+execute as Bonesdog at @s unless entity @p[distance=..3,team=!away] facing entity @p[distance=3..32,team=!away,tag=!block_stream] eyes run tp @s ^ ^ ^0.1

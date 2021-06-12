@@ -56,6 +56,75 @@ bool project_map_has_plugins(Map project_map) {
 }
 
 String tellraw_teleport() {}
+
+String ban_player() {
+  String final_string = "";
+
+  String current_string = '#';
+  String command = "";
+
+  for (var index = 2; index <= 71; index++) {
+    command =
+        'execute if entity @p[team=helper,scores={ban=${index}}] as @p[scores={unique=${index}},tag=!ban] run tag @s add ban';
+    current_string = '${current_string}\n${command}';
+  }
+
+  final_string = current_string;
+  return final_string;
+}
+
+String kick_player() {
+  String final_string = "";
+
+  String current_string = '#';
+  String command = "";
+
+  for (var index = 2; index <= 71; index++) {
+    command =
+        'execute if entity @p[team=helper,scores={kick=${index}}] as @p[scores={unique=${index}},tag=!kick] run tag @s add kick';
+    current_string = '${current_string}\n${command}';
+  }
+
+  final_string = current_string;
+  return final_string;
+}
+
+extension StringExtension on String {
+  String capitalize() {
+    return "${this[0].toUpperCase()}${this.substring(1)}";
+  }
+}
+
+String menu(String menu_name) {
+  String final_string = "";
+  String menu_name_to_uppercase = menu_name.capitalize();
+  String current_string =
+      "execute if entity @p[team=helper,tag=${menu_name}_menu] as @a[team=helper,tag=${menu_name}_menu] run tellraw @s [";
+
+  for (var index = 2; index <= 71; index++) {
+    String tellraw =
+        '''{"selector":"@p[scores={unique=${index}}]","clickEvent":{"action":"run_command","value":"/trigger ${menu_name} set ${index}"},"hoverEvent":{"action":"show_text","contents":[{"text":"${menu_name_to_uppercase} "},{"selector":"@p[scores={unique=${index}}]"},{"text":" ID ~ "},{"score":{"name":"@p[scores={unique=${index}}]","objective":"unique"}}]}}''';
+    if (index == 2) {
+      current_string = '${current_string}${tellraw}';
+    } else if (index > 2 && index < 71) {
+      current_string = '${current_string},${tellraw}';
+    } else if (index == 71) {
+      current_string = '${current_string},${tellraw}]';
+    } else {}
+  }
+
+  final_string = "${current_string}";
+  return final_string;
+}
+
+String kick_menu() {
+  return menu("kick");
+}
+
+String ban_menu() {
+  return menu("ban");
+}
+
 String spawn_to_creative() {
   String output =
       'execute if entity @p[tag=spawn_to_creative] as @a[tag=spawn_to_creative] unless entity @p[scores={temporary_timer=0..}] run scoreboard objectives add temporary_timer minecraft.custom:minecraft.play_one_minute "Temporary Timer"\n';
@@ -260,6 +329,20 @@ execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${i
 execute if entity @p[tag=reset_offer_${index_as_word}] as @a[tag=reset_offer_${index_as_word}] run tag @s remove reset_offer_${index_as_word}
          ''';
       }
+    }
+
+    if (current_line.startsWith('#;kick_menu')) {
+      current_line = kick_menu();
+    }
+    if (current_line.startsWith('#;ban_menu')) {
+      current_line = ban_menu();
+    }
+
+    if (current_line.startsWith('#;kick_player')) {
+      current_line = kick_player();
+    }
+    if (current_line.startsWith('#;ban_player')) {
+      current_line = ban_player();
     }
 
     if (current_line.startsWith('#;handle_decline')) {}

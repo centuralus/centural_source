@@ -33,15 +33,15 @@ execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,t
 #TODO Remove the wait... was told not needed so lets try it without!
 execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["protected","target"],Age:-2147483648,Duration:-1,WaitTime:-2147483648,NoGravity:1b}
 
-execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] run scoreboard objectives add temp_wait_x
+execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] run scoreboard objectives add temp_wait_x dummy
 execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] run tag @s add store_x
 execute if entity @p[tag=store_x,team=builder] as @a[tag=store_x,team=builder] at @s store success score @s temp_wait_x store result entity @e[tag=target,tag=protected,limit=1,distance=..48,sort=nearest] Pos[0] double 1 run scoreboard players get @s mark_protected_x
 
-execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] run scoreboard objectives add temp_wait_y
+execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] run scoreboard objectives add temp_wait_y dummy
 execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=!store_y,tag=!store_z] run tag @s add store_y
 execute if entity @p[tag=store_y,team=builder] as @a[tag=store_y,team=builder] at @s store success score @s temp_wait_y store result entity @e[tag=target,tag=protected,limit=1,distance=..48,sort=nearest] Pos[1] double 1 run scoreboard players get @s mark_protected_y
 
-execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] run scoreboard objectives add temp_wait_z
+execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] run scoreboard objectives add temp_wait_z dummy
 execute if entity @p[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=store_x,tag=store_y,tag=!store_z] run tag @s add store_z
 execute if entity @p[tag=store_z,team=builder] as @a[tag=store_z,team=builder] at @s store success score @s temp_wait_z store result entity @e[tag=target,tag=protected,limit=1,distance=..48,sort=nearest] Pos[2] double 1 run scoreboard players get @s mark_protected_z
 
@@ -172,11 +172,11 @@ execute if entity @p[team=helper,tag=builder] as @a[team=helper,tag=builder] run
 execute if entity @p[team=builder,tag=builder] as @a[team=builder,tag=builder] run tag @s remove builder
 #
 
-execute if entity @p[team=player,gamemode=adventure] as @a[team=player,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
-execute if entity @p[team=player,gamemode=adventure] as @a[team=player,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
 
-execute if entity @p[team=player,gamemode=survival] as @a[team=player,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "You have entered the protected region"
-execute if entity @p[team=player,gamemode=survival] as @a[team=player,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run gamemode adventure @s
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "You have entered the protected region"
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run gamemode adventure @s
 
 
 

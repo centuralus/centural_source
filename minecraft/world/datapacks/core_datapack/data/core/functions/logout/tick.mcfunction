@@ -55,26 +55,16 @@ execute if entity @p[team=] as @a[team=] if score current teleport_unique <= max
 
 #execute if entity @p[tag=logout_reset,team=!builder,name=SHADOWWOLF6497] run team join builder SHADOWWOLF6497
 #execute if entity @p[tag=logout_reset,team=!builder,name=IRIN2021] run team join builder IRIN2021
-execute if entity @p[tag=logout_reset,team=!operator,name=Nardwe] run team join operator Nardwe
+#execute if entity @p[tag=logout_reset,team=!operator,name=Nardwe] run team join operator Nardwe
 execute if entity @p[tag=logout_reset,team=!builder,name=_LilPug] run team join builder _LilPug
 execute if entity @p[tag=logout_reset,team=!builder,name=_Magic_Man] run team join builder _Magic_Man
-execute if entity @p[tag=logout_reset,team=!builder,name=Torchic2149] run team join builder Torchic2149
 execute if entity @p[tag=logout_reset,team=!builder,name=Tahlia_Cluffy] run team join builder Tahlia_Cluffy
-execute if entity @p[tag=logout_reset,team=!builder,name=heribone64] run team join builder heribone64
 execute if entity @p[tag=logout_reset,team=!builder,name=Spike40211] run team join builder Spike40211
-execute if entity @p[tag=logout_reset,team=!builder,name=Obsidi4nEye] run team join builder Obsidi4nEye
-execute if entity @p[tag=logout_reset,team=!builder,name=Grayscale_Block] run team join builder Grayscale_Block
-execute if entity @p[tag=logout_reset,team=!builder,name=Gameio_YT] run team join builder Gameio_YT
 
 execute if entity @p[tag=logout_reset,team=!builder,name=maxicode] as @p[nbt={UUID:[I;1451173037,1723482750,-1832450951,-1964160116]}] run team join explorer @s
 # End Builders
 
 # Start Explorers
-execute if entity @p[tag=logout_reset,team=!explorer,name=Paxolot] run team join explorer Paxolot
-execute if entity @p[tag=logout_reset,team=!explorer,name=Frumple12] run team join explorer Frumple12
-execute if entity @p[tag=logout_reset,team=!explorer,name=frampalino67] run team join explorer Frampalino67
-execute if entity @p[tag=logout_reset,team=!explorer,name=EvilCashew83008] run team join explorer EvilCashew83008
-execute if entity @p[tag=logout_reset,team=!explorer,name=thedemonofthesky] run team join explorer thedemonofthesky
 
 # End Explorers
 
@@ -87,20 +77,19 @@ execute if entity @p[tag=logout_reset,team=builder,gamemode=!creative] as @a[tag
 # Helpers
 
 
-execute if entity @p[tag=logout_reset,team=!helper,name=MaksioGames] run team join helper MaksioGames
 execute if entity @p[tag=logout_reset,team=!helper,name=Odins_Mom] run team join helper Odins_Mom
 execute if entity @p[tag=logout_reset,team=!helper,name=Drowsy1] run team join helper Drowsy1
 execute if entity @p[tag=logout_reset,team=!helper,name=Xios12] run team join helper Xios12
 execute if entity @p[tag=logout_reset,team=!helper,name=Sollace5792] run team join helper Sollace5792
-execute if entity @p[tag=logout_reset,team=!helper,name=Bonesdog] run team join helper Bonesdog
-execute if entity @p[tag=logout_reset,team=!helper,name=Caimengaming45] run team join helper Caimengaming45
+execute if entity @p[tag=logout_reset,team=!helper,name=Nardwe] run team join helper Nardwe
 execute if entity @p[tag=logout_reset,team=!helper,name=AntyCrix] run team join helper AntyCrix
-execute if entity @p[tag=logout_reset,team=!helper,name=WinterWins1] run team join helper WinterWins1
-execute if entity @p[tag=logout_reset,team=!helper,name=TitanKnight0007] run team join helper TitanKnight0007
+execute if entity @p[tag=logout_reset,team=!helper,name=x_UNIC0RN_x] run team join helper x_UNIC0RN_x
+execute if entity @p[tag=logout_reset,team=!helper,name=Marshy_4u3] run team join helper Marshy_4u3
 
 # End Helpers
 # Helper Login Message
 execute if entity @p[tag=logout_reset,team=helper] as @a[tag=logout_reset,team=helper] run tellraw @a [{"selector":"@s"}," ","a Centural Helper has logged in!"]
+execute if entity @p[tag=logout_reset,team=helper] as @a[tag=logout_reset,team=helper] run tellraw @s [{"text":"/trigger helper_menu","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger helper_menu set 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to open your helper menu.","color":"yellow"}]}}]
 # Helper Gamemode Rules
 execute if entity @p[tag=logout_reset,team=helper,gamemode=!creative] as @a[tag=logout_reset,team=helper,gamemode=!creative] run gamemode creative @s
 

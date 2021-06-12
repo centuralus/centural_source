@@ -1,19 +1,18 @@
 execute as @a unless entity @s[scores={spawn=-2147483648..2147483647}] run scoreboard players enable @s spawn
 
-execute if entity @p[team=,scores={walk_one_cm=0}] as @a[team=,scores={walk_one_cm=0}] in minecraft:overworld run tp @s @e[tag=spawn,limit=1,type=armor_stand]
+#execute if entity @p[team=,scores={walk_one_cm=0}] as @a[team=,scores={walk_one_cm=0}] in minecraft:overworld run tp @s @e[tag=spawn,limit=1,type=armor_stand]
 
-execute in minecraft:spawn if entity @e[tag=wild,type=armor_stand] at @e[tag=wild,type=armor_stand] if entity @p[distance=..32] as @a[distance=..32] run particle minecraft:dripping_water ~ ~1 ~ 1 1 1 1 1 force @s
+#execute in minecraft:spawn if entity @e[tag=wild,type=armor_stand] at @e[tag=wild,type=armor_stand] if entity @p[distance=..32] as @a[distance=..32] run particle minecraft:dripping_water ~ ~1 ~ 1 1 1 1 1 force @s
 
-execute in minecraft:spawn if entity @e[tag=wild,type=armor_stand] at @e[tag=wild,type=armor_stand] if entity @p[distance=..1] as @a[distance=..1] run tag @s add wild
+#execute in minecraft:spawn if entity @e[tag=wild,type=armor_stand] at @e[tag=wild,type=armor_stand] if entity @p[distance=..1] as @a[distance=..1] run tag @s add wild
 
 
-execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512] as @a[distance=..512] run effect give @s minecraft:jump_boost 2 200 true
-execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512,team=player] as @a[distance=..512,team=player] run effect give @s minecraft:mining_fatigue 2 200 true
+#execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512] as @a[distance=..512] run effect give @s minecraft:jump_boost 2 200 true
+#execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512,team=player] as @a[distance=..512,team=player] run effect give @s minecraft:mining_fatigue 2 200 true
 
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run tag @s add spawn
 execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tp @s ~ ~ ~
 execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tag @s remove spawn
-
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players reset @s spawn
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..32] as @a[distance=..32] at @s if block ~ ~-1 ~ minecraft:smooth_quartz align x align y align z positioned ~.5 ~2.5 ~.5 unless entity @e[type=item,tag=icon,distance=..1] run summon item ~ ~ ~ {NoGravity:1b,Glowing:1b,CustomNameVisible:1b,Age:-32768,PickupDelay:32767,Tags:["icon"],Item:{id:"minecraft:small_amethyst_bud",Count:1b}}
 
@@ -49,19 +48,13 @@ execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboar
 #
 
 
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=minecraft:tnt_minecart,distance=..256] run kill @e[type=minecraft:tnt_minecart,distance=..256]
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=tnt,distance=..256] run kill @e[type=tnt,distance=..256]
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=arrow,distance=..256] run kill @e[type=arrow,distance=..256]
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @p[distance=..16,team=!operator,tag=!operator] as @a[distance=..256,team=!operator,tag=!operator] at @s unless entity @e[tag=guard,distance=..0.5,type=slime] run summon slime ~ ~42 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:4,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
-
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] as @a[distance=..256] at @s unless entity @e[tag=guard,distance=0,type=slime] positioned ~ ~42 ~ run tp @e[tag=guard,distance=..1,type=slime,limit=1] @s
-
-execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unless entity @p[distance=..0.5] run tp @s[type=slime] 0 -100 0
-
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=minecraft:tnt_minecart,distance=..64] run kill @e[type=minecraft:tnt_minecart,distance=..256]
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=tnt,distance=..64] run kill @e[type=tnt,distance=..64]
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=arrow,distance=..64] run kill @e[type=arrow,distance=..64]
 #
 
 
 # NPC Protect
-execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!player,type=!villager,type=!slime,type=!armor_stand,distance=..256] run spreadplayers ~ ~ 256 320 true @e[type=!player,type=!villager,type=!slime,type=!armor_stand,type=!item,distance=..256]
+#execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!area_effect_cloud,type=!boat,type=!player,type=!villager,type=!slime,type=!falling_block,type=!armor_stand,distance=..256] run tag @e[type=!area_effect_cloud,type=!player,type=!villager,type=!slime,type=!armor_stand,type=!boat,type=!item,type=!falling_block,distance=..256] add kill
 
 # NPC Protect

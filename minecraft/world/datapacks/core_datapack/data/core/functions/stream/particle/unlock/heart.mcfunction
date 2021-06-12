@@ -1,11 +1,10 @@
-execute if entity @s[tag=unlock_stream_particle_heart] run 
-function rx.playerdb:api/get_self
+execute if entity @s[tag=unlock_stream_particle_heart] run function rx.playerdb:api/get_self
 
 #
 execute if entity @s[tag=unlock_stream_particle_heart] store result score @s temp run data get storage rx:io playerdb.player.data.centural.core.stream.particle.heart
 
 #
-execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=1}] run tellraw @s {"text":"Your particle is already set to heart","color":"yellow"}
+execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=1}] run tellraw @s {"text":"You have already unlocked this particle","color":"yellow"}
 execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=1}] run tag @s remove unlock_stream_particle_heart
 
 #

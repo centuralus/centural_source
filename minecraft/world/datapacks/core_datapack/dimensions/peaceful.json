@@ -1,9 +1,9 @@
 {
   "type": {
-    "name": "minecraft:creative",
+    "name": "minecraft:peaceful",
     "ultrawarm": false,
     "natural": true,
-    "piglin_safe": false,
+    "piglin_safe": true,
     "respawn_anchor_works": false,
     "bed_works": true,
     "has_raids": false,
@@ -12,15 +12,23 @@
     "coordinate_scale": 1,
     "ambient_light": 0,
     "logical_height": 1024,
+    "effects": "minecraft:overworld",
     "infiniburn": "minecraft:infiniburn_overworld",
     "min_y": -1024,
-    "height": 2048
+    "height": 1024
   },
   "generator": {
     "type": "minecraft:flat",
-    "seed": 17871,
     "settings": {
-      "layers": [],
+      "biome": "minecraft:mushroom_fields",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:barrier",
+          "height": 1
+        }
+      ],
       "structures": {
         "structures": {}
       }

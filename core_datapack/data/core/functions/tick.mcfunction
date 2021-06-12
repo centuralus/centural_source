@@ -1,8 +1,8 @@
 #Mark as active unless storage has information alread.
 #execute unless data storage core:tick * run data modify storage core:tick tick set value 1b
 
-execute if entity @p run function core:chesttrade/tick
-execute if entity @p run function core:unique/tick
+#execute if entity @p run function core:chesttrade/tick
+execute if entity @p as @a run function core:unique/tick
 execute if entity @p run function core:echest/tick
 execute if entity @p run function core:trade/tick
 
