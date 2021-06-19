@@ -172,9 +172,12 @@ execute if entity @p[team=helper,tag=builder] as @a[team=helper,tag=builder] run
 execute if entity @p[team=builder,tag=builder] as @a[team=builder,tag=builder] run tag @s remove builder
 #
 
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
 
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run tag @s remove protected_region
+
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tag @s add protected_region
 execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "You have entered the protected region"
 execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run gamemode adventure @s
 

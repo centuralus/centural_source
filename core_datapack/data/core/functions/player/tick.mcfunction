@@ -14,3 +14,5 @@ execute if entity @p[tag=player] as @a[tag=player] run team join player @s
 execute if entity @p[tag=player] as @a[tag=player] run tag @s remove player
 
 execute if entity @p[scores={player=1..}] as @a[scores={player=1..}] run scoreboard players reset @s player
+
+execute if entity @p run function core:player/generated

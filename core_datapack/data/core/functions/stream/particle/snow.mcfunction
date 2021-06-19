@@ -1,0 +1,1 @@
+execute at @p[tag=camera] if entity @p[tag=stream_particle_snow,tag=!camera,distance=..32,team=!away] as @a[tag=stream_particle_snow,tag=!camera,distance=..32,team=!away] at @s run particle minecraft:snowflake ~ ~2 ~ 0 0 0 0 1 force @s

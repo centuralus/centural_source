@@ -1,12 +1,23 @@
 
-# Enabled Trigger If Protected Not Enabled
-#execute if entity @p[tag=protector] as @a[tag=protector] unless entity @s[scores={builder_mode=-2147483648..2147483647}] unless score @s protect_count < @s max_protect run scoreboard players enable @s protect
-execute if entity @p[team=builder] as @a[team=builder] unless entity @s[scores={builder_mode=-2147483648..2147483647}] run scoreboard players enable @s builder_mode
+# Enabled Trigger Claim if in peaceful deminsion
+execute in core:peaceful if entity @p as @a unless entity @s[scores={claim=-2147483648..2147483647}] run scoreboard players enable @s claim
+execute in minecraft:the_end if entity @p[scores={claim=-2147483648..2147483647}] as @a[scores={claim=-2147483648..2147483647}] run scoreboard players reset @s claim
+execute in minecraft:the_nether if entity @p[scores={claim=-2147483648..2147483647}] as @a[scores={claim=-2147483648..2147483647}] run scoreboard players reset @s claim
+execute in minecraft:overworld if entity @p[scores={claim=-2147483648..2147483647}] as @a[scores={claim=-2147483648..2147483647}] run scoreboard players reset @s claim
 
 # Trigger 
-execute if entity @p[team=builder,scores={builder_mode=1}] as @a[team=builder,scores={builder_mode=1}] run tellraw @s "Marking closest region protected"
-execute if entity @p[team=builder,scores={builder_mode=1}] as @a[team=builder,scores={builder_mode=1}] run tag @s add mark_protected
+execute in core:peaceful if entity @p[scores={claim=1}] as @a[scores={claim=1}] run tag @s add claim
 
+# Commands
+execute in core:peaceful if entity @p[tag=claim,tag=claim_owner] as @a[tag=claim,tag=claim_owner] run tellraw @s {"text":"You are already a claim owner, currently you may only have 1 claimed region.","color":"yellow"}
+execute in core:peaceful if entity @p[tag=claim,tag=claim_owner] as @a[tag=claim,tag=claim_owner] run tag @s remove claim
+execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] at @s if entity @e[tag=claim,type=armor_stand,distance=..64] run tellraw @s {"text":"You claim is to close to another persons claimed region.","color":"yellow"}
+execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] at @s if entity @e[tag=claim,type=armor_stand,distance=..64] run tag @s remove claim
+execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] unless entity @e[tag=claim,type=armor_stand,distance=..64] run summon armor_stand ~ ~ ~ {Tags:["claim"],Marker:1b,Invisible:1b,NoGravity:1b}
+
+
+#
+execute in core:peaceful if entity @p[gamemode=survival] as @a[gamemode=survival] at @s if entity @e[tag=claim,distance=..64] 
 
 #execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "This area is already protected."
 #execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] at @s if entity @e[tag=protected,distance=..48] run tag @s remove mark_protected
@@ -172,12 +183,9 @@ execute if entity @p[team=helper,tag=builder] as @a[team=helper,tag=builder] run
 execute if entity @p[team=builder,tag=builder] as @a[team=builder,tag=builder] run tag @s remove builder
 #
 
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run tellraw @s "You have left the protected region"
+execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
 
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=adventure,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run gamemode survival @s 
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival,tag=protected_region] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival,tag=protected_region] at @s unless entity @e[tag=protected,distance=..48] run tag @s remove protected_region
-
-execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tag @s add protected_region
 execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "You have entered the protected region"
 execute if entity @p[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] as @a[team=!helper,team=!away,team=!builder,team=!operator,gamemode=survival] at @s if entity @e[tag=protected,distance=..48] run gamemode adventure @s
 

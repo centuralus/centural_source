@@ -46,7 +46,8 @@ execute if entity @p[tag=raycast] as @a[tag=raycast] at @a[tag=raycast] position
 #function core:abduct/tick
 #function core:save/tick
 #function core:elevator/tick
-#function core:hub/tick
+function core:hub/tick
+
 #function core:poll/tick
 #function music:death_song/tick
 #function music:the_great_fairy_fountain/tick

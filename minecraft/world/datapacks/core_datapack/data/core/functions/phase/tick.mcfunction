@@ -2,8 +2,8 @@ execute if entity @p as @a unless entity @s[scores={phase=-2147483648..214748364
 
 execute if entity @p[scores={phase=1..}] as @a[scores={phase=1..}] run tag @s add reset_phase
 
-execute if entity @p[scores={phase=2}] as @a[scores={phase=2}] run tag @s add phase
-execute if entity @p[scores={phase=1}] as @a[scores={phase=1}] run tag @s add phase
+execute if entity @p[scores={phase=2}] as @a[scores={phase=2}] run tellraw @s {"text":"This feature has been disabled!"}
+execute if entity @p[scores={phase=1}] as @a[scores={phase=1}] run tellraw @s {"text":"This feature has been disabled!"}
 
 
 execute if entity @p[tag=phase] as @a[tag=phase] unless entity @s[scores={phase_timer=-2147483648..2147483647}] run scoreboard objectives add phase_timer minecraft.custom:minecraft.play_time
