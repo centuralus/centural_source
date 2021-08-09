@@ -1,7 +1,10 @@
-#
+# Testing
 usercache.json
-advancements  
-minecraft/*/data  
+advancements
+minecraft/logs/*
+minecraft/*/data
+minecraft/*/generated
+minecraft/*/dimensions
 DIM-1  
 DIM1  
 entities  
@@ -15,20 +18,55 @@ stats
 server.jar
 old
 build_scp.sh
+eula.txt
+banned-ips.json
+banned-players.json
 
 # Generated Code
 centural/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+sftp-config.json
+sftp-config-alt*.json
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+GitHub.sublime-settings
+
 #Tesseract
 eng.traineddata
 package-lock.json
 
-# Bloated Code that should be in git
-
-
 # Dart
-pubspec.lock
+.dart_tool/
 .packages
-.dart_tool
+build/
+pubspec.lock
+doc/api/
+.env*
+*.info.json
+.flutter-plugins
+.flutter-plugins-dependencies
 
 # Logs
 logs
