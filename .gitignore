@@ -1,7 +1,10 @@
 # Testing
 usercache.json
-advancements  
-minecraft/*/data  
+advancements
+minecraft/logs/*
+minecraft/*/data
+minecraft/*/generated
+minecraft/*/dimensions
 DIM-1  
 DIM1  
 entities  
@@ -15,6 +18,9 @@ stats
 server.jar
 old
 build_scp.sh
+eula.txt
+banned-ips.json
+banned-players.json
 
 # Generated Code
 centural/
