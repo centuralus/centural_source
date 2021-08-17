@@ -173,6 +173,16 @@ execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run title @s actionba
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run tag @s remove arrow_buff
 
 
+#invisible_buff
+execute if entity @p[scores={prefix_storage=10,buff_timer=200..}] as @a[scores={prefix_storage=10,buff_timer=200..}] run tag @s add invisible_buff
+execute if entity @p[scores={prefix_storage=10,buff_timer=200..}] as @a[scores={prefix_storage=10,buff_timer=200..}] run scoreboard players reset @s buff_timer
+#execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] at @s positioned ~ ~3 ~ run function core:particle/invisible_buff
+
+execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] at @s if entity @p[tag=!invisible_buff,distance=..3] run tellraw @s {"text":"Your buff fails ~ Another player may not be within 3 blocks of yourself.","color":"yellow"}
+execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] at @s unless entity @p[tag=!invisible_buff,distance=..3] run effect give @s minecraft:invisibility 10 10 true
+execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] at @s unless entity @p[tag=!invisible_buff,distance=..3] run effect give @s minecraft:weakness 10 10 true
+execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] run title @s actionbar {"text":"⛄","color":"#FFFFFF"}
+execute if entity @p[tag=invisible_buff] as @a[tag=invisible_buff] run tag @s remove invisible_buff
 
 
 #lightning buff
