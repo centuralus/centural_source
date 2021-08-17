@@ -71,9 +71,10 @@ execute if entity @p[scores={teleport_timer=200..}] as @a[scores={teleport_timer
 execute if entity @p[scores={teleport_timer=200..}] as @a[scores={teleport_timer=200..}] unless entity @p[tag=teleport] run scoreboard objectives remove teleport_timer
 execute if entity @p[scores={teleport_timer=200..}] as @a[scores={teleport_timer=200..}] run scoreboard players reset @s teleport_timer
 
-execute as @p[sort=random] at @s at @a[distance=1..] if score @p[distance=0] teleport_unique = @s teleport_unique run tag @s add reset_teleport_unique
+execute as @a[sort=random] at @s at @a[distance=1..] if score @p[distance=0] teleport_unique = @s teleport_unique run tag @s add reset_teleport_unique
+execute as @a[sort=random] at @s at @a[distance=1..] if score @p[distance=0] teleport_unique = @s teleport_unique run tag @p[distance=0] add reset_teleport_unique
 execute if entity @p[tag=reset_teleport_unique] as @a[tag=reset_teleport_unique] run tellraw @s "You have the same ID as someone else, changing ID."
-execute if entity @p[tag=reset_teleport_unique] as @a[tag=reset_teleport_unique] run scoreboard players reset @s teleport_unique
+execute if entity @p[tag=reset_teleport_unique] as @a[tag=reset_teleport_unique] run tag @s add reset_unique
 execute if entity @p[tag=reset_teleport_unique] as @a[tag=reset_teleport_unique] run tag @s remove reset_teleport_unique
 
 execute if entity @p[tag=teleport_menu] as @a[tag=teleport_menu] run tag @s remove teleport_menu

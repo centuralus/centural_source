@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Alpha/Beta Member Portal" />
+    <script type="module" src="/index.js"></script>
+    <title>Centural Alpha/Beta Member Portal</title>
+  </head>
+  <body>
+    <nav>
+        <button>Login</button>
+        <button class="unlock_membership_button"><span class="key">⚷</span>Unlock Membership</button>
+    </nav>
+    <div id="login">
+        <p>
+            Login currently requires a key file.
+        </p>
+        <form>
+            <input type="file"></input>
+        </form>
+    </div>
+    <div id="main_container">
+        <div id="membership_buttons">
+            <button class="membership_button solo_membership_button">
+                Solo Membership
+                <div id="shadowBox">
+                    <h3 class="rainbow rainbow_text_animated">★1 Token</h3>
+                </div>
+                <br>
+                <span class="game_time">⌛</span>168 Hour Game Ticks
+                <br>
+                $2.50 + tax
+            </button>
+            <button class="membership_button friend_membership_button">
+                Bring a Friend 
+                <div id="shadowBox">
+                    <h3 class="rainbow rainbow_text_animated">★2 Token</h3>
+                </div>
+                <br>
+                <span class="game_time">⌛</span>336 Hour Game Ticks
+                <br>
+                $4.00 + tax
+            </button>
+            <button class="membership_button group_membership_button">
+                Group Package
+                <div id="shadowBox">
+                    <h3 class="rainbow rainbow_text_animated">★10 Token</h3>
+                </div>
+                <br>
+                <span class="game_time">⌛</span>1680 Hour Game Ticks
+                <br>
+                $15 + tax
+            </button>
+        </div>
+        
+        
+    </div>
+    <div>
+        <p>Currently only Members may access this application.</p>
+    </div>
+    <footer></footer>
+  </body>
+  <style type="text/css">
+    .portal {
+      
+    }
+    .unlock_membership_button {
+        font-weight: bold;
+    }
+    .key {
+        font-size:2em;
+        color:orange;
+        padding:.2em;
+        text-shadow: 2px 2px black;
+    }
+    nav{
+        list-style: none;
+        width:100%;
+        border: 1px solid black;
+        text-align: right;
+    }
+    nav button{
+        padding: 1em;
+        margin: 1em;
+    }
+    #main_container { 
+        width: 100%;
+    }
+    #membership_buttons {
+        width:25%;
+    }
+    .membership_button {
+        width: 100%;
+    }
+    .game_time{
+        position: absolute;
+        margin-left:-1.2em;
+        transition-property: transform;
+        transition-duration: 1s;
+        animation-name: rotate; 
+        animation-duration: 2s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+#shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+
+.rainbow {
+    text-align: center;
+    font-family: monospace;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+  </style>
+</html>

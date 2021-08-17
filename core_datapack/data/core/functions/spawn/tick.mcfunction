@@ -11,8 +11,15 @@ execute as @a unless entity @s[scores={spawn=-2147483648..2147483647}] run score
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..512,team=player] as @a[distance=..512,team=player] run effect give @s minecraft:mining_fatigue 2 200 true
 
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run tag @s add spawn
-execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tp @s ~ ~ ~
-execute if entity @p[tag=spawn] as @a[tag=spawn] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tag @s remove spawn
+
+execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players set @s spawn_timer -80
+
+execute if entity @p[scores={spawn_timer=-80..-1}] as @a[scores={spawn_timer=-80..-1}] at @s anchored feet align x align y align z positioned ~.25 ~ ~.25 facing entity @s feet run function core:animate/teleport_spawn/animate
+
+
+#execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] run scoreboard players reset @s spawn
+execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tp @s ~ ~ ~
+execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tag @s remove spawn
 execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players reset @s spawn
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..32] as @a[distance=..32] at @s if block ~ ~-1 ~ minecraft:smooth_quartz align x align y align z positioned ~.5 ~2.5 ~.5 unless entity @e[type=item,tag=icon,distance=..1] run summon item ~ ~ ~ {NoGravity:1b,Glowing:1b,CustomNameVisible:1b,Age:-32768,PickupDelay:32767,Tags:["icon"],Item:{id:"minecraft:small_amethyst_bud",Count:1b}}
 
@@ -58,3 +65,5 @@ execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stan
 #execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!area_effect_cloud,type=!boat,type=!player,type=!villager,type=!slime,type=!falling_block,type=!armor_stand,distance=..256] run tag @e[type=!area_effect_cloud,type=!player,type=!villager,type=!slime,type=!armor_stand,type=!boat,type=!item,type=!falling_block,distance=..256] add kill
 
 # NPC Protect
+
+

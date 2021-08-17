@@ -55,7 +55,13 @@ bool project_map_has_plugins(Map project_map) {
   return project_map.containsKey("plugins");
 }
 
-String tellraw_teleport() {}
+Future<String> common(Future<String> this_common) {
+  return this_common;
+}
+
+Future<String> ban_player_list() async {
+  return await Future.forEach([], (num) async {}) | "";
+}
 
 String ban_player() {
   String final_string = "";
@@ -95,6 +101,11 @@ extension StringExtension on String {
   }
 }
 
+String player_chat_menu(String line) {
+  String final_string = "";
+  return final_string;
+}
+
 String menu(String menu_name) {
   String final_string = "";
   String menu_name_to_uppercase = menu_name.capitalize();
@@ -115,6 +126,51 @@ String menu(String menu_name) {
 
   final_string = "${current_string}";
   return final_string;
+}
+
+const String all = "@a";
+String multiple_scoreboard_objective_enable_all(
+    List<String> scoreboard_objective_names) {
+  String final_string = "";
+  scoreboard_objective_names.forEach((String scoreboard_objective_name) {
+    final_string = '''
+      ${final_string}
+      ${scoreboard_objective_enable_all(scoreboard_objective_name)}
+    ''';
+  });
+  return final_string;
+}
+
+String scoreboard_objective_enable_all(scoreboard_objective_name) {
+  return scoreboard_objective_enable(all, scoreboard_objective_name);
+}
+
+String scoreboard_objective_enable(selector, scoreboard_objective_name) {
+  return '''
+  execute as ${selector} unless entity @s[scores={${scoreboard_objective_name}=-2147483648..2147483647}] run scoreboard players enable @s ${scoreboard_objective_name}
+  ''';
+}
+
+String scoreboard_objective_reset_with_proccessing_code(
+    scoreboard_objective_name, proccesing_code) {
+  return '''
+    execute if entity @p[scores={${scoreboard_objective_name}=1..}] as @a[scores={${scoreboard_objective_name}_menu=1..}] run tag @s add reset_${scoreboard_objective_name}
+    execute if entity @p[scores={${scoreboard_objective_name}=..1}] as @a[scores={${scoreboard_objective_name}_menu=..1}] run tag @s add reset_${scoreboard_objective_name}
+    ${proccesing_code}
+    execute if entity @p[tag=${scoreboard_objective_name}] as @a[tag=${scoreboard_objective_name}] run scoreboard players reset @s reset_${scoreboard_objective_name}
+    execute if entity @p[tag=${scoreboard_objective_name}] as @a[tag=${scoreboard_objective_name}] run tag @s remove reset_${scoreboard_objective_name}
+  ''';
+}
+
+String scoreboard_objective_reset(scoreboard_objective_name) {
+  return '''
+    # Resets should occur at the end of the script
+    execute if entity @p[scores={${scoreboard_objective_name}=1..}] as @a[scores={${scoreboard_objective_name}_menu=1..}] run tag @s add reset_${scoreboard_objective_name}
+    execute if entity @p[scores={${scoreboard_objective_name}=..1}] as @a[scores={${scoreboard_objective_name}_menu=..1}] run tag @s add reset_${scoreboard_objective_name}
+    # IF not then place proccesing code HERE instead. <----- 
+    execute if entity @p[tag=${scoreboard_objective_name}] as @a[tag=${scoreboard_objective_name}] run scoreboard players reset @s reset_${scoreboard_objective_name}
+    execute if entity @p[tag=${scoreboard_objective_name}] as @a[tag=${scoreboard_objective_name}] run tag @s remove reset_${scoreboard_objective_name}
+  ''';
 }
 
 String kick_menu() {
@@ -316,6 +372,223 @@ File load_file(String project_name, String file_name) {
       current_line = view_all_barter();
     }
 
+    if (current_line.startsWith("#;join_team")) {
+      for (var index = 2; index <= 71; index++) {
+        current_line = '''
+      ${current_line}
+execute if entity @s[tag=reset_unique,tag=!duplicate_unique,scores={unique=${index}},team=!helper,team=!builder] run team join player_${index}
+execute if entity @s[tag=reset_unique,tag=!duplicate_unique,scores={unique=${index}}] run scoreboard players set @s teleport_unique ${index}
+''';
+      }
+    }
+    if (current_line.startsWith("#;generate_player_team")) {
+      for (var index = 2; index <= 71; index++) {
+        current_line = '''
+      ${current_line}
+      
+team add player_${index} ["",{"text":"[✌]","color":"#10B3C9"}]
+team modify player_${index} prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+scoreboard objectives remove player_${index}_menu
+scoreboard objectives add player_${index}_menu trigger ["",""]
+      ''';
+      }
+    }
+    if (current_line.startsWith("#;generated_player_menu")) {
+      String final_string = "";
+      for (var index = 2; index <= 71; index++) {
+        current_line = '''
+        ${current_line}
+        execute if entity @p[team=player_${index}] as @p[team=player_${index}] run function core:player/players/player_${index}/tick
+        ''';
+        final_string = '''
+          execute as @a unless entity @s[scores={player_${index}_menu=-2147483648..2147483647}] run scoreboard players enable @s player_${index}_menu
+
+execute if entity @p[scores={player_${index}_menu=1..}] as @a[scores={player_${index}_menu=1..}] run tag @s add reset_player_${index}_menu
+
+execute if entity @p[scores={player_${index}_menu=1}] as @a[scores={player_${index}_menu=1}] run tag @s add player_${index}_menu
+
+#Start Prefix
+
+#End Prefix🔥 🌊
+#["",{"color":"#F7630C","text":"[🔥]","clickEvent":{"action":"run_command","value":"/trigger prefix set 2"}},{"text":"[🌊]","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger prefix set 3"}}]
+
+
+execute if entity @s[team=player_${index},scores={prefix=2..18}] run scoreboard players operation @s prefix_storage = @s prefix
+
+execute if entity @s[team=player_${index},scores={prefix=2}] run team modify player_${index} prefix ["",{"text":"🔥","color":"#F7630C","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=3}] run team modify player_${index} prefix ["",{"text":"🌊","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=4}] run team modify player_${index} prefix ["",{"text":"🗡","color":"#727273","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=5}] run team modify player_${index} prefix ["",{"text":"🏹","color":"#722D09","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=6}] run team modify player_${index} prefix ["",{"text":"🪓","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=7}] run team modify player_${index} prefix ["",{"text":"🔱","color":"#FFB900","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=8}] run team modify player_${index} prefix ["",{"text":"🎣","color":"#31D2F7","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=9}] run team modify player_${index} prefix ["",{"text":"🧪","color":"#00B294","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=10}] run team modify player_${index} prefix ["",{"text":"⛄","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=11}] run team modify player_${index} prefix ["",{"text":"⚡","color":"#FFC83D","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=12}] run team modify player_${index} prefix ["",{"text":"⛏","color":"#0F0F0F","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=13}] run team modify player_${index} prefix ["",{"text":"❄","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=14}] run team modify player_${index} prefix ["",{"text":"❤","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=15}] run team modify player_${index} prefix ["",{"text":"⚓","color":"#525252","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=16}] run team modify player_${index} prefix ["",{"text":"⛨","color":"#F8F9FA","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=17}] run team modify player_${index} prefix ["",{"text":"☔","color":"#886CE4","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+execute if entity @s[team=player_${index},scores={prefix=18}] run team modify player_${index} prefix ["",{"text":"❦","color":"#149414","clickEvent":{"action":"run_command","value":"/trigger player_${index}_menu set 1"}}]
+
+#["",{"color":"#F7630C","text":"[🔥]","clickEvent":{"action":"run_command","value":"/trigger prefix set 2"}},{"text":"[🌊]","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger prefix set 3"}},{"text":"[🗡]","color":"#727273","clickEvent":{"action":"run_command","value":"/trigger prefix set 4"}},{"text":"[🏹]","color":"#722D09","clickEvent":{"action":"run_command","value":"/trigger prefix set 5"}},{"text":"[🪓]","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger prefix set 6"}},{"text":"[🔱]","color":"#FFB900","clickEvent":{"action":"run_command","value":"/trigger prefix set 7"}},{"text":"[🎣]","color":"#31D2F7","clickEvent":{"action":"run_command","value":"/trigger prefix set 8"}},{"text":"[🧪]","color":"#00B294","clickEvent":{"action":"run_command","value":"/trigger prefix set 9"}},{"text":"[⛄]","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger prefix set 10"}},{"text":"[⚡]","color":"#FFC83D","clickEvent":{"action":"run_command","value":"/trigger prefix set 11"}},{"text":"[⛏]","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger prefix set 12"}},{"text":"[❄]","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger prefix set 13"}},{"text":"[❤]","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger prefix set 14"}},{"text":"[⚓]","color":"#525252","clickEvent":{"action":"run_command","value":"/trigger prefix set 15"}},{"text":"[⛨]","color":"#F8F9FA","clickEvent":{"action":"run_command","value":"/trigger prefix set 16"}},{"text":"[☔]","color":"#886CE4","clickEvent":{"action":"run_command","value":"/trigger prefix set 17"}},{"text":"[❦]","color":"#149414","clickEvent":{"action":"run_command","value":"/trigger prefix set 18"}}]
+
+
+
+execute if entity @s[scores={team_color=2}] run team modify player_${index} color aqua
+execute if entity @s[scores={team_color=3}] run team modify player_${index} color black
+execute if entity @s[scores={team_color=4}] run team modify player_${index} color blue
+execute if entity @s[scores={team_color=5}] run team modify player_${index} color dark_aqua
+execute if entity @s[scores={team_color=6}] run team modify player_${index} color dark_blue
+execute if entity @s[scores={team_color=7}] run team modify player_${index} color dark_gray
+execute if entity @s[scores={team_color=8}] run team modify player_${index} color dark_green
+execute if entity @s[scores={team_color=9}] run team modify player_${index} color dark_purple
+execute if entity @s[scores={team_color=10}] run team modify player_${index} color dark_red
+execute if entity @s[scores={team_color=11}] run team modify player_${index} color gold
+execute if entity @s[scores={team_color=12}] run team modify player_${index} color gray
+execute if entity @s[scores={team_color=13}] run team modify player_${index} color green
+execute if entity @s[scores={team_color=14}] run team modify player_${index} color light_purple
+execute if entity @s[scores={team_color=15}] run team modify player_${index} color red
+execute if entity @s[scores={team_color=16}] run team modify player_${index} color reset
+execute if entity @s[scores={team_color=17}] run team modify player_${index} color yellow
+
+
+
+#
+execute if entity @p[tag=player_${index}_menu,team=player_${index}] as @a[tag=player_${index}_menu,team=player_${index}] run tellraw @s ["",{"text":"Personal Menu"}]
+
+execute if entity @p[tag=player_${index}_menu,team=player_${index}] as @a[tag=player_${index}_menu,team=player_${index}] run function core:player/players/player_${index}/personal_menu
+#
+
+
+execute if entity @p[tag=player_${index}_menu,team=!player_${index}] as @a[tag=player_${index}_menu,team=!player_${index}] run tellraw @s ["",{"text":"[ Teleport To ","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set ${index}"}},{"selector":"@p[scores={teleport_unique=${index}}]","clickEvent":{"action":"run_command","value":"/trigger teleport set ${index}"}},{"text":" ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set ${index}"}}]
+
+
+
+
+execute if entity @p[tag=player_${index}_menu] as @a[tag=player_${index}_menu] run tag @s remove player_${index}_menu
+
+execute if entity @p[tag=reset_player_${index}_menu] as @a[tag=reset_player_${index}_menu] run scoreboard players reset @s player_${index}_menu
+execute if entity @p[tag=reset_player_${index}_menu] as @a[tag=reset_player_${index}_menu] run tag @s remove reset_player_${index}_menu
+        
+        
+        
+        
+        
+        
+        ''';
+        append_files_array.add(File("player/players/player_${index}/tick",
+            child: CommandList.str(final_string)));
+
+        final_string = '''
+
+execute if entity @s[tag=!personal_menu_show_symbol,tag=!personal_menu_show_text] run tag @s add personal_menu_show_text
+execute if entity @s[tag=!personal_menu_show_symbol,tag=personal_menu_show_text] run function core:player/players/player_${index}/personal_menu_show_text
+execute if entity @s[tag=personal_menu_show_symbol,tag=!personal_menu_show_text] run function core:player/players/player_${index}/personal_menu_show_symbol
+
+
+
+        ''';
+        append_files_array.add(File(
+            "player/players/player_${index}/personal_menu",
+            child: CommandList.str(final_string)));
+
+        String new_line = "\\n";
+        final_string = '''
+
+
+scoreboard objectives add temp_count dummy
+scoreboard players set @s temp_count 0
+
+team add spawn_text [{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+team modify spawn_text prefix ["",{"color":"aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_aqua] run team modify spawn_text prefix ["",{"color":"aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_black] run team modify spawn_text prefix ["",{"color":"black","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_blue] run team modify spawn_text prefix ["",{"color":"blue","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_aqua] run team modify spawn_text prefix ["",{"color":"dark_aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_blue] run team modify spawn_text prefix ["",{"color":"dark_blue","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_gray] run team modify spawn_text prefix ["",{"color":"dark_gray","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_green] run team modify spawn_text prefix ["",{"color":"dark_green","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_purple] run team modify spawn_text prefix ["",{"color":"dark_purple","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_red] run team modify spawn_text prefix ["",{"color":"dark_red","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_gold] run team modify spawn_text prefix ["",{"color":"gold","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_gray] run team modify spawn_text prefix ["",{"color":"gray","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_green] run team modify spawn_text prefix ["",{"color":"green","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_light_purple] run team modify spawn_text prefix ["",{"color":"light_purple","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_red] run team modify spawn_text prefix ["",{"color":"red","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_white] run team modify spawn_text prefix ["",{"color":"white","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_yellow] run team modify spawn_text prefix ["",{"color":"yellow","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+team add wild_text [{"text":"[Wild]","clickEvent":{"action":"run_command","value":"/trigger wild set 2"}}]
+team modify wild_text prefix ["",{"text":"[Wild]","clickEvent":{"action":"run_command","value":"/trigger wild set 2"}}]
+team add teleport_text [{"text":"[Teleport]","clickEvent":{"action":"run_command","value":"/trigger teleport set 1"}}]
+team modify teleport_text prefix ["",{"text":"[Teleport]","clickEvent":{"action":"run_command","value":"/trigger teleport set 1"}}]
+team add set_return_text [{"text":"[Set Return]","clickEvent":{"action":"run_command","value":"/trigger set_return set 1"}}]
+team modify set_return_text prefix ["",{"text":"[Set Return]","clickEvent":{"action":"run_command","value":"/trigger set_return set 1"}}]
+team add return_text [{"text":"[Return]","clickEvent":{"action":"run_command","value":"/trigger return set 1"}}]
+team modify return_text prefix ["",{"text":"[Return]","clickEvent":{"action":"run_command","value":"/trigger return set 1"}}]
+
+team add set_home_text [{"text":"[Set Home]","clickEvent":{"action":"run_command","value":"/trigger set_home set 1"}}]
+team modify set_home_text prefix ["",{"text":"[Set Home]","clickEvent":{"action":"run_command","value":"/trigger set_home set 1"}}]
+team add home_text [{"text":"[Home]","clickEvent":{"action":"run_command","value":"/trigger home set 1"}}]
+team modify home_text prefix ["",{"text":"[Home]","clickEvent":{"action":"run_command","value":"/trigger home set 1"}}]
+
+team add settings_text [{"text":"[Settings]","clickEvent":{"action":"run_command","value":"/trigger settings set 1"}}]
+team modify settings_text prefix ["",{"text":"[Settings]","clickEvent":{"action":"run_command","value":"/trigger settings_text set 1"}}]
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_spawn] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"spawn_text",Tags:["personal_menu_show_spawn"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_spawn] run scoreboard players add @s temp_count 5
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_wild] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"wild_text",Tags:["personal_menu_show_wild"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_wild] run scoreboard players add @s temp_count 3
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_teleport] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"teleport_text",Tags:["personal_menu_show_teleport"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_teleport] run scoreboard players add @s temp_count 7
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_set_return] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"set_return_text",Tags:["personal_menu_show_set_return"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_set_return] run scoreboard players add @s temp_count 9
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_return] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"return_text",Tags:["personal_menu_show_return"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_return] run scoreboard players add @s temp_count 5
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_set_home] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"set_home_text",Tags:["personal_menu_show_set_home"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_set_home] run scoreboard players add @s temp_count 7
+
+execute if entity @s[team=player_${index},tag=personal_menu_show_home] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"home_text",Tags:["personal_menu_show_home"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_${index},tag=personal_menu_show_home] run scoreboard players add @s temp_count 7
+
+
+
+
+execute if entity @s[team=player_${index}] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"settings_text",Tags:["personal_menu_show_settings"],CustomName:'{"text":""}'}
+
+
+execute at @s run tellraw @s[team=player_${index},scores={temp_count=0..33}] [{"selector":"@e[tag=personal_menu_show_spawn,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_wild,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_teleport,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_settings,type=armor_stand,limit=1,distance=..1]"}]
+execute at @s run tellraw @s[team=player_${index},scores={temp_count=34..}] [{"selector":"@e[tag=personal_menu_show_spawn,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_wild,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_teleport,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_home,type=armor_stand,limit=1,distance=..1]"},"${new_line}",{"selector":"@e[tag=personal_menu_show_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_settings,type=armor_stand,limit=1,distance=..1]"}]
+
+team remove spawn_text
+team remove wild_text
+execute at @s run kill @e[tag=personal_menu_show_spawn,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_wild,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_teleport,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_set_return,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_return,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_set_home,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_home,type=armor_stand]
+execute at @s run kill @e[tag=personal_menu_show_settings,type=armor_stand]
+scoreboard objectives remove temp_count
+#execute at @s run kill @e[tag=selector,type=armor_stand]
+        ''';
+        append_files_array.add(File(
+            "player/players/player_${index}/personal_menu_show_text",
+            child: CommandList.str(final_string)));
+
+        append_files_array.add(File(
+            "player/players/player_${index}/personal_menu_show_symbol",
+            child: CommandList.str(final_string)));
+      }
+    }
     if (current_line.startsWith('#;reset_offer')) {
       for (var index = 2; index <= 71; index++) {
         String index_as_word =

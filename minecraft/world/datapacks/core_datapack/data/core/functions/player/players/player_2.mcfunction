@@ -2,7 +2,7 @@ execute as @a unless entity @s[scores={player_2_menu=-2147483648..2147483647}] r
 
 execute if entity @p[scores={player_2_menu=1..}] as @a[scores={player_2_menu=1..}] run tag @s add reset_player_2_menu
 
-execute if entity @p[scores={player_2_menu=1}] as @a[scores={player_2_menu=1}] run tag @s add reset_player_2_menu
+execute if entity @p[scores={player_2_menu=1}] as @a[scores={player_2_menu=1}] run tag @s add player_2_menu
 
 execute if entity @p[tag=player_2_menu,team=player_2] as @a[tag=player_2_menu,team=player_2] run tellraw @s ["",{"text":"Personal Menu"}]
 execute if entity @p[tag=player_2_menu,team=!player_2] as @a[tag=player_2_menu,team=!player_2] run tellraw @s ["",{"text":"Player Menu"}]
