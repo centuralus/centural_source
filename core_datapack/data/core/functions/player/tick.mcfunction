@@ -181,8 +181,8 @@ execute if entity @p[scores={prefix_storage=11,buff_timer=500..,sneak_timer=1..2
 execute if entity @p[scores={prefix_storage=11,buff_timer=520..}] as @a[scores={prefix_storage=11,buff_timer=520..}] run tag @s add lightning_buff
 execute if entity @p[scores={prefix_storage=11,buff_timer=520..,sneak_timer=20..}] as @a[scores={prefix_storage=11,buff_timer=520..,sneak_timer=20..}] run scoreboard players reset @s buff_timer
 
-execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] at @s anchored eyes positioned ^ ^ ^5 if entity @p[distance=..1] as @a[distance=..1] run tellraw @s {"text":"You have been stunned!","color":"yellow"}
-execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] at @s anchored eyes positioned ^ ^ ^5 if entity @p[distance=..1] as @a[distance=..1] run effect give @s minecraft:slowness 2 10 true
+execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] at @s anchored eyes positioned ^ ^ ^5 if entity @p[distance=..1.75] as @a[distance=..1.75] run tellraw @s {"text":"You have been stunned!","color":"yellow"}
+execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] at @s anchored eyes positioned ^ ^ ^5 if entity @p[distance=..1.75] as @a[distance=..1.75] run effect give @s minecraft:slowness 2 10 true
 execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] at @s anchored eyes run summon lightning_bolt ^ ^ ^5
 #execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ~ ~3 ~ run function core:particle/lightning_buff
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run title @s actionbar {"text":"⚡","color":"#FFC83D"}
